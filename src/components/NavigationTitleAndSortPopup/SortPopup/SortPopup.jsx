@@ -40,7 +40,7 @@ const SortPopup = ({ item }) => {
             </svg>
           </div>
           {
-            visiblePopup &&
+             visiblePopup &&
             item.map(item => (
               <div className={classes.sort__sort_wrap__open_links__drop_link}>
                 <span key={item.type}>{item.name}</span><br />
