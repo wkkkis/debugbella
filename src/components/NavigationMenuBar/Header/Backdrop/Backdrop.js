@@ -1,4 +1,3 @@
-  
 import classes from "./Backdrop.module.scss";
 
 const Backdrop = ({ show, click }) => {

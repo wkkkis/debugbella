@@ -4,7 +4,7 @@ import lupa from "../../../images/lupa.png";
 import heart from "../../../images/heart.png";
 import shop from "../../../images/shop.png";
 import user from "../../../images/user.png";
-import bella from "../../../images/bella.svg";
+import bella from "../../../images/bella.svg"; 
 import { Link } from "react-router-dom";
 import { useState } from "react";
 const Nav = () => {
