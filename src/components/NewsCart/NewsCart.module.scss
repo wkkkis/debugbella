@@ -1,0 +1,88 @@
+
+//----------КРОШКИ----------
+ .breadCrumbs{
+    width: 80%;
+    
+    &__link {
+        width: 100%;
+        height: 60px;
+        padding-left: 92px;
+        padding-top: 30px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    .breadCrumbs__newsTitle{
+        padding-left: 122px;
+        padding-top: 20px;
+    }
+}
+//-------END OF КРОШКИ------
+.w_100{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .mainCart{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.newscart{
+    width: 532px;
+    height: 250px;
+    border: 1px solid #E4E4E4;;
+    display: flex;
+    margin: 15px;
+
+    .newscart__blockRight{
+        margin: 22px;
+    }
+    .newscart__data{
+        font-weight: 550;
+        font-size: 13px;
+        color: #7C7C7C;
+
+    }
+    .newscart__title{
+        font-weight: 600;
+        font-size: 15px;
+        color: #000000;
+    }
+    .newscart__text{
+        font-weight: 400;
+        font-size: 14px;
+        color: #7C7C7C;
+        letter-spacing: 0.04em;
+        line-height: 150%;
+    }
+    .newscart__btn{
+        width: 234px;
+        height: 44px;
+        background: #ffffff;
+        border: none;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .newscart__btn img{
+        width: 14px;
+        height: 14px;
+        margin: 0 7px;
+    }
+    //--------HOVER-------------
+    .newscart__btn:hover {
+        background: #2a2a2a;
+        color: white;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    //--------ДУБЛЬ КАРТ--------
+    .newscart{
+        margin: 20px;
+    }
+}

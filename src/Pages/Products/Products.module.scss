@@ -1,0 +1,111 @@
+
+.w_100{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.main{
+    display: flex; 
+    // margin: 0 50px;
+    width: 80%;
+    justify-content: center;
+
+    .main__descriptions{ 
+        max-width: 438px;
+        padding-top: 20px;
+    }
+    .main__descriptions{
+        margin: 0 30px;
+    }
+    .main__descriptions p{
+        color: #7C7C7C;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .main__desTitle {
+        color: #ab844a; 
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .main__span{
+        color: black;
+        font-weight: 600;
+    }
+    .main__aboutProduct{
+        color: black;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .main__price{
+        font-weight: 700;
+        font-size: 24px;
+        color: #ab844a;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .main__addToBasketBtn{
+        background: #2a2a2a;
+        color: white;
+        width: 438px;
+        border: none;
+        height: 44px;
+        margin-top: 20px;
+    }
+    .main__addToBasketBtn img{
+        width: 18px;
+        margin: 0 10px;
+    }
+    .main__aboutProduct{
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .main__colorsDiv{
+        display: flex;
+        border: none;
+        align-items: center;
+        color: #7C7C7C;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .main__colors{
+        border: none;
+        height: 11px;
+        border-radius: 1px;
+        width: 11px;
+    }
+    .main__colorsHover{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+    }
+    // ---------HOVER---------
+    .main__colorsHover:hover{
+        outline: 1px solid #65994C;
+    }
+    .main__typeOfProduct{
+        display: flex;
+    }
+    .main__typeOfProductDiv{
+       width: 200px;
+    }
+    .main__priceDiv{
+        display: flex;
+    }
+    .main__xPrice{
+        margin-top: 5px;
+        color: #7C7C7C;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: line-through;
+    }
+    .main__addToBasketBtn{
+        margin-bottom: 100px;
+    }
+}
