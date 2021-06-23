@@ -1,6 +1,7 @@
+@import "src/styles/modules/mixins/modal";
+
 .favorite_wrap {
   margin: 0 auto 20px auto;
-
   &__container {
     display: flex;
     justify-content: space-between;
