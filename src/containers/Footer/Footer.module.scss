@@ -1,0 +1,94 @@
+$brown: rgba(43, 42, 42, 1);
+
+.mainContainer {
+    background-color: $brown;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        padding-right: 120px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        color: rgba(171, 132, 74, 1);
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        color: rgba(124, 124, 124, 1);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 35px;
+    }
+
+    .secondContainer {
+        padding-right: 200px;
+        padding-left: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        .copyright {
+            padding-left: 10px;
+            font-size: 18px;
+            color: rgba(124, 124, 124, 1);
+        }
+    }
+}
+
+@media all and (max-width: 780px) {
+    .mainContainer {
+        background-color: $brown;
+        // height: 1000px;
+        .container {
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            padding-top: 0px;
+            padding-right: 20px;
+
+            .first__col {
+                padding-top: 20px;
+            }
+        }
+    }
+    .secondContainer {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        padding-right: 0px;
+        padding-left: 0px;
+        .copyright {
+            padding-left: 0px;
+            font-size: 12px;
+            text-align: center;
+            margin-left: 50px;
+        }
+        .socialMediaLink {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 10px;
+            padding-left: 60px;
+            padding-bottom: 20px;
+        }
+    }
+}
+@media all and (max-width: 720px) {
+    .secondContainer {
+        padding-right: 0px;
+        padding-left: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
