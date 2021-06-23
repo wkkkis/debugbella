@@ -1,0 +1,11 @@
+.favorite_wrap {
+  margin: 0 auto 20px auto;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
