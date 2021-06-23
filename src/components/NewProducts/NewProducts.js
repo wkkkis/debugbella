@@ -5,6 +5,7 @@ import cart from "../../assets/images/cart.svg";
 import favourite from "../../assets/images/favourite.png";
 import ColorSelection from "../ColorSelection/ColorSelection";
 import new_logo from "../../assets/images/new.svg";
+
 const NewProducts = () => {
     return (
         <div className={classes.topSales__wrap}>

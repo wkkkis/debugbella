@@ -1,26 +1,21 @@
 import React from "react";
-import classes from "../AboutUs/AboutUs.module.scss";
-import diva from "../../assets/images/diva.png";
-import bella_font from "../../assets/images/bella_font.png";
-import dress from "../../assets/images/about_us_dress.png";
-import beach from "../../assets/images/beach.png";
+import classes from "./AboutUs.module.scss";
+import diva from "../../assets/aijan_img/diva.svg"
+import dress from "../../assets/aijan_img/about_us_dress.svg"
+import beach from "../../assets/aijan_img/beach.png"
+
 const AboutUs = () => {
     return (
         <div className={classes.mainContainer}>
-            <div className={classes.mainContainer__link}>
-                <ul className={classes.mainContainer__list}>
-                    <li>Главная &ensp;/&ensp;</li>
-                    <li>О нас</li>
-                </ul>
-            </div>
             <div className={classes.main_header}>
-                <span>О нас</span>
 
                 <section className={classes.first_image}>
                     <img src={diva} alt="lady" className={classes.lady_img} />
                 </section>
                 <section className={classes.first_image__text}>
-                    <img src={bella_font} alt="bella" />
+                    <span>
+                        BELLA
+                    </span>
                 </section>
 
                 <section className={classes.first_image__pg}>
