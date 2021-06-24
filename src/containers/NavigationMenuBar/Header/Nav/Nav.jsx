@@ -20,7 +20,7 @@ const Nav = () => {
             <ul className={classes.ul}>
                 <div className={classes.left}>
                     <NavItem url="/product">Product</NavItem>
-                    <NavItem url="/about-us">About Us</NavItem>
+                    <NavItem url="/about">About Us</NavItem>
                     <NavItem url="/new">New</NavItem>
                     <NavItem url="/delivery">Delivery</NavItem>
                     <NavItem url="/contacts"> Contacts</NavItem>
