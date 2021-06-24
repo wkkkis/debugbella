@@ -10,11 +10,13 @@ import Collection from "../../components/Collection/Collection";
 import Button from "../../components/Button/Button";
 import Subscription from "../../components/Subscription/Subscription";
 import Advantages from "../../components/Advantages/Advantages";
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 const Main = () => {
     return (
         <>
             <div className={classes.main_container}>
+                <HeroSection />
                 <div className={classes.secondary_container}>
                     <div className={classes.third_container}>
                         <div className={classes.inner_container}>
