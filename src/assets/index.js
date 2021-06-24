@@ -1,9 +1,9 @@
 //logo
-export {default as logo} from "../assests/image/Bella.svg";
+export { default as logo } from "./image/bella.svg";
 
 //btnLinkMenu
-export {default as search} from "../assests/btnImage/search 1.svg";
-export {default as shopCart} from "../assests/btnImage/shopping-bag 1.svg";
-export {default as user} from "../assests/btnImage/user 1.svg";
-export {default as favorite} from "../assests/btnImage/Fovarite.svg";
-export {default as dropBtn} from "../assests/btnImage/dropVector.svg";
+export { default as search } from "../assets/btnImage/search 1.svg";
+export { default as shopCart } from "../assets/btnImage/shopping-bag 1.svg";
+export { default as user } from "../assets/btnImage/user 1.svg";
+export { default as favorite } from "../assets/btnImage/Fovarite.svg";
+export { default as dropBtn } from "../assets/btnImage/dropVector.svg";

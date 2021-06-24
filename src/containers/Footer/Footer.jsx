@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "../Footer/Footer.module.scss";
-import odnoklassniki from "../../assets/images/odnokl.png";
-import vk from "../../assets/images/vk.png";
-import insta from "../../assets/images/insta.png";
-import facebook from "../../assets/images/facebook.png";
+import odnoklassniki from "../../assets/aijan_img/odnokl.png";
+import vk from "../../assets/aijan_img/vk.png";
+import insta from "../../assets/aijan_img/insta.png";
+import facebook from "../../assets/aijan_img/facebook.png";
 const Footer = () => {
     return (
         <div className={classes.mainContainer}>
