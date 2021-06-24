@@ -42,7 +42,7 @@ const SortPopup = ({ item }) => {
           {
              visiblePopup &&
             item.map(item => (
-              <div className={classes.sort__sort_wrap__open_links__drop_link}>
+              <div onClick={() => console.log(item.type)} className={classes.sort__sort_wrap__open_links__drop_link}>
                 <span key={item.type}>{item.name}</span><br />
               </div>
             ))

@@ -6,7 +6,7 @@ const PageName = () => {
   return (
     <div className={classes.pages_name}>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="about/">
           <span>О нас</span>
         </Route>
         <Route exact path="/favorite">
