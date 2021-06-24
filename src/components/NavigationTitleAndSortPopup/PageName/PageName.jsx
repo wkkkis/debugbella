@@ -1,11 +1,14 @@
 import React from "react"
 import classes from './NavigationPageName.module.scss';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom'
 
 const PageName = () => {
   return (
     <div className={classes.pages_name}>
       <Switch>
+        <Route exact path="about/">
+          <span>О нас</span>
+        </Route>
         <Route exact path="/favorite">
           <span>Избранное</span>
         </Route>

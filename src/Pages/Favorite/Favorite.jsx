@@ -22,7 +22,7 @@ const Favorite = () => {
 
     <div className={classes.favorite_wrap}>
       <NavigationTitleAndSortPopup item={favoriteSortItems} />
-      <div className={classes.favorite_wrap__container}>
+      <div className={classes.__containfavorite_wraper}>
         {count.map(item => {
           return (
             <ProductCart key={item} />
