@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Backdrop from "../Backdrop/Backdrop";
 import classes from "./Drawer.module.scss";
-import user from "../../../images/user.png";
+import user from "../../../../assets/image/user.png";
 const Drawer = ({ open, closeDrawer }) => {
   const drawerClasses = [classes.content, open ? classes.open : classes.close];
 

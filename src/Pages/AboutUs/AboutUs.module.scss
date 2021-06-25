@@ -3,15 +3,20 @@ $grey: #7c7c7c;
 
 .mainContainer {
     width: 100%;
-
+    display: flex;
+    justify-content: center;
     .main_header {
-
+        width: 80%;
+        .heading {
+            font-size: 28px;
+            margin: 30px 0 30px 0;
+        }
         .first_image {
             width: 100%;
-            position: relative;
+            // position: relative;
 
             &__text {
-                position: absolute;
+                // position: absolute;
                 width: 703px;
                 height: 157px;
                 background-color: green;
@@ -22,7 +27,7 @@ $grey: #7c7c7c;
             }
 
             &__pg {
-                position: absolute;
+                // position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -49,14 +54,14 @@ $grey: #7c7c7c;
             padding-top: 40px;
         }
         .third_image {
-            position: absolute;
+            // position: absolute;
             width: 700px;
             height: 469px;
             top: 1095px;
             left: 515px;
         }
         .fourth_image {
-            position: absolute;
+            // position: absolute;
             z-index: 1;
             padding-top: 40px;
             background-color: $white;
