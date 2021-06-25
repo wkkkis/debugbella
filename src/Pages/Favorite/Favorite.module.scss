@@ -1,12 +1,14 @@
 @import "src/styles/modules/mixins/modal";
 
 .favorite_wrap {
-  margin: 0 auto 20px auto;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin: 0 auto 20px auto;
     width: 100%;
-    margin-bottom: 20px;
-  }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
