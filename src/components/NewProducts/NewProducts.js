@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "../../styles/styles.module.scss";
-import dress_model from "../../assets/images/dress_model.svg";
-import cart from "../../assets/images/cart.svg";
-import favourite from "../../assets/images/favourite.png";
+import dress_model from "../../assets/image/dress_model.svg";
+import cart from "../../assets/image/cart.svg";
+import favourite from "../../assets/image/favourite.png";
 import ColorSelection from "../ColorSelection/ColorSelection";
-import new_logo from "../../assets/images/new.svg";
+import new_logo from "../../assets/image/new.svg";
 
 const NewProducts = () => {
     return (
