@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import style from './Products.module.scss'
-import lock from '../../../../assets/lock.png'
-import VerticalSlider from '../../components/VerticalSlider/VerticalSlider';
-=======
 import React from "react";
 import style from "./Products.module.scss";
 import lock from "../../assets/lock_nextImg/lock.png";
 import VerticalSlider from "../../components/VerticalSlider/VerticalSlider";
->>>>>>> 4e8e38bca780f86f28141a3dff34ee66866036b5
 
 const Products = () => {
     return (
