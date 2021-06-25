@@ -4,11 +4,7 @@ import lupa from "../../../../assets/image/lupa.png";
 import heart from "../../../../assets/image/heart.png";
 import shop from "../../../../assets/image/shop.png";
 import user from "../../../../assets/image/user.png";
-<<<<<<< HEAD
-import bella from "../../../../assets/image/bella.svg"; 
-=======
 import bella from "../../../../assets/image/bella.svg";
->>>>>>> 4e8e38bca780f86f28141a3dff34ee66866036b5
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
