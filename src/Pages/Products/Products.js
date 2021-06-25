@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Products.module.scss'
-import lock from '../../assets/lock.png'
+import lock from '../../../../assets/lock.png'
 import VerticalSlider from '../../components/VerticalSlider/VerticalSlider';
 
 const Products = () => {

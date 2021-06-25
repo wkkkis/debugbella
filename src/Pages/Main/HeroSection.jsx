@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './HeroSettings.module.scss';
-import arrow from '../../assets/lock_nextImg/next.png';
-import img1 from '../../assets/sliderImg/01.jpg';
-import img2 from '../../assets/sliderImg/02.jpg';
-import img3 from '../../assets/sliderImg/03.jpg';
+import arrow from '../../../../assets/lock_nextImg/next.png';
+import img1 from '../../../../assets/sliderImg/01.jpg';
+import img2 from '../../../../assets/sliderImg/02.jpg';
+import img3 from '../../../../assets/sliderImg/03.jpg';
 
 const HeroSection = () => {
 

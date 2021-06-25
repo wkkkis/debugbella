@@ -2,8 +2,8 @@ import React from 'react';
 
 import classes from './ProductCart.module.scss';
 
-import dress_model from '../../assests/image/Rectangle 353.svg';
-import { favorite } from '../../assests';
+import dress_model from '../../assets/image/Rectangle 353.svg';
+import { favorite } from '../../assets';
 import { ColorPickerBtn } from '../index';
 
 const color = [

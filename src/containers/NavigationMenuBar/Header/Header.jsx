@@ -2,8 +2,8 @@ import classes from "./Header.module.scss";
 import Nav from "./Nav/Nav";
 import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen";
 import { NavLink} from "react-router-dom";
-import shop from "../../images/shop.png";
-import lupa from "../../images/lupa.png";
+import shop from "../../assets/image/shop.png";
+import lupa from "../../../../assets/image/lupa.png";
 import Logo from "./Logo/Logo"
 
 const Header = ({ openDrawer }) => {

@@ -1,10 +1,10 @@
 import NavItem from "./NavItem/NavItem";
 import classes from "./Nav.module.scss";
-import lupa from "../../../images/lupa.png";
-import heart from "../../../images/heart.png";
-import shop from "../../../images/shop.png";
-import user from "../../../images/user.png";
-import bella from "../../../images/bella.svg"; 
+import lupa from "../../../../assets/image/lupa.png";
+import heart from "../../../../assets/image/heart.png";
+import shop from "../../../../assets/image/shop.png";
+import user from "../../../../assets/image/user.png";
+import bella from "../../../../assets/image/bella.svg"; 
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
