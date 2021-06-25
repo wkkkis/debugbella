@@ -1,9 +1,9 @@
-// import bella from "../../../images/bella.svg";
+import bella from "../../../../assets/image/bella.svg";
 
 const Logo = () => {
   return ( 
     <div>
-     <img src="" alt="logo" />
+     <img src={bella} alt="logo" />
     </div>
    );
 }
