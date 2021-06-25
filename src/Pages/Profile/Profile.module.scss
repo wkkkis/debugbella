@@ -1,0 +1,119 @@
+.profilePage{
+  width: 100%;
+}
+
+.profile {
+  width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 200px;
+
+}
+
+.input_cont {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+
+  input {
+    width: 344px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-color: #e4e4e4;
+    outline: none;
+  }
+  h5 {
+    font-size: 13px;
+    color: black;
+    font-weight: 500;
+  }
+}
+
+.btn_reg {
+  width: 344px;
+  margin-bottom: 15px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+
+  a {
+    color: white;
+  }
+}
+
+.btn__save {
+  width: 344px;
+  margin-bottom: 15px;
+  background-color: #bdbdbd;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+
+  a {
+    color: black;
+  }
+}
+
+.second__cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .bella1 {
+    background-image: url(../../images/bellaprofile1.png);
+    margin-bottom: -20px;
+
+    width: 300px;
+    z-index: 100;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .bella {
+    margin-left: 35px;
+    width: 220px;
+  }
+}
+
+.img2{
+  width: 432px;
+  height: 520px;
+}
+
+
+.product {
+  width: 200px;
+
+  margin-left: 112px;
+  padding-top: 15px;
+  padding-bottom: 20;
+  .product1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+   
+    margin-left: 20px;
+    margin-bottom: 40px;
+
+a{
+  color: black;
+}
+
+    a:hover {
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
