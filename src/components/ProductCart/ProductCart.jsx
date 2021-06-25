@@ -2,9 +2,15 @@ import React from "react";
 
 import classes from "./ProductCart.module.scss";
 
+<<<<<<< HEAD
+import dress_model from '../../assets/image/Rectangle 353.svg';
+import { favorite } from '../../assets';
+import { ColorPickerBtn } from '../index';
+=======
 import dress_model from "../../assets/image/rect.svg";
 import { favorite } from "../../assets";
 import { ColorPickerBtn } from "../index";
+>>>>>>> 4e8e38bca780f86f28141a3dff34ee66866036b5
 
 const color = [
     `#6977f0`,

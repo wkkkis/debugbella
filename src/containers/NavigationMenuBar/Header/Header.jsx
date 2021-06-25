@@ -1,10 +1,17 @@
 import classes from "./Header.module.scss";
 import Nav from "./Nav/Nav";
 import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen";
+<<<<<<< HEAD
+import { NavLink} from "react-router-dom";
+import shop from "../../assets/image/shop.png";
+import lupa from "../../../../assets/image/lupa.png";
+import Logo from "./Logo/Logo"
+=======
 import { NavLink } from "react-router-dom";
 import shop from "../../../assets/image/shop.png";
 import lupa from "../../../assets/image/lupa.png";
 import Logo from "./Logo/Logo";
+>>>>>>> 4e8e38bca780f86f28141a3dff34ee66866036b5
 
 const Header = ({ openDrawer }) => {
     return (
