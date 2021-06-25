@@ -11,7 +11,7 @@ import Button from "../../components/Button/Button";
 import Subscription from "../../components/Subscription/Subscription";
 import Advantages from "../../components/Advantages/Advantages";
 import HeroSection from "../../components/HeroSection/HeroSection";
-
+import News from "../../components/News/News";
 const Main = () => {
     return (
         <>
@@ -82,6 +82,7 @@ const Main = () => {
                 <Collection />
                 <Subscription />
                 <Advantages />
+                <News />
             </div>
         </>
     );

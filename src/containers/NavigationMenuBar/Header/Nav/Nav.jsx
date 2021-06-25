@@ -19,13 +19,13 @@ const Nav = () => {
         <div className={classes.Nav}>
             <ul className={classes.ul}>
                 <div className={classes.left}>
-                    <NavItem url="/product">Product</NavItem>
+                    <NavItem url="/">Product</NavItem>
                     <NavItem url="/about">About Us</NavItem>
                     <NavItem url="/new">New</NavItem>
                     <NavItem url="/delivery">Delivery</NavItem>
                     <NavItem url="/contacts"> Contacts</NavItem>
                 </div>
-                <NavItem url="/product" exact>
+                <NavItem url="/" exact>
                     <img src={bella} alt="logo" />
                 </NavItem>
 
@@ -36,7 +36,7 @@ const Nav = () => {
                             Search
                         </span>
                     </NavItem>
-                    <NavItem url="/favorites">
+                    <NavItem url="/favourites">
                         <span className={classes.img}>
                             <img src={heart} alt="logo" />
                             Favorites
