@@ -19,11 +19,16 @@ const Favourites = () => {
 
     return (
         <div className={classes.favorite_wrap}>
-            <NavigationTitleAndSortPopup item={favoriteSortItems} />
-            <div className={classes.favorite_wrap__container}>
-                {count.map((item) => {
-                    return <ProductCart key={item} />;
-                })}
+            <div className={classes.favorite_wrap__inner}>
+                <div className={classes.favorite_wrap__header}>
+                    <span>Избранное</span>
+                    <NavigationTitleAndSortPopup item={favoriteSortItems} />
+                </div>
+                <div className={classes.favorite_wrap__container}>
+                    {count.map((item) => {
+                        return <ProductCart key={item} />;
+                    })}
+                </div>
             </div>
         </div>
     );

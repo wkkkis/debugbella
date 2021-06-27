@@ -9,6 +9,7 @@ import {
     Delivery,
     PageNotFound,
     Favourites,
+    Category,
 } from "./Pages";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                     <Route exact path="/details" component={Products} />
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
+                    <Route exact path="/category" component={Category} />
                 </Switch>
             </Layout>
             <Footer />
