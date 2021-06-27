@@ -20,7 +20,7 @@ const Nav = () => {
                 <div className={classes.left}>
                     <NavItem url="/product">Product</NavItem>
                     <NavItem url="/about">About Us</NavItem>
-                    <NavItem url="/new">New</NavItem>
+                    <NavItem url="/news">News</NavItem>
                     <NavItem url="/delivery">Delivery</NavItem>
                     <NavItem url="/contacts"> Contacts</NavItem>
                 </div>
@@ -35,7 +35,7 @@ const Nav = () => {
                             Search
                         </span>
                     </NavItem>
-                    <NavItem url="/favorites">
+                    <NavItem url="/favourites">
                         <span className={classes.img}>
                             <img src={heart} alt="logo" />
                             Favorites

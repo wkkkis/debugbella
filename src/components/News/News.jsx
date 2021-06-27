@@ -25,6 +25,63 @@ const News = () => {
                         </button>
                     </div>
                 </div>
+                <div className={style.newscart}>
+                    <div className={style.newscart__blockLeft}>
+                        <img src={newsImg} alt="img-news" />
+                    </div>
+                    <div className={style.newscart__blockRight}>
+                        <p className={style.newscart__data}>22.06.21</p>
+                        <h1 className={style.newscart__title}>
+                            Гарантия обмена и возврата товара
+                        </h1>
+                        <p className={style.newscart__text}>
+                            100% гарантия возврата товара -14 дней на возврат,
+                            без скандалов и истерик
+                        </p>
+                        <button className={style.newscart__btn}>
+                            Подробнее
+                            <img src={arrow} alt="img-arrow" />
+                        </button>
+                    </div>
+                </div>
+                <div className={style.newscart}>
+                    <div className={style.newscart__blockLeft}>
+                        <img src={newsImg} alt="img-news" />
+                    </div>
+                    <div className={style.newscart__blockRight}>
+                        <p className={style.newscart__data}>22.06.21</p>
+                        <h1 className={style.newscart__title}>
+                            Гарантия обмена и возврата товара
+                        </h1>
+                        <p className={style.newscart__text}>
+                            100% гарантия возврата товара -14 дней на возврат,
+                            без скандалов и истерик
+                        </p>
+                        <button className={style.newscart__btn}>
+                            Подробнее
+                            <img src={arrow} alt="img-arrow" />
+                        </button>
+                    </div>
+                </div>
+                <div className={style.newscart}>
+                    <div className={style.newscart__blockLeft}>
+                        <img src={newsImg} alt="img-news" />
+                    </div>
+                    <div className={style.newscart__blockRight}>
+                        <p className={style.newscart__data}>22.06.21</p>
+                        <h1 className={style.newscart__title}>
+                            Гарантия обмена и возврата товара
+                        </h1>
+                        <p className={style.newscart__text}>
+                            100% гарантия возврата товара -14 дней на возврат,
+                            без скандалов и истерик
+                        </p>
+                        <button className={style.newscart__btn}>
+                            Подробнее
+                            <img src={arrow} alt="img-arrow" />
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );

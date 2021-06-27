@@ -23,9 +23,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 3rem;
 
     .mainCart {
-        width: 90%;
+        width: 80%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -38,27 +39,27 @@
     display: flex;
     margin: 15px;
 
-    .newscart__blockRight {
+    &__blockRight {
         margin: 22px;
     }
-    .newscart__data {
+    &__data {
         font-weight: 550;
         font-size: 13px;
         color: #7c7c7c;
     }
-    .newscart__title {
+    &__title {
         font-weight: 600;
         font-size: 15px;
         color: #000000;
     }
-    .newscart__text {
+    &__text {
         font-weight: 400;
         font-size: 14px;
         color: #7c7c7c;
         letter-spacing: 0.04em;
         line-height: 150%;
     }
-    .newscart__btn {
+    &__btn {
         width: 234px;
         height: 44px;
         background: #ffffff;
@@ -67,13 +68,13 @@
         font-size: 14px;
         font-weight: 400;
     }
-    .newscart__btn img {
+    &__btn img {
         width: 14px;
         height: 14px;
         margin: 0 7px;
     }
     //--------HOVER-------------
-    .newscart__btn:hover {
+    &__btn:hover {
         background: #2a2a2a;
         color: white;
         transition: all 0.2s ease-in-out;

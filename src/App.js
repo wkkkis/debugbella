@@ -1,4 +1,4 @@
-import { Footer, Header , } from "./containers";
+import { Footer, Layout } from "./containers";
 import { Route, Switch } from "react-router-dom";
 import {
     AboutUs,
@@ -8,9 +8,8 @@ import {
     Products,
     Delivery,
     PageNotFound,
+    Favourites,
 } from "./Pages";
-import Layout from './containers/Layout/Layout'
-
 
 function App() {
     return (
@@ -24,9 +23,10 @@ function App() {
                     <Route exact path="/about" component={AboutUs} />
                     <Route exact path="/details" component={Products} />
                     <Route exact path="/notFound" component={PageNotFound} />
+                    <Route exact path="/favourites" component={Favourites} />
                 </Switch>
             </Layout>
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

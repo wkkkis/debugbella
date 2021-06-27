@@ -8,9 +8,6 @@ import classes from "../Advantages/Advantages.module.scss";
 const Advantages = () => {
     return (
         <div className={classes.main_advantages}>
-            <section>
-                <h4 className={classes.heading}>Наши преимущества</h4>
-            </section>
             <div className={classes.main_advantages__wrapper}>
                 <div className={classes.wrapper__card}>
                     <img src={money} alt="money_icon" />

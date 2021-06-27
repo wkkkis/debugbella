@@ -1,20 +1,18 @@
 import React from "react";
-
 import classes from "./ProductCart.module.scss";
-
 import dress_model from "../../assets/image/rect.svg";
 import { favorite } from "../../assets";
-import { ColorPickerBtn } from "../index";
+import { ColorSelection } from "../index";
 
-const color = [
-    `#6977f0`,
-    `#73a39d`,
-    `#84cc4c`,
-    `#ab844a`,
-    `#a4adac`,
-    `#d1d1d1`,
-    `#ff6363`,
-];
+// const color = [
+//     `#6977f0`,
+//     `#73a39d`,
+//     `#84cc4c`,
+//     `#ab844a`,
+//     `#a4adac`,
+//     `#d1d1d1`,
+//     `#ff6363`,
+// ];
 
 const ProductCart = () => {
     return (
@@ -62,11 +60,12 @@ const ProductCart = () => {
                 </div>
             </div>
 
-            <div className={classes.color_picker}>
+            {/* <div className={classes.color_picker}>
                 {color.map((color) => {
                     return <ColorPickerBtn color={color} />;
                 })}
-            </div>
+            </div> */}
+            <ColorSelection />
         </div>
     );
 };

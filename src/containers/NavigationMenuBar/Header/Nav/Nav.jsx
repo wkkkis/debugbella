@@ -21,7 +21,7 @@ const Nav = () => {
                 <div className={classes.left}>
                     <NavItem url="/">Product</NavItem>
                     <NavItem url="/about">About Us</NavItem>
-                    <NavItem url="/new">New</NavItem>
+                    <NavItem url="/news">News</NavItem>
                     <NavItem url="/delivery">Delivery</NavItem>
                     <NavItem url="/contacts"> Contacts</NavItem>
                 </div>
@@ -39,7 +39,7 @@ const Nav = () => {
                     <NavItem url="/favourites">
                         <span className={classes.img}>
                             <img src={heart} alt="logo" />
-                            Favorites
+                            Favourites
                         </span>
                     </NavItem>
 
@@ -79,15 +79,13 @@ const Nav = () => {
                                         style={{ position: "absolute" }}
                                     >
                                         <span className={classes.link}>
-                                            <Link to="/product">
-                                                мои заказы
-                                            </Link>
+                                            <Link to="/orders">мои заказы</Link>
                                         </span>
                                         <span className={classes.link}>
-                                            <Link to="/product">профиль</Link>
+                                            <Link to="/profile">профиль</Link>
                                         </span>
                                         <span className={classes.link}>
-                                            <Link to="/product">выйти</Link>
+                                            <Link to="/notFound">выйти</Link>
                                         </span>
                                     </div>
                                 </>

@@ -7,8 +7,6 @@ import autumn from "../../assets/image/autumn.png";
 const Collection = () => {
     return (
         <div className={classes.collection_container}>
-            <section className={classes.topSales_wrap}></section>
-            <span className={classes.topSales}>Коллекция</span>
             <div className={classes.third_container}>
                 <div className={classes.inner_container}>
                     <div className={classes.category_card}>
