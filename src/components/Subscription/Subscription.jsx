@@ -64,6 +64,15 @@ const Subscription = (callback, Validate) => {
                             ullamcorper porttitor faucibus tellus. Elit
                             ullamcorper lorem in mauris.
                         </p>
+<<<<<<< HEAD
+                        {/* <label>Имя</label> */}
+                        {/* <input
+                            placeholder="Ваше Ф.И.О."
+                            className={styles.form_inp}
+                        /> */}
+                        {/* <label>WhatsApp номер</label> */}
+                        {/* <input
+=======
                         <input
                             placeholder="Ваше Ф.И.О."
                             className={styles.form_inp}
@@ -73,6 +82,7 @@ const Subscription = (callback, Validate) => {
                             required
                         />
                         <input
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
                             placeholder="WhatsApp номер"
                             className={styles.form_inp}
                             type="number"
@@ -99,6 +109,11 @@ const Subscription = (callback, Validate) => {
                             >
                                 Верхняя одежда
                             </option>
+<<<<<<< HEAD
+                            <option className={styles.option}>Пальто</option>
+                            <option className={styles.option}>Туники</option>
+                        </select> */}
+=======
                             <option
                                 value="category"
                                 name="category"
@@ -114,8 +129,9 @@ const Subscription = (callback, Validate) => {
                                 Туники
                             </option>
                         </select>
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
 
-                        <button
+                        {/* <button
                             className={styles.form_wrapper__btn}
                             onClick={handleSubmit}
                         >
@@ -125,10 +141,17 @@ const Subscription = (callback, Validate) => {
                                 className={styles.form_wrapper__img}
                             />
                             Подписаться
+<<<<<<< HEAD
+                        </button> */}
+                        <p className={styles.alert}>
+                            Не заполнены обязательные поля
+                        </p>
+=======
                         </button>
                         {errors.valid && (
                             <p className={styles.alert}>{errors.valid}</p>
                         )}
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
                     </div>
                 </div>
             </div>
