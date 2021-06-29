@@ -13,7 +13,6 @@ import {
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
-
 function App() {
     return (
         <>
@@ -24,16 +23,18 @@ function App() {
                     <Route exact path="/favourite" component={Favorite} />
                     <Route exact path="/delivery" component={Delivery} />
                     <Route exact path="/news" component={NewsCart} />
-                    <Route exact path="/news_details/" component={NewsDetails}/>
+                    <Route
+                        exact
+                        path="/news_details/"
+                        component={NewsDetails}
+                    />
                     <Route exact path="/details" component={Products} />
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
                 </Switch>
-
-                
             </Layout>
-  
+
             <Footer />
         </>
     );
