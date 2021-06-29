@@ -2,8 +2,10 @@ import React from 'react';
 import style from './NewsCart.module.scss';
 import newsImg from '../../assets/newsimg.png';
 import arrow from '../../assets/lock_nextImg/arrow_brown.png';
+import { Link } from 'react-router-dom';
 
-const NewsCart = () => {
+const NewsCart = (props) => {
+  // props посмотри откуда приходит--это Нурбек---
   return (
     <>
       <div className={style.breadCrumbs}>
@@ -18,6 +20,7 @@ const NewsCart = () => {
 
       <div className={style.w_100}>
         <div className={style.mainCart}>
+        <Link to={`/news_details/`}> {/*${props.item.id} */}
           <div className={style.newscart}>
             <div className={style.newscart__blockLeft}>
               <img src={newsImg} alt="img-news" />
@@ -32,6 +35,7 @@ const NewsCart = () => {
               </button>
             </div>
           </div>
+        </Link>
 
           <div className={style.newscart}>
             <div className={style.newscart__blockLeft}>

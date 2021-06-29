@@ -1,6 +1,6 @@
 import classes from "./Header.module.scss";
 import Nav from "./Nav/Nav";
-import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen";
+import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen"
 import { NavLink } from "react-router-dom";
 import shop from "../../../assets/image/shop.png";
 import lupa from "../../../assets/image/lupa.png";

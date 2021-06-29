@@ -8,10 +8,29 @@
     transition: transform 0.5s;
 }
 
+.Drawer{
+  height: 100%;
+}
+
 .content {
+<<<<<<< HEAD
     width: 300px;
     background-color: #fff;
     position: absolute;
+=======
+  width: 300px;
+  background-color: #fff;
+  position: absolute;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  padding: 15px 0px;
+  z-index: 1;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+>>>>>>> f55df87f6ff3fc0f9a19e7f4c703d8ce035a1690
     height: 100%;
     top: 0;
     left: 0;
@@ -53,6 +72,7 @@
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 1120px) {
     .Drawer {
         display: none;
@@ -66,8 +86,27 @@
         .drawerLinks {
             height: 300px;
         }
+=======
+@media (min-width: 966px) {
+  .Drawer {
+    height: 100%;
+    display: none;
+    .content {
+      width: 300px;
+    }
+    li {
+      margin: 0;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+    }
+    .drawerLinks {
+      height: 300px;
+>>>>>>> f55df87f6ff3fc0f9a19e7f4c703d8ce035a1690
     }
 }
+<<<<<<< HEAD
 @media (max-width: 700px) {
     .Drawer {
         .content {
@@ -75,3 +114,5 @@
         }
     }
 }
+=======
+>>>>>>> f55df87f6ff3fc0f9a19e7f4c703d8ce035a1690
