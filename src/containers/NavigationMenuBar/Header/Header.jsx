@@ -1,10 +1,6 @@
 import classes from "./Header.module.scss";
 import Nav from "./Nav/Nav";
-<<<<<<< HEAD
-import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen";
-=======
 import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen"
->>>>>>> 3428be4fae658533e15ceeafc9f98598aa5af9bb
 import { NavLink } from "react-router-dom";
 import shop from "../../../assets/image/shop.png";
 import lupa from "../../../assets/image/lupa.png";
