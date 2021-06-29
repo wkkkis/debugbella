@@ -27,8 +27,11 @@ function App() {
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
                 </Switch>
+
+                <Footer />
             </Layout>
-            <Footer />
+  
+        
         </>
     );
 }

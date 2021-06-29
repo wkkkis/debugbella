@@ -10,6 +10,7 @@ ul li {
   a {
     color: #7c7c7c;
     font-size: 13px;
+    text-decoration: none;
   }
   .tov {
     color: black;
@@ -18,7 +19,7 @@ ul li {
 }
 
 
-@media (max-width: 1119px) {
+@media (max-width: 965px) {
     li a {
     padding: 10px;
     margin: 10px;

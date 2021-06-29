@@ -19,11 +19,11 @@ const Nav = () => {
         <div className={classes.Nav}>
             <ul className={classes.ul}>
                 <div className={classes.left}>
-                    <NavItem url="/">Product</NavItem>
-                    <NavItem url="/about">About Us</NavItem>
-                    <NavItem url="/news">News</NavItem>
-                    <NavItem url="/delivery">Delivery</NavItem>
-                    <NavItem url="/contacts"> Contacts</NavItem>
+                    <NavItem url="/">Товары</NavItem>
+                    <NavItem url="/about">О нас</NavItem>
+                    <NavItem url="/news">Новости</NavItem>
+                    <NavItem url="/delivery">Доставка</NavItem>
+                    <NavItem url="/contacts"> Контакты</NavItem>
                 </div>
                 <NavItem url="/" exact>
                     <img src={bella} alt="logo" />
@@ -33,13 +33,13 @@ const Nav = () => {
                     <NavItem url="/search">
                         <span className={classes.img}>
                             <img src={lupa} alt="logo" />
-                            Search
+                            Поиск
                         </span>
                     </NavItem>
                     <NavItem url="/favourites">
                         <span className={classes.img}>
                             <img src={heart} alt="logo" />
-                            Favourites
+                            Избранные
                         </span>
                     </NavItem>
 
@@ -68,7 +68,7 @@ const Nav = () => {
                                             : classes.hoverDropDown__color
                                     }
                                 >
-                                    Profile
+                                    Профиль
                                 </span>
                             </div>
 
@@ -96,7 +96,7 @@ const Nav = () => {
                     <NavItem url="/basket">
                         <span className={classes.img}>
                             <img src={shop} alt="logo" />
-                            Basket
+                            Корзина
                         </span>
                     </NavItem>
                 </div>

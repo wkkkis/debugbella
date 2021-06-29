@@ -12,13 +12,13 @@ const Drawer = ({ open, closeDrawer }) => {
         <ul className={classes.ul}>
           <div className={classes.links}>
             <li>
-              <NavLink to="/products">Товары</NavLink>
+              <NavLink to="/details">Товары</NavLink>
             </li>
             <li>
-              <NavLink to="/aboutUs">О нас</NavLink>
+              <NavLink to="/about">О нас</NavLink>
             </li>
             <li>
-              <NavLink to="/new">Новости</NavLink>
+              <NavLink to="/news">Новости</NavLink>
             </li>
             <li>
               <NavLink to="/delivery">Доставка</NavLink>
@@ -27,7 +27,7 @@ const Drawer = ({ open, closeDrawer }) => {
               <NavLink to="/contacts">Контакты</NavLink>
             </li>
             <li>
-              <NavLink to="/favorites">Избранное</NavLink>
+              <NavLink to="/favourite">Избранное</NavLink>
             </li>
           </div>
           <div className={classes.profile}>

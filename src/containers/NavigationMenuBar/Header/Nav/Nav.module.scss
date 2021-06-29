@@ -4,8 +4,9 @@
   padding: 0;
 }
 
-span {
+span , ul , li , ol {
   margin: 0;
+  padding: 0;
 }
 
 .Nav {
@@ -15,6 +16,8 @@ span {
   max-width: 100%;
   margin: 0 auto;
   z-index: 100;
+  border-bottom: solid 0.5px #c4c4c4;
+  
   .ul {
     width: 1366px;
     display: flex;
@@ -31,8 +34,9 @@ span {
 
   span {
     font-size: 13px;
+    color: #4e4e4e;
     img {
-      margin-right: 9px;
+      margin-right: 5px;
     }
   }
 }
@@ -96,7 +100,7 @@ span {
   }
 }
 
-@media (max-width: 1119px) {
+@media (max-width: 965px) {
   .Nav {
     display: none;
   }
