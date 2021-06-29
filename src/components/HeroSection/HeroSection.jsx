@@ -1,5 +1,5 @@
 import React from "react";
-import "./HeroSettings.scss";
+import "./HeroSettings.css";
 import arrow from "../../assets/lock_nextImg/next.png";
 import img1 from "../../assets/SliderImg/01.jpg";
 import img2 from "../../assets/SliderImg/02.jpg";
@@ -10,7 +10,8 @@ const HeroSection = () => {
         <>
             <div
                 id="carouselExampleCaptions"
-                class="carousel slide"
+                data-interval="5000"
+                class="carousel slide carousel-fade"
                 data-bs-ride="carousel"
             >
                 <div class="carousel-indicators">
@@ -38,7 +39,7 @@ const HeroSection = () => {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src={img1} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption  d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -57,7 +58,7 @@ const HeroSection = () => {
                     </div>
                     <div class="carousel-item">
                         <img src={img2} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption  d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -76,7 +77,7 @@ const HeroSection = () => {
                     </div>
                     <div class="carousel-item">
                         <img src={img3} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption  d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
