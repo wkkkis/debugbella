@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./Category.module.scss";
+import { Link } from "react-router-dom";
 import NavigationTitleAndSortPopup from "../../components/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup";
 import { ProductCart } from "../../components";
+import arrow from "../../assets/image/arrow.png";
 const categorySortItems = [
     { name: "По алфавиту", type: "alphabet", order: "desc" },
     { name: "По обновлению", type: "update", order: "desc" },
@@ -18,10 +20,191 @@ const Category = () => {
     const [count, setCount] = React.useState(arr);
 
     return (
-        <div className={classes.category_wrap}>
-            <div className={classes.category_wrap__inner}>
-                <div className={classes.category_wrap__category_drop}>
-                    <div
+        <div>
+            <div className={classes.breadCrumbs}>
+                <ul className={classes.breadCrumbs__list}>
+                    <li>Главная /</li>
+                    <li>Товары</li>
+                </ul>
+            </div>
+            <div className={classes.category_wrap}>
+                <div className={classes.category_wrap__inner}>
+                    {/* <div className={classes.category_wrap__category_drop}> */}
+                    <div className={classes.multilevel}>
+                        <div className={classes.item}>
+                            <input
+                                type="checkbox"
+                                className={classes.id}
+                                id="A"
+                            />
+                            <div className={classes.category_name_arrow}>
+                                <label htmlFor="A">Верхняя одежда</label>
+                                <img
+                                    src={arrow}
+                                    className={classes.arrow}
+                                    alt="arrow_icon"
+                                />
+                            </div>
+                            <ul>
+                                <li>
+                                    <Link className={classes.link} to="#">
+                                        Верхняя одежда
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className={classes.link} to="#">
+                                        Верхняя одежда
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className={classes.link} to="#">
+                                        Верхняя одежда
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={classes.item}>
+                            <input
+                                type="checkbox"
+                                className={classes.item__id}
+                                id="B"
+                            />
+                            <div className={classes.category_name_arrow}>
+                                <label htmlFor="B">Верхняя одежда</label>
+                                <img
+                                    src={arrow}
+                                    className={classes.arrow}
+                                    alt="arrow_icon"
+                                />
+                            </div>
+                            <ul>
+                                <div className={classes.sub_item}>
+                                    <input type="checkbox" id="B-A" />
+                                    <div
+                                        className={classes.category_name_arrow}
+                                    >
+                                        <label htmlFor="B-A">Футболка</label>
+                                        <img
+                                            src={arrow}
+                                            className={classes.arrow}
+                                            alt="arrow_icon"
+                                        />
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className={classes.sub_item}>
+                                    <input type="checkbox" id="B-A" />
+                                    <div
+                                        className={classes.category_name_arrow}
+                                    >
+                                        <label htmlFor="B-A">Рубашки</label>
+                                        <img
+                                            src={arrow}
+                                            className={classes.arrow}
+                                            alt="arrow_icon"
+                                        />
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className={classes.sub_item}>
+                                    <input type="checkbox" id="B-A" />
+                                    <div
+                                        className={classes.category_name_arrow}
+                                    >
+                                        <label htmlFor="B-A">Платье</label>
+                                        <img
+                                            src={arrow}
+                                            className={classes.arrow}
+                                            alt="arrow_icon"
+                                        />
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                className={classes.link}
+                                                to="#"
+                                            >
+                                                Верхняя одежда
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* <li>
+                                <Link to="#">Верхняя одежда</Link>
+                            </li>
+                            <li>
+                                <Link to="#">Верхняя одежда</Link>
+                            </li> */}
+                            </ul>
+                        </div>
+                        {/* <div
                         className={classes.category_wrap__category_drop__links}
                     >
                         <div
@@ -103,16 +286,21 @@ const Category = () => {
                                 />
                             </svg>
                         </div>
+                    </div> */}
                     </div>
-                </div>
 
-                <div className={classes.category_wrap__container}>
-                    <NavigationTitleAndSortPopup item={categorySortItems} />
+                    <div className={classes.category_wrap__container}>
+                        <NavigationTitleAndSortPopup item={categorySortItems} />
 
-                    <div className={classes.category_wrap__container__product}>
-                        {count.map((item) => {
-                            return <ProductCart key={item} />;
-                        })}
+                        <div
+                            className={
+                                classes.category_wrap__container__product
+                            }
+                        >
+                            {count.map((item) => {
+                                return <ProductCart key={item} />;
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

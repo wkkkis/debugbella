@@ -1,17 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 $font: "Open Sans", sans-serif;
+.breadCrumbs {
+    width: 86%;
+    margin: 0 auto;
 
+    &__list {
+        width: 80%;
+        display: flex;
+        word-spacing: 10px;
+    }
+}
 .category_wrap {
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     &__inner {
-        margin: 2rem 0 2rem 0;
+        margin: 1rem 0 2rem 0;
         width: 80%;
         display: flex;
         justify-content: center;
+        .multilevel {
+            width: 16rem;
+
+            .link {
+                text-decoration: none;
+                font-size: 13px;
+            }
+        }
+
+        .item ul {
+            display: none;
+            list-style: none;
+        }
+        .id:checked ~ .multilevel,
+        .item input:checked ~ ul {
+            display: block;
+        }
+        .category_name_arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .arrow {
+            vertical-align: middle;
+            float: right;
+            z-index: 0;
+        }
+        .item input + .category_name_arrow .arrow {
+            transform: rotate(-90deg);
+            transition: 0.1s;
+        }
+        .item input:checked + .category_name_arrow .arrow {
+            transform: rotate(0deg);
+            transition: 0.1s;
+        }
+
+        label:hover {
+            cursor: pointer;
+        }
+        label {
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
     }
     &__category_drop {
         width: 20%;
