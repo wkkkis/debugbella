@@ -1,5 +1,5 @@
 import React from "react";
-import "./HeroSettings.scss";
+import "./HeroSettings.css";
 import arrow from "../../assets/lock_nextImg/next.png";
 import img1 from "../../assets/SliderImg/01.jpg";
 import img2 from "../../assets/SliderImg/02.jpg";

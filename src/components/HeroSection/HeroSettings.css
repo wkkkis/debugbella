@@ -6,7 +6,7 @@
 }
 .block_absolute h5 {
     position: absolute;
-    bottom: 280px;
+    bottom: 310px;
     font-family: "Cormorant", serif;
     color: white;
     font-size: 64px;
@@ -18,7 +18,7 @@
 }
 .block_absolute button {
     position: absolute;
-    bottom: 200px;
+    bottom: 230px;
     width: 250px;
     background: #ab844a;
     color: white;
@@ -42,23 +42,45 @@
     margin: 0 7px;
 }
 @media screen and (max-width: 1120px) {
-    .carousel{
-        padding-top: 60px;
-    }
+    
     .block_absolute h5 {
         bottom: 250px;
         font-size: 53px;
     }
 
     .block_absolute button {
-        position: absolute;
         bottom: 195px;
-        width: 250px;
-        background: #ab844a;
-        color: white;
-        height: 44px;
-        border: none;
         font-size: 17px;
-        font-weight: 300;
+    }
+}
+@media screen and (max-width: 965px) {
+    .carousel{    
+    padding-top: 60px;
+    }
+}
+@media screen and (max-width: 810px) {
+    .block_absolute h5 {
+        bottom: 250px;
+        font-size: 48px;
+    }
+
+    .block_absolute button {
+        bottom: 190px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .block_absolute{
+        position: relative;
+    }
+    .block_absolute h5 {
+         bottom: 250px;
+        font-size: 21px;
+    }
+
+    .block_absolute button {
+         bottom: 190px;
+        font-size: 17px;
     }
 }
