@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./AboutUs.module.scss";
-import diva from "../../assets/aijan_img/diva.svg";
-import dress from "../../assets/aijan_img/about_us_dress.svg";
-import beach from "../../assets/aijan_img/beach.png";
+import diva from "../../assets/image/diva.png";
+import dress from "../../assets/image/about_us_dress.png";
+import beach from "../../assets/image/beach.png";
 const AboutUs = () => {
     return (
         <div className={classes.mainContainer}>
