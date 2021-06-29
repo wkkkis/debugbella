@@ -1,15 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import subscription_img from "../../assets/image/subscription_img.png";
 import styles from "../../components/Subscription/Subscription.module.scss";
 import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
 
-const Subscription = () => {
+const Subscription = (callback, Validate) => {
+    // const { values, errors, handleChange, handleSubmit } = SubscriptionCheck(
+    //     Subscribe,
+    //     Validate
+    // );
     const [showModal, setShowModal] = useState(false);
+    const [values, setValues] = useState({});
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
+    useEffect(() => {
+        if (Object.keys(errors).length === 0 && isSubmitting) {
+            callback();
+        }
+    }, [errors]);
+
+    const handleSubmit = (event) => {
+        if (event) event.preventDefault();
+        setErrors(Validate(values));
+        setIsSubmitting(true);
+        openModal();
+    };
+
+    const handleChange = (event) => {
+        event.persist();
+        setValues((values) => ({
+            ...values,
+            [event.target.name]: event.target.value,
+        }));
+    };
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
+
+    // function Subscribe() {
+    //     console.log("Done");
+    // }
     return (
         <div className={styles.main_subscription}>
             <div className={styles.subscription_wrapper}>
@@ -29,6 +60,7 @@ const Subscription = () => {
                             ullamcorper porttitor faucibus tellus. Elit
                             ullamcorper lorem in mauris.
                         </p>
+<<<<<<< HEAD
                         {/* <label>Имя</label> */}
                         {/* <input
                             placeholder="Ваше Ф.И.О."
@@ -36,24 +68,68 @@ const Subscription = () => {
                         /> */}
                         {/* <label>WhatsApp номер</label> */}
                         {/* <input
+=======
+                        <input
+                            placeholder="Ваше Ф.И.О."
+                            className={styles.form_inp}
+                            name="fullName"
+                            onChange={handleChange}
+                            value={values.fullName}
+                            required
+                        />
+                        <input
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
                             placeholder="WhatsApp номер"
                             className={styles.form_inp}
+                            type="number"
+                            name="phone"
+                            onChange={handleChange}
+                            value={values.phone}
+                            required
                         />
                         <select>
-                            <option className={styles.option}>
+                            <option defaultChecked className={styles.option}>
                                 Выбрать категорию
                             </option>
-                            <option className={styles.option}>Платья</option>
-                            <option className={styles.option}>
+                            <option
+                                name="category"
+                                value={values.category}
+                                className={styles.option}
+                            >
+                                Платья
+                            </option>
+                            <option
+                                value="category"
+                                name="category"
+                                className={styles.option}
+                            >
                                 Верхняя одежда
                             </option>
+<<<<<<< HEAD
                             <option className={styles.option}>Пальто</option>
                             <option className={styles.option}>Туники</option>
                         </select> */}
+=======
+                            <option
+                                value="category"
+                                name="category"
+                                className={styles.option}
+                            >
+                                Пальто
+                            </option>
+                            <option
+                                value="category"
+                                name="category"
+                                className={styles.option}
+                            >
+                                Туники
+                            </option>
+                        </select>
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
 
                         {/* <button
                             className={styles.form_wrapper__btn}
-                            onClick={openModal}
+                            onClick={handleSubmit}
                         >
                             <img
                                 src={bell}
@@ -61,10 +137,17 @@ const Subscription = () => {
                                 className={styles.form_wrapper__img}
                             />
                             Подписаться
+<<<<<<< HEAD
                         </button> */}
                         <p className={styles.alert}>
                             Не заполнены обязательные поля
                         </p>
+=======
+                        </button>
+                        {errors.valid && (
+                            <p className={styles.alert}>{errors.valid}</p>
+                        )}
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
                     </div>
                 </div>
             </div>

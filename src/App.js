@@ -11,7 +11,10 @@ import {
     Favourites,
     Category,
 } from "./Pages";
+<<<<<<< HEAD
 // import Layout from './containers/Layout/Layout'
+=======
+>>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
 
