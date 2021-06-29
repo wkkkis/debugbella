@@ -1,15 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import subscription_img from "../../assets/image/subscription_img.png";
 import styles from "../../components/Subscription/Subscription.module.scss";
 import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
 
-const Subscription = () => {
+const Subscription = (callback, Validate) => {
+    // const { values, errors, handleChange, handleSubmit } = SubscriptionCheck(
+    //     Subscribe,
+    //     Validate
+    // );
     const [showModal, setShowModal] = useState(false);
+    const [values, setValues] = useState({});
+    const [errors, setErrors] = useState({});
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
+    useEffect(() => {
+        if (Object.keys(errors).length === 0 && isSubmitting) {
+            callback();
+        }
+    }, [errors]);
+
+    const handleSubmit = (event) => {
+        if (event) event.preventDefault();
+        setErrors(Validate(values));
+        setIsSubmitting(true);
+        openModal();
+    };
+
+    const handleChange = (event) => {
+        event.persist();
+        setValues((values) => ({
+            ...values,
+            [event.target.name]: event.target.value,
+        }));
+    };
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
+
+    // function Subscribe() {
+    //     console.log("Done");
+    // }
     return (
         <div className={styles.main_subscription}>
             <div className={styles.subscription_wrapper}>
@@ -29,31 +60,60 @@ const Subscription = () => {
                             ullamcorper porttitor faucibus tellus. Elit
                             ullamcorper lorem in mauris.
                         </p>
-                        {/* <label>Имя</label> */}
                         <input
                             placeholder="Ваше Ф.И.О."
                             className={styles.form_inp}
+                            name="fullName"
+                            onChange={handleChange}
+                            value={values.fullName}
+                            required
                         />
-                        {/* <label>WhatsApp номер</label> */}
                         <input
                             placeholder="WhatsApp номер"
                             className={styles.form_inp}
+                            type="number"
+                            name="phone"
+                            onChange={handleChange}
+                            value={values.phone}
+                            required
                         />
                         <select>
-                            <option className={styles.option}>
+                            <option defaultChecked className={styles.option}>
                                 Выбрать категорию
                             </option>
-                            <option className={styles.option}>Платья</option>
-                            <option className={styles.option}>
+                            <option
+                                name="category"
+                                value={values.category}
+                                className={styles.option}
+                            >
+                                Платья
+                            </option>
+                            <option
+                                value="category"
+                                name="category"
+                                className={styles.option}
+                            >
                                 Верхняя одежда
                             </option>
-                            <option className={styles.option}>Пальто</option>
-                            <option className={styles.option}>Туники</option>
+                            <option
+                                value="category"
+                                name="category"
+                                className={styles.option}
+                            >
+                                Пальто
+                            </option>
+                            <option
+                                value="category"
+                                name="category"
+                                className={styles.option}
+                            >
+                                Туники
+                            </option>
                         </select>
 
                         <button
                             className={styles.form_wrapper__btn}
-                            onClick={openModal}
+                            onClick={handleSubmit}
                         >
                             <img
                                 src={bell}
@@ -62,9 +122,9 @@ const Subscription = () => {
                             />
                             Подписаться
                         </button>
-                        <p className={styles.alert}>
-                            Не заполнены обязательные поля
-                        </p>
+                        {errors.valid && (
+                            <p className={styles.alert}>{errors.valid}</p>
+                        )}
                     </div>
                 </div>
             </div>

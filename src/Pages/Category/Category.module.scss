@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 $font: "Open Sans", sans-serif;
+.breadCrumbs {
+    width: 86%;
+    margin: 0 auto;
 
+    &__list {
+        width: 80%;
+        display: flex;
+        word-spacing: 10px;
+    }
+}
 .category_wrap {
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     &__inner {
-        margin: 2rem 0 2rem 0;
+        margin: 1rem 0 2rem 0;
         width: 80%;
         display: flex;
         justify-content: center;
