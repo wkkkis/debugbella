@@ -11,12 +11,9 @@ import {
     Favourites,
     Category,
 } from "./Pages";
-<<<<<<< HEAD
-=======
-import Layout from './containers/Layout/Layout'
+// import Layout from './containers/Layout/Layout'
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
->>>>>>> 9cb1ba479f3592bc020f80bcc78ba92fb23f36e3
 
 function App() {
     return (
@@ -35,10 +32,10 @@ function App() {
                     <Route exact path="/category" component={Category} />
                 </Switch>
 
-                <Footer />
+                
             </Layout>
   
-        
+            <Footer />
         </>
     );
 }

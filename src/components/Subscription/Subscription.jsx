@@ -30,12 +30,12 @@ const Subscription = () => {
                             ullamcorper lorem in mauris.
                         </p>
                         {/* <label>Имя</label> */}
-                        <input
+                        {/* <input
                             placeholder="Ваше Ф.И.О."
                             className={styles.form_inp}
-                        />
+                        /> */}
                         {/* <label>WhatsApp номер</label> */}
-                        <input
+                        {/* <input
                             placeholder="WhatsApp номер"
                             className={styles.form_inp}
                         />
@@ -49,9 +49,9 @@ const Subscription = () => {
                             </option>
                             <option className={styles.option}>Пальто</option>
                             <option className={styles.option}>Туники</option>
-                        </select>
+                        </select> */}
 
-                        <button
+                        {/* <button
                             className={styles.form_wrapper__btn}
                             onClick={openModal}
                         >
@@ -61,7 +61,7 @@ const Subscription = () => {
                                 className={styles.form_wrapper__img}
                             />
                             Подписаться
-                        </button>
+                        </button> */}
                         <p className={styles.alert}>
                             Не заполнены обязательные поля
                         </p>
