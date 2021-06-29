@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 5px #a7a7a7;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .logo,
@@ -15,7 +19,9 @@
 
 @media (max-width: 966px) {
   .header {
-    position: fixed;
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
 
