@@ -157,7 +157,11 @@ const Category = () => {
                                     </ul>
                                 </div>
                                 <div className={classes.sub_item}>
-                                    <input type="checkbox" id="B-A" />
+                                    <input
+                                        type="checkbox"
+                                        className={classes.checkbox}
+                                        id="B-A"
+                                    />
                                     <div
                                         className={classes.category_name_arrow}
                                     >
@@ -288,7 +292,16 @@ const Category = () => {
                         </div>
                     </div> */}
                     </div>
-
+                    <div>
+                        <button className={classes.category_btn}>
+                            Категории
+                            <img
+                                src={arrow}
+                                className={classes.arrow}
+                                alt="arrow_icon"
+                            />
+                        </button>
+                    </div>
                     <div className={classes.category_wrap__container}>
                         <NavigationTitleAndSortPopup item={categorySortItems} />
 

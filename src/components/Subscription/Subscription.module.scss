@@ -5,7 +5,11 @@ $grey: #7c7c7c;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-
+        @media screen and (max-width: 1035px) {
+            .img_wrapper > img {
+                width: 22rem;
+            }
+        }
         &__form {
             display: flex;
             justify-content: center;
@@ -20,6 +24,7 @@ $grey: #7c7c7c;
                 span {
                     font-weight: 700;
                     font-size: 24px;
+                    padding-bottom: 5px;
                 }
                 p {
                     font-weight: 400;
@@ -27,6 +32,15 @@ $grey: #7c7c7c;
                     color: $grey;
                     line-height: 24.5px;
                     // letter-spacing: 4%;
+                }
+                @media screen and (max-width: 1035px) {
+                    span {
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                    p {
+                        line-height: 19px;
+                    }
                 }
 
                 &placeholder {
@@ -45,6 +59,7 @@ $grey: #7c7c7c;
                     height: 2.75rem;
                     margin-top: 0.8em;
                 }
+
                 select {
                     color: $grey;
                 }
@@ -75,10 +90,62 @@ $grey: #7c7c7c;
                     font-size: 16px;
                     font-weight: 300;
                 }
+                @media screen and (max-width: 1036px) {
+                    .form_inp,
+                    select {
+                        width: 16rem;
+                        outline: none;
+                        height: 2rem;
+                        margin-top: 0.8em;
+                    }
+                    &__btn {
+                        margin-top: 1em;
+                        background-color: #2b2a2a;
+                        width: 16rem;
+                        height: 2rem;
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 400;
+                        outline: none;
+                        border: none;
+                    }
+                }
+
+                @media screen and (max-width: 320px) {
+                    .form_inp,
+                    select {
+                        width: 16rem;
+                        outline: none;
+                        height: 2rem;
+                        margin-top: 0.8em;
+                    }
+                    &__btn {
+                        margin-top: 1em;
+                        background-color: #2b2a2a;
+                        width: 16rem;
+                        height: 2rem;
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 400;
+                        outline: none;
+                        border: none;
+                    }
+                    .form_wrapper__img {
+                        padding-right: 10px;
+                    }
+                    .alert {
+                        color: red;
+
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
             }
         }
     }
 }
+
 @media all and (max-width: 720px) {
     .main_subscription {
         margin: 0 auto;

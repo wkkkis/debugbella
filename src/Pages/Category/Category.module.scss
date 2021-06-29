@@ -56,7 +56,9 @@ $font: "Open Sans", sans-serif;
             transform: rotate(0deg);
             transition: 0.1s;
         }
-
+        .sub_item {
+            margin-top: 0.5rem;
+        }
         label:hover {
             cursor: pointer;
         }

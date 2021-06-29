@@ -5,10 +5,6 @@ import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
 
 const Subscription = (callback, Validate) => {
-    // const { values, errors, handleChange, handleSubmit } = SubscriptionCheck(
-    //     Subscribe,
-    //     Validate
-    // );
     const [showModal, setShowModal] = useState(false);
     const [values, setValues] = useState({});
     const [errors, setErrors] = useState({});
@@ -16,15 +12,27 @@ const Subscription = (callback, Validate) => {
 
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
-            callback();
+            openModal();
         }
     }, [errors]);
 
+    function validate(values) {
+        let errors = {};
+        let valid = values.fullName && values.phone;
+
+        if (!valid) {
+            errors.valid = "Не заполнены обязательные поля";
+        }
+        return errors;
+    }
+
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
-        setErrors(Validate(values));
-        setIsSubmitting(true);
-        openModal();
+        setErrors(validate(values));
+
+        if (setIsSubmitting(true)) {
+            openModal();
+        }
     };
 
     const handleChange = (event) => {
@@ -37,10 +45,6 @@ const Subscription = (callback, Validate) => {
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
-
-    // function Subscribe() {
-    //     console.log("Done");
-    // }
     return (
         <div className={styles.main_subscription}>
             <div className={styles.subscription_wrapper}>
@@ -78,7 +82,7 @@ const Subscription = (callback, Validate) => {
                             required
                         />
                         <select>
-                            <option defaultChecked className={styles.option}>
+                            <option selected className={styles.option}>
                                 Выбрать категорию
                             </option>
                             <option
