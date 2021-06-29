@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 12;
 }
 
 .logo,
@@ -44,11 +44,35 @@
 
     .img1 {
       margin: 20px;
+      width: 25px;
+    }
+
+    .img2 {
+      width: 25px;
+      margin: 20px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width:720px) {
+  .header{
+    height: 54px;
+    
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+
+    .img1 {
+      margin: 20px;
+      width: 18px;
     }
 
     .img2 {
       margin: 20px;
       margin-left: 0;
+      width: 18px;
     }
   }
 }
