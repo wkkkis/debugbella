@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../Pages/NewsCart/NewsCart.module.scss";
+import style from "../../components/NewsCart/NewsCart.module.scss";
 const BreadCrumbs = () => {
     return (
         <div className={style.breadCrumbs}>

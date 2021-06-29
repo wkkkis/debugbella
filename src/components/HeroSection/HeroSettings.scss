@@ -13,6 +13,9 @@
     font-weight: 300;
     text-align: left;
 }
+.carousel-caption{
+    position: relative;
+}
 .block_absolute button {
     position: absolute;
     bottom: 200px;
@@ -37,4 +40,25 @@
 }
 .arrow {
     margin: 0 7px;
+}
+@media screen and (max-width: 1120px) {
+    .carousel{
+        padding-top: 60px;
+    }
+    .block_absolute h5 {
+        bottom: 250px;
+        font-size: 53px;
+    }
+
+    .block_absolute button {
+        position: absolute;
+        bottom: 195px;
+        width: 250px;
+        background: #ab844a;
+        color: white;
+        height: 44px;
+        border: none;
+        font-size: 17px;
+        font-weight: 300;
+    }
 }

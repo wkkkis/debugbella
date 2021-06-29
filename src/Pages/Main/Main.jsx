@@ -4,6 +4,7 @@ import red_coat from "../../assets/image/redCoat.png";
 import yellowDress from "../../assets/image/yellowDress.png";
 import pinkDress from "../../assets/image/pinkDress.png";
 import blackDress from "../../assets/image/blackDress.png";
+<<<<<<< HEAD
 import {
     NewProducts,
     Subscription,
@@ -14,6 +15,16 @@ import {
     Button,
     Collection,
 } from "../../components";
+=======
+import TopSales from "../../components/topSales/topSales";
+import NewProducts from "../../components/NewProducts/NewProducts";
+import Collection from "../../components/Collection/Collection";
+import Button from "../../components/Button/Button";
+import Subscription from "../../components/Subscription/Subscription";
+import Advantages from "../../components/Advantages/Advantages";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import News from "../../Pages/News/News";
+>>>>>>> 9cb1ba479f3592bc020f80bcc78ba92fb23f36e3
 const Main = () => {
     return (
         <>
