@@ -10,3 +10,4 @@ export { default as PageNotFound } from "./PageNotFound/PageNotFound";
 export { default as Favourites } from "./Favourites/Favourites";
 export { default as CollectionPage } from "./CollectionPage/CollectionPage";
 export { default as OrderProcessing } from "./OrderProcessing/OrderProcessing";
+export { default as Profile } from "./Profile/Profile";

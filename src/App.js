@@ -12,6 +12,7 @@ import {
     Category,
     CollectionPage,
     OrderProcessing,
+    Profile,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
@@ -40,6 +41,7 @@ function App() {
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
                     <Route exact path="/order" component={OrderProcessing} />
+                    <Route exact path="/profile" component={Profile} />
                 </Switch>
             </Layout>
             <Footer />

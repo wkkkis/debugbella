@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "../OrderProcessing/OrderProcessing.module.scss";
+import ModalOrder from "../../components/ModalOrder/ModalOrder";
 import cardImage from "../../assets/image/summer.png";
 const OrderProcessing = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal((prev) => !prev);
+    };
     return (
         <div className={classes.main_container}>
             <div className={classes.main_container__inner}>
@@ -105,11 +111,12 @@ const OrderProcessing = () => {
                             </div>
                         </div>
                         <div className={classes.button_order}>
-                            <button>Оформить заказ</button>
+                            <button onClick={openModal}>Оформить заказ</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <ModalOrder showModal={showModal} setShowModal={setShowModal} />
         </div>
     );
 };
