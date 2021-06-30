@@ -11,9 +11,10 @@ import {
     Favourites,
     Category,
     CollectionPage,
+    
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
-
+import Order from "./Pages/Order/Order";
 function App() {
     return (
         <>
@@ -41,6 +42,7 @@ function App() {
                 </Switch>
             </Layout>
            {/*  <Footer /> */}
+           <Order />
 
         </>
     );
