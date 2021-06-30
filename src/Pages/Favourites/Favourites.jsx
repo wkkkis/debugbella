@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Favourites.module.scss";
 import { ProductCart } from "../../components";
 import NavigationTitleAndSortPopup from "../../components/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup";
-
+import { PagesBtn } from "../../components";
 const favoriteSortItems = [
     { name: "По обновлению", type: "update", order: "desc" },
     { name: "По цене (высокая > низкая) ", type: "price", order: "desc" },
@@ -29,6 +29,7 @@ const Favourites = () => {
                         return <ProductCart key={item} />;
                     })}
                 </div>
+                <PagesBtn />
             </div>
         </div>
     );

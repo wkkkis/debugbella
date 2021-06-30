@@ -8,16 +8,6 @@ const NewsCart = (props) => {
     // props посмотри откуда приходит--это Нурбек---
     return (
         <>
-            <div className={classes.breadCrumbs}>
-                <div className={classes.breadCrumbs__link}>
-                    <ul className={classes.breadCrumbs__list}>
-                        <li>Главная &ensp;/&ensp;</li>
-                        <li>Новости</li>
-                    </ul>
-                </div>
-                <h1 className={classes.breadCrumbs__newsTitle}>Новости</h1>
-            </div>
-
             <div className={classes.w_100}>
                 <div className={classes.mainCart}>
                     <Link to={/news_details/}>

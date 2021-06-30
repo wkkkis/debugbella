@@ -20,7 +20,7 @@ const Category = () => {
     const [count, setCount] = React.useState(arr);
 
     return (
-        <div>
+        <>
             <div className={classes.breadCrumbs}>
                 <ul className={classes.breadCrumbs__list}>
                     <li>Главная /</li>
@@ -29,8 +29,14 @@ const Category = () => {
             </div>
             <div className={classes.category_wrap}>
                 <div className={classes.category_wrap__inner}>
-                    {/* <div className={classes.category_wrap__category_drop}> */}
-                    <div className={classes.multilevel}>
+                    <div className={classes.inner__multilevel}>
+                        <button className={classes.multilevel__btn}>
+                            <span className={classes.multilevel__btn__span}>
+                                Категории
+                            </span>
+                            <img src={arrow} alt="arrow_icon" />
+                        </button>
+
                         <div className={classes.item}>
                             <input
                                 type="checkbox"
@@ -208,8 +214,9 @@ const Category = () => {
                             </li> */}
                             </ul>
                         </div>
-                        {/* <div
-                        className={classes.category_wrap__category_drop__links}
+                    </div>
+
+                    {/* <className={classes.category_wrap__category_drop__links}
                     >
                         <div
                             className={
@@ -290,34 +297,39 @@ const Category = () => {
                                 />
                             </svg>
                         </div>
+                    </div>
                     </div> */}
-                    </div>
-                    <div>
-                        <button className={classes.category_btn}>
-                            Категории
-                            <img
-                                src={arrow}
-                                className={classes.arrow}
-                                alt="arrow_icon"
-                            />
-                        </button>
-                    </div>
-                    <div className={classes.category_wrap__container}>
-                        <NavigationTitleAndSortPopup item={categorySortItems} />
 
+                    <div className={classes.category_wrap__container}>
                         <div
                             className={
-                                classes.category_wrap__container__product
+                                classes.category_wrap__container__secondary
                             }
                         >
-                            {count.map((item) => {
-                                return <ProductCart key={item} />;
-                            })}
+                            <div
+                                className={
+                                    classes.category_wrap__container__inner
+                                }
+                            >
+                                <NavigationTitleAndSortPopup
+                                    item={categorySortItems}
+                                />
+                            </div>
+
+                            <div
+                                className={
+                                    classes.category_wrap__container__product
+                                }
+                            >
+                                {count.map((item) => {
+                                    return <ProductCart key={item} />;
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
