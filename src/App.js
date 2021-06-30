@@ -10,8 +10,10 @@ import {
     PageNotFound,
     Favourites,
     Category,
+    CollectionPage,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
+
 function App() {
     return (
         <>
@@ -26,6 +28,11 @@ function App() {
                         exact
                         path="/news_details/"
                         component={NewsDetails}
+                    />
+                    <Route
+                        exact
+                        path="/collections"
+                        component={CollectionPage}
                     />
                     <Route exact path="/details" component={Products} />
                     <Route exact path="/notFound" component={PageNotFound} />

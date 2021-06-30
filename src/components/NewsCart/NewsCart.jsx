@@ -3,6 +3,7 @@ import classes from "./NewsCart.module.scss";
 import newsImg from "../../assets/newsimg.png";
 import arrow from "../../assets/lock_nextImg/arrow_brown.png";
 import { Link } from "react-router-dom";
+import { PageName } from "../NavigationTitleAndSortPopup/NavigationTitleAndSortPopup";
 
 const NewsCart = (props) => {
     // props посмотри откуда приходит--это Нурбек---
