@@ -40,7 +40,8 @@ function App() {
                     <Route exact path="/category" component={Category} />
                 </Switch>
             </Layout>
-            <Footer />
+           {/*  <Footer /> */}
+
         </>
     );
 }
