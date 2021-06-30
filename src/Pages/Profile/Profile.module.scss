@@ -1,4 +1,4 @@
-.profilePage{
+.profilePage {
   width: 100%;
 }
 
@@ -15,7 +15,6 @@
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 200px;
-
 }
 
 .input_cont {
@@ -87,11 +86,10 @@
   }
 }
 
-.img2{
+.img2 {
   width: 432px;
   height: 520px;
 }
-
 
 .product {
   width: 200px;
@@ -103,13 +101,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-   
+
     margin-left: 20px;
     margin-bottom: 40px;
 
-a{
-  color: black;
-}
+    a {
+      color: black;
+    }
 
     a:hover {
       color: red;

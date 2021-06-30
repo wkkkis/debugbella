@@ -1,7 +1,7 @@
 import classes from "./Profile.module.scss";
 import { Link } from "react-router-dom";
-import img1 from "../../images/bellaprofile3.png";
-import img2 from "../../images/bellaprofile2.png";
+import img1 from "../../assets/image/bellaprofile3.png";
+import img2 from "../../assets/image/bellaprofile2.png";
 const Profile = () => {
   return (
     <div className={classes.profilePage}>

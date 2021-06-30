@@ -13,6 +13,7 @@ import {
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
+
 function App() {
     return (
         <>

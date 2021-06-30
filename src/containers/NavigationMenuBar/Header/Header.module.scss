@@ -76,3 +76,48 @@
     }
   }
 }
+
+@media (max-width:420px) {
+  .header{
+    height: 54px;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+
+    .img1 {
+      margin: 15px;
+      width: 18px;
+    }
+
+    .img2 {
+      margin: 15px;
+      margin-left: 0;
+      width: 18px;
+    }
+  }
+}
+
+@media (max-width:300px) {
+  .header{
+    height: 54px;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+
+    .img1 {
+      margin: 10px;
+      margin-right: 5px;
+      width: 18px;
+    }
+
+    .img2 {
+      margin: 10px;
+      margin-right: 5px;
+      margin-left: 0;
+      width: 18px;
+    }
+  }
+}
+
