@@ -11,6 +11,7 @@ import {
     Favourites,
     Category,
     CollectionPage,
+    OrderProcessing,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
@@ -38,10 +39,10 @@ function App() {
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
+                    <Route exact path="/order" component={OrderProcessing} />
                 </Switch>
             </Layout>
-           {/*  <Footer /> */}
-
+            <Footer />
         </>
     );
 }
