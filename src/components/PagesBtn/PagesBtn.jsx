@@ -2,12 +2,12 @@ import React from "react";
 import classes from "./PagesBtn.module.scss";
 import prevBtn from "../../assets/image/prevBtn.svg";
 import nextBtn from "../../assets/image/nextBtn.png";
-import jsonPlaceholder from "../../adapters/axios.config";
-import { useEffect } from "react";
+// import jsonPlaceholder from "../../adapters/axios.config";
+// import { useEffect } from "react";
 const PagesBtn = () => {
-    useEffect(() => {
-        jsonPlaceholder("/posts").then((res) => console.log(res));
-    }, []);
+    // useEffect(() => {
+    //     jsonPlaceholder("/posts").then((res) => console.log(res));
+    // }, []);
     return (
         <div>
             <div>
