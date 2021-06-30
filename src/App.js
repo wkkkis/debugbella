@@ -12,8 +12,6 @@ import {
     Category,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
-import Auth from "./containers/NavigationMenuBar/Auth/Auth";
-import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
 function App() {
     return (
         <>

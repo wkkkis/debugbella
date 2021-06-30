@@ -19,7 +19,7 @@ $font: "Open Sans", sans-serif;
         margin: 1rem 0 2rem 0;
         width: 80%;
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
 
         .inner__multilevel {
             width: 16rem;
@@ -37,7 +37,12 @@ $font: "Open Sans", sans-serif;
                 font-weight: 400;
                 outline: none;
                 border: none;
-                // display: none;
+                display: none;
+
+                .arrow_btn:hover {
+                    transform: rotate(-180deg);
+                    transition: 0.1s;
+                }
 
                 &__span {
                     margin-right: 0.5rem;
@@ -45,7 +50,9 @@ $font: "Open Sans", sans-serif;
             }
             .link {
                 text-decoration: none;
-                font-size: 13px;
+                font-size: 16px;
+                font-weight: 400;
+                list-style: none;
             }
         }
 
@@ -75,7 +82,7 @@ $font: "Open Sans", sans-serif;
             transform: rotate(0deg);
             transition: 0.1s;
         }
-        .sub_item {
+        .item {
             margin-top: 0.5rem;
         }
         label:hover {
@@ -136,18 +143,27 @@ $font: "Open Sans", sans-serif;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-
-            .multilevel {
-                margin: 0 auto;
+            .inner__multilevel {
+                width: 16rem;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                margin: 0 auto;
                 align-items: center;
 
-                .link {
-                    text-decoration: none;
-                    font-size: 13px;
+                .multilevel__btn {
+                    background-color: #2b2a2a;
+                    margin-top: 1.5rem;
+                    width: 18em;
+                    height: 2.75rem;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 400;
+                    outline: none;
+                    border: none;
+                    display: block;
                 }
             }
+
             &__container {
                 width: 100%;
                 // margin-left: 95px;
