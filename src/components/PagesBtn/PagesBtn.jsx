@@ -9,12 +9,15 @@ const PagesBtn = () => {
     //     jsonPlaceholder("/posts").then((res) => console.log(res));
     // }, []);
     return (
-        <div>
-            <div>
-                <button className={classes.prevBtn}>
+        <div className={classes.main_container}>
+            <div className={classes.btn_wrapper}>
+                <button className={classes.btn_wrapper__prevBtn}>
                     <img src={prevBtn} alt="previous_button" />
                 </button>
-                <button className={classes.prevBtn}>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button className={classes.btn_wrapper__nextBtn}>
                     <img src={nextBtn} alt="next_button" />
                 </button>
             </div>
