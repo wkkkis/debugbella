@@ -82,7 +82,7 @@ const Subscription = (callback, Validate) => {
                             required
                         />
                         <select>
-                            <option selected className={styles.option}>
+                            <option defaultValue className={styles.option}>
                                 Выбрать категорию
                             </option>
                             <option
@@ -115,7 +115,7 @@ const Subscription = (callback, Validate) => {
                             </option>
                         </select>
 
-                         <button
+                        <button
                             className={styles.form_wrapper__btn}
                             onClick={handleSubmit}
                         >

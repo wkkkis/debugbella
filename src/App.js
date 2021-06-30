@@ -12,8 +12,11 @@ import {
     Category,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 55aa8b0997baed9db4aca3e08cf631f401e3a8ca
 function App() {
     return (
         <>
@@ -35,7 +38,6 @@ function App() {
                     <Route exact path="/category" component={Category} />
                 </Switch>
             </Layout>
-
             <Footer />
         </>
     );
