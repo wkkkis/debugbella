@@ -13,7 +13,6 @@ import {
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
-import Profile from "./Pages/Profile/Profile"
 function App() {
     return (
         <>
@@ -22,7 +21,7 @@ function App() {
                     <Route exact path="/" component={Main} />
                     <Route exact path="/about" component={AboutUs} />
                     <Route exact path="/favourite" component={Favorite} />
-                    <Route exact path="/delivery" component={Profile} />
+                    <Route exact path="/delivery" component={Delivery} />
                     <Route exact path="/news" component={NewsCart} />
                     <Route
                         exact
