@@ -11,10 +11,12 @@ import {
     Favourites,
     Category,
     CollectionPage,
-    
+    OrderProcessing,
+    Profile,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 import Order from "./Pages/Order/Order";
+import Modal  from "./containers/Modal/Modal";
 function App() {
     return (
         <>
@@ -39,11 +41,13 @@ function App() {
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
+                    <Route exact path="/order" component={OrderProcessing} />
+                    <Route exact path="/profile" component={Profile} />
                 </Switch>
             </Layout>
-           {/*  <Footer /> */}
-           <Order />
 
+            <Modal />
+           
         </>
     );
 }
