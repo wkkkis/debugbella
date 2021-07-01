@@ -4,7 +4,7 @@ import styles from "../../components/Subscription/Subscription.module.scss";
 import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
 
-const Subscription = (callback, Validate) => {
+const Subscription = () => {
     const [showModal, setShowModal] = useState(false);
     const [values, setValues] = useState({});
     const [errors, setErrors] = useState({});
@@ -64,12 +64,13 @@ const Subscription = (callback, Validate) => {
                             ullamcorper porttitor faucibus tellus. Elit
                             ullamcorper lorem in mauris.
                         </p>
+                        {/* <form onSubmit={handleSubmit}> */}
                         <input
                             placeholder="Ваше Ф.И.О."
                             className={styles.form_inp}
                             name="fullName"
                             onChange={handleChange}
-                            value={values.fullName}
+                            // value="fullName"
                             required
                         />
                         <input
@@ -78,7 +79,7 @@ const Subscription = (callback, Validate) => {
                             type="number"
                             name="phone"
                             onChange={handleChange}
-                            value={values.phone}
+                            // value="phone"
                             required
                         />
                         <select>
@@ -87,7 +88,7 @@ const Subscription = (callback, Validate) => {
                             </option>
                             <option
                                 name="category"
-                                value={values.category}
+                                // value={values.category}
                                 className={styles.option}
                             >
                                 Платья
@@ -129,6 +130,7 @@ const Subscription = (callback, Validate) => {
                         {errors.valid && (
                             <p className={styles.alert}>{errors.valid}</p>
                         )}
+                        {/* </form> */}
                     </div>
                 </div>
             </div>

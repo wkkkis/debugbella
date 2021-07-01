@@ -10,6 +10,5 @@ export { default as NewProducts } from "./NewProducts/NewProducts";
 export { default as NewsCart } from "./NewsCart/NewsCart";
 export { default as ColorPickerBtn } from "./ColorPickerBtn/ColorPickerBtn";
 export { default as ColorSelection } from "./ColorSelection/ColorSelection";
-export { default as NavigationLinkBar } from "./Navigation/NavigationLinkBar/NavigationLinkBar";
 export { default as NavigationTitleAndPopup } from "./NavigationTitleAndSortPopup/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup";
 export { default as PagesNumber } from "./PagesNumber/PagesNumber";

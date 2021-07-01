@@ -13,6 +13,7 @@ import {
     CollectionPage,
     OrderProcessing,
     Profile,
+    MyOrders,
 } from "./Pages";
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 
@@ -42,6 +43,7 @@ function App() {
                     <Route exact path="/category" component={Category} />
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
+                    <Route exact path="/myOrders" component={MyOrders} />
                 </Switch>
             </Layout>
             <Footer />
