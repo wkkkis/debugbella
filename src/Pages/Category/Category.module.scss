@@ -49,9 +49,16 @@ $font: "Open Sans", sans-serif;
             }
             .link {
                 text-decoration: none;
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 400;
-                list-style: none;
+                color: #7c7c7c;
+
+                .brownColor {
+                    color: brown;
+                }
+            }
+            .link:hover {
+                color: #ab844a;
             }
             .multilevel_toggle {
                 display: none;
