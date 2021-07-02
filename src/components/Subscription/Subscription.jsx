@@ -64,10 +64,7 @@ const Subscription = () => {
                             ullamcorper porttitor faucibus tellus. Elit
                             ullamcorper lorem in mauris.
                         </p>
-<<<<<<< HEAD
-=======
                         {/* <form onSubmit={handleSubmit}> */}
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
                         <input
                             placeholder="Ваше Ф.И.О."
                             className={styles.form_inp}
@@ -133,10 +130,7 @@ const Subscription = () => {
                         {errors.valid && (
                             <p className={styles.alert}>{errors.valid}</p>
                         )}
-<<<<<<< HEAD
-=======
                         {/* </form> */}
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
                     </div>
                 </div>
             </div>

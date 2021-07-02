@@ -10,39 +10,20 @@ import { useState } from "react";
 import Basket from "../../../../Pages/Basket/Basket";
 
 const Nav = () => {
-<<<<<<< HEAD
-    const [visible, setVisible] = useState(false);
-    const [basket, setBasket] = useState(false);
 
-    function handleClickBasket(){
-            setBasket(!basket)
-    }
-
-    let toggle = () => {
-        setVisible(!visible);
-    };
-   
-    return (
-        <>
-        <div className={classes.Nav}>
-            <ul className={classes.ul}>
-                <div className={classes.left}>
-                    <NavItem url="/">Товары</NavItem>
-                    <NavItem url="/about">О нас</NavItem>
-                    <NavItem url="/news">Новости</NavItem>
-                    <NavItem url="/delivery">Доставка</NavItem>
-                    <NavItem url="/contacts"> Контакты</NavItem>
-=======
   const [visible, setVisible] = useState(false);
-
   let toggle = () => {
     setVisible(!visible);
   };
 
   const [vid, setVid] = useState(false);
-
   let toggle1 = () => {
     setVid(!vid);
+  };
+
+  const [basket, setBasket] = useState(false);
+  let handleBasketClick = () => {
+    setBasket(!basket);
   };
 
   return (
@@ -109,7 +90,6 @@ const Nav = () => {
                       <div className={classes.div2}>&times;</div>
                     </button>
                   </span>
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
                 </div>
               </div>
             </>
@@ -122,37 +102,6 @@ const Nav = () => {
             </span>
           </NavItem>
 
-<<<<<<< HEAD
-                    <span
-                        style={{
-                            cursor: "pointer",
-                            display: "felx",
-                            alignItems: "center",
-                        }}
-                    >
-                        <div>
-                            <div
-                                className={classes.cont}
-                                style={{
-                                    position: "realtive",
-                                    marginRight: "0",
-                                }}
-                            >
-                                <img src={user} alt="logo" />
-                                <span
-                                    style={{ margin: "0" }}
-                                    onClick={toggle}
-                                    className={
-                                        visible?
-                                                classes.hoverDropDown
-                                            : 
-                                                classes.hoverDropDown__color
-                                    }
-                                >
-                                    Профиль
-                                </span>
-                            </div>
-=======
           <span
             style={{
               cursor: "pointer",
@@ -181,7 +130,6 @@ const Nav = () => {
                   Профиль
                 </span>
               </div>
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
 
               {visible && (
                 <>
@@ -204,31 +152,18 @@ const Nav = () => {
             </div>
           </span>
 
-<<<<<<< HEAD
-                    <span onClick={handleClickBasket} >
-                        <span className={classes.img}>
-                            <img src={shop} alt="logo" />
-                            Корзина
-                        </span>
-                    </span>
-                </div>
-            </ul>
-        </div>
-        <Basket setBasket={setBasket} basket={basket}/>
-        </>
-    );
-=======
-          <NavItem url="/basket">
+          <span className={classes.basket} onClick={handleBasketClick}>
             <span className={classes.img}>
               <img src={shop} alt="logo" />
               Корзина
             </span>
-          </NavItem>
+          </span>
+
         </div>
       </ul>
+      <Basket setBasket={setBasket} basket={basket}/>
     </div>
   );
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
 };
 
 export default Nav;

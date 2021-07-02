@@ -69,7 +69,6 @@
     }
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 720px) {
     .block_absolute h5 {
         bottom: 250px;
@@ -156,15 +155,6 @@
     }
     .block_absolute button {
         bottom: 80px;
-=======
-@media screen and (max-width: 767px) {
-    .block_absolute {
-        position: relative;
-    }
-    .block_absolute h5 {
-        bottom: 250px;
-        font-size: 21px;
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
     }
     
 }
@@ -184,7 +174,6 @@
 
     }
     .block_absolute button {
-<<<<<<< HEAD
         position: absolute;
         width: 130px;
         background: #ab844a;
@@ -197,9 +186,5 @@
     .block_absolute img {
         width: 10px;
         height: 10px;
-=======
-        bottom: 190px;
-        font-size: 17px;
->>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
     }
 }
