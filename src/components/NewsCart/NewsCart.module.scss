@@ -39,6 +39,10 @@
     display: flex;
     margin: 15px;
 
+    &__blockLeft img{
+        height: 100%;
+    }
+
     &__blockRight {
         margin: 22px;
     }

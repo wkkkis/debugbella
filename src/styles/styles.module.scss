@@ -143,6 +143,25 @@ i:hover {
         font-weight: 400;
     }
 }
+.mainContainer {
+    width: 80%;
+    margin: 0 auto;
+
+    .breadCrumbs {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 1.5rem;
+        padding-bottom: 0.5rem;
+        &__left_col {
+            color: #000;
+            text-decoration: none;
+            list-style: none;
+        }
+        &__right_col {
+            color: #7c7c7c;
+        }
+    }
+}
 @media (max-width: 720px) {
     .main_container {
         margin: 0 auto;

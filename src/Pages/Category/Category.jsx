@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Category.module.scss";
 import { Link } from "react-router-dom";
+import styles from "../../styles/styles.module.scss";
 import NavigationTitleAndSortPopup from "../../components/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup/NavigationTitleAndSortPopup";
 import { ProductCart, PagesBtn } from "../../components";
 import arrow from "../../assets/image/arrow.png";
@@ -27,11 +28,17 @@ const Category = () => {
     };
     return (
         <div>
-            <div className={classes.breadCrumbs}>
-                <ul className={classes.breadCrumbs__list}>
-                    <li>Главная /</li>
-                    <li>Товары</li>
-                </ul>
+            <div className={styles.mainContainer}>
+                <div className={styles.breadCrumbs}>
+                    <Link to="/">
+                        <span className={styles.breadCrumbs__left_col}>
+                            Главная /&ensp;
+                        </span>
+                    </Link>
+                    <span className={styles.breadCrumbs__right_col}>
+                        Товары
+                    </span>
+                </div>
             </div>
             <div className={classes.category_wrap}>
                 <div className={classes.category_wrap__inner}>

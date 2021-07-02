@@ -2,15 +2,17 @@ import React from "react";
 import style from "./Products.module.scss";
 import lock from "../../assets/lock_nextImg/lock.png";
 import VerticalSlider from "../../components/VerticalSlider/VerticalSlider";
+// import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
+import ProductImg from '../../assets/ProductImg/vertical1.png'
 
 const Products = () => {
     return (
         <div className={style.w_100}>
             <div className={style.main}>
-                <div className={style.main__carousel}></div>
-                <div className={style.main__card}>
-                    <VerticalSlider />
+                <div className={style.main__carousel}>
+                    <VerticalSlider/>
                 </div>
+                
                 <div className={style.main__descriptions}>
                     <h1 className={style.main__desTitle}>
                         Платье с сетчатыми рукавами
@@ -22,8 +24,8 @@ const Products = () => {
                         </span>{" "}
                     </p>
                     <p>
-                        Количество в линейке:{" "}
-                        <span className={style.main__span}> 1</span>
+                        Количество в линейке:
+                        <span className={style.main__span}>1</span>
                     </p>
                     <div className={style.main__colorsDiv}>
                         Цвет:
@@ -113,7 +115,9 @@ const Products = () => {
                     </button>
                 </div>
             </div>
+            {/* <ProductCarousel/> */}
         </div>
+        
     );
 };
 

@@ -1,14 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { PagesNumber, Collection } from "../../components";
+import styles from "../../styles/styles.module.scss";
 import classes from "../CollectionPage/CollectionPage.module.scss";
 const CollectionPage = () => {
     return (
-        <div className={classes.main_container}>
-            <div className={classes.breadCrumbs}>
-                <ul className={classes.breadCrumbs__list}>
-                    <li>Главная /</li>
-                    <li>Избранное</li>
-                </ul>
+        <div>
+            <div className={styles.mainContainer}>
+                <div className={styles.breadCrumbs}>
+                    <Link to="/" className={styles.breadCrumbs__left_col}>
+                        <span>Главная /&ensp;</span>
+                    </Link>
+                    <span className={styles.breadCrumbs__right_col}>
+                        Коллекция
+                    </span>
+                </div>
             </div>
             <div className={classes.header}>
                 <h4>Коллекция</h4>

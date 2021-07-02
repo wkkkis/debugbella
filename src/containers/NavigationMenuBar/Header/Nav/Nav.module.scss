@@ -31,7 +31,12 @@ ol {
   .right {
     display: flex;
     align-items: center;
+
+     span{
+      cursor: pointer;
+    }
   }
+  
 
   span {
     font-size: 13px;
