@@ -69,6 +69,17 @@
     }
 }
 
+<<<<<<< HEAD
+@media screen and (max-width: 767px) {
+    .block_absolute {
+        position: relative;
+    }
+    .block_absolute h5 {
+        bottom: 250px;
+        font-size: 21px;
+    }
+    
+=======
 @media screen and (max-width: 720px) {
     .block_absolute h5 {
         bottom: 250px;
@@ -156,6 +167,7 @@
     .block_absolute button {
         bottom: 80px;
     }
+>>>>>>> f37361477b0a90d8c03efe315a03e4afdd2039b0
 }
 @media screen and (max-width: 390px) {
     .block_absolute h5 {
@@ -171,6 +183,10 @@
         font-size: 21px;
     }
     .block_absolute button {
+<<<<<<< HEAD
+        bottom: 190px;
+        font-size: 17px;
+=======
         position: absolute;
         width: 130px;
         background: #ab844a;
@@ -183,5 +199,6 @@
     .block_absolute img {
         width: 10px;
         height: 10px;
+>>>>>>> f37361477b0a90d8c03efe315a03e4afdd2039b0
     }
 }

@@ -16,7 +16,7 @@ const Delivery = () => {
                 </div>
                 <div className={classes.cont}>
                     <div className={classes.column__first}>
-                        <Link className={classes.link} to="/delivery">
+                        <Link className={classes.link} to="/delivery" className={classes.del}>
                             Доставка
                         </Link>
                         <Link className={classes.link} to="/contacts">

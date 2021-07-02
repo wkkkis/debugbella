@@ -15,7 +15,6 @@ const categorySortItems = [
 const Category = () => {
     const [visibleMultilevel, setVisibleMultilevel] = useState(false);
     // const [wobble, setWobble] = useState(0);
-
     let arr = [];
     for (let i = 0; i < 12; i++) {
         arr.push(i);
@@ -26,6 +25,7 @@ const Category = () => {
         setVisibleMultilevel(!visibleMultilevel);
         // setWobble(1);
     };
+
     return (
         <div>
             <div className={styles.mainContainer}>

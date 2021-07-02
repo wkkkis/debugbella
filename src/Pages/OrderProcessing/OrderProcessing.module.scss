@@ -45,7 +45,7 @@ $dark_brown: #2b2a2a;
                 width: 15.625rem;
                 height: 44px;
                 outline: none;
-                margin-top: -10px;
+                // margin-top: -10px;
             }
             .save_btn {
                 margin-top: 1.5rem;
@@ -87,14 +87,14 @@ $dark_brown: #2b2a2a;
     }
     .card_wrapper {
         width: 41.125rem;
-        height: 15.875rem;
+        height: 13.875rem;
         border: 1px solid rgb(192, 192, 192);
         display: flex;
         &__image_wrapper {
             padding: 0.5rem 0 0.5rem 0.5rem;
         }
         &__image_wrapper > img {
-            width: 9.75rem;
+            width: 7.75rem;
         }
         &__right_col {
             padding: 0.5rem 0 0.5rem 0.5rem;
@@ -174,13 +174,13 @@ $dark_brown: #2b2a2a;
         // width: 30%;
         display: flex;
         justify-content: center;
+        align-items: center;
         &__inner {
-            // margin-top: -5rem;
+            // padding-top: -2rem;
             display: flex;
             justify-content: center;
-            position: sticky;
             width: 23.5rem;
-            height: 24.125rem;
+            height: 20rem;
             background-color: #f6fdff;
 
             &__sum {
@@ -188,7 +188,7 @@ $dark_brown: #2b2a2a;
                 width: 80%;
                 font-size: 24px;
                 font-weight: 400;
-                padding: 0.5rem 0;
+                margin: 0.7rem 0;
             }
             &__prices {
                 padding: 0.8rem 0;
@@ -237,12 +237,12 @@ $dark_brown: #2b2a2a;
 
         .card_wrapper {
             width: 100%;
-            height: 14.875rem;
+            height: 9.875rem;
             &__image_wrapper {
                 padding: 0.5rem 0 0.5rem 0.5rem;
             }
             &__image_wrapper > img {
-                width: 8.75rem;
+                width: 5.75rem;
             }
             &__right_col {
                 position: relative;
