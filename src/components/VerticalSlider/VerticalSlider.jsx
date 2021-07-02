@@ -1,6 +1,10 @@
 import React from 'react';
-import './VerticalSlider.css';
+import style from './VerticalSlider.css';
 import DetailsThumb from './DetailsThumb';
+import vertical1 from '../../assets/VerticalSlider/vertical2.png'
+import vertical2 from '../../assets/VerticalSlider/vertical3.png'
+import vertical3 from '../../assets/VerticalSlider/vertical4.png'
+
 
 class VerticalSlider extends React.Component{
 
@@ -9,10 +13,9 @@ class VerticalSlider extends React.Component{
       {
         "_id": "1",
         "src": [
-            "https://lh3.googleusercontent.com/eeI2-wwf1kOi5mbGtgarrpOMaEV7qoLUdhND7n2PeLQFFgbHwJG7ycIzUCZyUVdE_yY8LA=s85",
-            "https://lh3.googleusercontent.com/vG-ZAvnHR9A6qgdcJlczrQd5JsS4jhAUchahWh9JyOV6QjQMeWAdJLSpqDrNWeHwlwAtJw=s85",
-            "https://lh3.googleusercontent.com/2KbFpxwbM6DhGsiiJ70B7wq3lnralpkp1ECUlfaw4Bh_K7LM_KHM0oVRgKuQOs0b-C5N=s85",
-            "https://lh3.googleusercontent.com/vG-ZAvnHR9A6qgdcJlczrQd5JsS4jhAUchahWh9JyOV6QjQMeWAdJLSpqDrNWeHwlwAtJw=s85"
+            vertical1,
+            vertical2,
+            vertical3,
           ],
        
       }
@@ -40,7 +43,7 @@ class VerticalSlider extends React.Component{
   render(){
     const {products, index} = this.state;
     return(
-      <div className="app">
+      <div className={style.app}>
         {
           products.map(item =>(
             <div className="details" key={item._id}>

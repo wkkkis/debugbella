@@ -8,20 +8,9 @@ const NewsCart = (props) => {
   // props посмотри откуда приходит--это Нурбек---
   return (
     <>
-      <div className={classes.breadCrumbs}>
-        <div className={classes.breadCrumbs__link}>
-          <ul className={classes.breadCrumbs__list}>
-            <li>Главная &ensp;/&ensp;</li>
-            <li>Новости</li>
-          </ul>
-        </div>
-        <h1 className={classes.breadCrumbs__newsTitle}>Новости</h1>
-      </div>
-
       <div className={classes.w_100}>
         <div className={classes.mainCart}>
-        <Link to={`/news_details/`}> {/*${props.item.id} */}
-          <div className={classes.newscart}>
+          <div  className={classes.newscart}> {/*${props.item.id} */}
             <div className={classes.newscart__blockLeft}>
               <img src={newsImg} alt="img-news" />
             </div>
@@ -29,14 +18,15 @@ const NewsCart = (props) => {
               <p className={classes.newscart__data}>22.06.21</p>
               <h1 className={classes.newscart__title}>Гарантия обмена и возврата товара</h1>
               <p className={classes.newscart__text}>100% гарантия возврата товара -14 дней на возврат, без скандалов и
-                истерик</p>
-              <button className={classes.newscart__btn}>Подробнее
-                <img src={arrow} alt="img-arrow" />
-              </button>
+                истерик
+              </p>
+              <Link to={`/news_details/`}>
+                <button className={classes.newscart__btn}>Подробнее
+                  <img src={arrow} alt="img-arrow" />
+                </button>
+              </Link>
             </div>
           </div>
-        </Link>
-
           <div className={classes.newscart}>
             <div className={classes.newscart__blockLeft}>
               <img src={newsImg} alt="img-news" />

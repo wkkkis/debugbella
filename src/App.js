@@ -11,11 +11,10 @@ import {
     Favourites,
     Category,
 } from "./Pages";
-<<<<<<< HEAD
 // import Layout from './containers/Layout/Layout'
-=======
->>>>>>> a2b06506dff9685db0a396768877ac65a81a8c76
 import NewsDetails from "./components/NewsDetails/NewsDetails";
+import ProductCarousel from "./components/ProductCarousel/ProductCarousel";
+import Basket from "./Pages/Basket/Basket";
 
 
 function App() {
@@ -33,6 +32,8 @@ function App() {
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
+                    <Route exact path="/products" component={Products} />
+                    <Route exact path="/prodCarousel" component={ProductCarousel} />
                 </Switch>
 
                 

@@ -7,15 +7,22 @@ import user from "../../../../assets/image/user.png";
 import bella from "../../../../assets/image/bella.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Basket from "../../../../Pages/Basket/Basket";
 
 const Nav = () => {
     const [visible, setVisible] = useState(false);
+    const [basket, setBasket] = useState(false);
+
+    function handleClickBasket(){
+            setBasket(!basket)
+    }
 
     let toggle = () => {
         setVisible(!visible);
     };
-
+   
     return (
+        <>
         <div className={classes.Nav}>
             <ul className={classes.ul}>
                 <div className={classes.left}>
@@ -63,9 +70,10 @@ const Nav = () => {
                                     style={{ margin: "0" }}
                                     onClick={toggle}
                                     className={
-                                        visible
-                                            ? classes.hoverDropDown
-                                            : classes.hoverDropDown__color
+                                        visible?
+                                                classes.hoverDropDown
+                                            : 
+                                                classes.hoverDropDown__color
                                     }
                                 >
                                     Профиль
@@ -93,15 +101,17 @@ const Nav = () => {
                         </div>
                     </span>
 
-                    <NavItem url="/basket">
+                    <span onClick={handleClickBasket} >
                         <span className={classes.img}>
                             <img src={shop} alt="logo" />
                             Корзина
                         </span>
-                    </NavItem>
+                    </span>
                 </div>
             </ul>
         </div>
+        <Basket setBasket={setBasket} basket={basket}/>
+        </>
     );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 // import style from "../../components/NewsCart/NewsCart.module.scss";
 // import newsImg from "../../assets/newsimg.png";
 // import arrow from "../../assets/lock_nextImg/arrow_brown.png";
@@ -6,13 +7,14 @@ import React from "react";
 const News = () => {
 
     return (
+        <BreadCrumbs/>
         // <div className="list">                
         //     {topicsData.map((item) =>(
-        //     <TopicCard key={item.id} item={item} />
+        //     <NewsCart key={item.id} item={item} />
             
         //     ))}                
         // </div>
-        <div></div>
+        
     );
 };
 
