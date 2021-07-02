@@ -1,6 +1,7 @@
 import { Footer, Layout } from "./containers";
 import { Route, Switch } from "react-router-dom";
 import { NewsDetails, ProductCarousel, NewsCart } from "./components";
+import './styles/global.module.scss'
 import {
     AboutUs,
     Favorite,
