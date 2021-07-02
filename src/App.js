@@ -14,8 +14,9 @@ import {
     OrderProcessing,
     Profile,
     MyOrders,
+    Order,
+    SearchResults,
 } from "./Pages";
-
 
 function App() {
     return (

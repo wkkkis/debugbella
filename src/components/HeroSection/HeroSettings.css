@@ -156,7 +156,6 @@
     .block_absolute button {
         bottom: 80px;
     }
-    
 }
 @media screen and (max-width: 390px) {
     .block_absolute h5 {
@@ -165,13 +164,11 @@
     .block_absolute button {
         bottom: 75px;
     }
-    
 }
 @media screen and (max-width: 360px) {
     .block_absolute h5 {
         bottom: 110px;
         font-size: 21px;
-
     }
     .block_absolute button {
         position: absolute;
