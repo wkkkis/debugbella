@@ -17,6 +17,7 @@ import {
 import NewsDetails from "./components/NewsDetails/NewsDetails";
 import Order from "./Pages/Order/Order";
 import Modal  from "./containers/Modal/Modal";
+import Hit from "./components/Hit/Hit"
 function App() {
     return (
         <>
@@ -46,8 +47,8 @@ function App() {
                 </Switch>
             </Layout>
 
-            <Modal />
-           
+            {/* <Modal /> */}
+           <Hit />
         </>
     );
 }
