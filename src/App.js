@@ -18,6 +18,9 @@ import {
     SearchResults,
 } from "./Pages";
 
+import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
+import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
+
 function App() {
     return (
         <>
@@ -55,6 +58,8 @@ function App() {
                     <Route exact path="/myOrders" component={MyOrders} />
                 </Switch>
             </Layout>
+            <Register />
+            <Confirmation />
             <Footer />
         </>
     );
