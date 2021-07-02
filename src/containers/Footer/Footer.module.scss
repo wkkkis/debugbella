@@ -23,7 +23,7 @@ $brown: rgba(43, 42, 42, 1);
         font-weight: 700;
         font-size: 15px;
         margin-left: 1.6rem;
-        padding-top: 1rem;
+        // padding-top: 1rem;
     }
 
     ul {
@@ -31,7 +31,7 @@ $brown: rgba(43, 42, 42, 1);
         color: rgba(124, 124, 124, 1);
 
         li {
-            padding: -5px 0 -5px 0;
+            // padding: -5px 0 -5px 0;
             font-weight: 400;
             font-size: 14px;
         }
@@ -50,7 +50,7 @@ $brown: rgba(43, 42, 42, 1);
     }
 }
 
-@media all and (max-width: 780px) {
+@media all and (max-width: 800px) {
     .mainContainer {
         background-color: $brown;
         &__inner {
