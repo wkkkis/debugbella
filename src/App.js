@@ -1,5 +1,6 @@
 import { Footer, Layout } from "./containers";
 import { Route, Switch } from "react-router-dom";
+import { NewsDetails } from "./components";
 import {
     AboutUs,
     Favorite,
@@ -15,9 +16,7 @@ import {
     Profile,
     MyOrders,
 } from "./Pages";
-import NewsDetails from "./components/NewsDetails/NewsDetails";
-import Order from "./Pages/Order/Order";
-import Modal  from "./containers/Modal/Modal";
+
 function App() {
     return (
         <>
@@ -47,9 +46,7 @@ function App() {
                     <Route exact path="/myOrders" component={MyOrders} />
                 </Switch>
             </Layout>
-
-            <Modal />
-           
+            <Footer />
         </>
     );
 }

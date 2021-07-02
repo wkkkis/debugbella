@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles.module.scss";
 import classes from "./MyOrders.module.scss";
 import summer from "../../assets/image/summer.png";
+import { PagesBtn } from "../../components";
 const MyOrders = () => {
+    const [visible, setVisible] = useState(false);
+    const [hideButton, setHideButton] = useState(true);
+    const openImages = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        setVisible((prev) => !prev);
+        setHideButton(!hideButton);
+    };
     return (
         <>
             <div className={styles.mainContainer}>
@@ -26,12 +35,12 @@ const MyOrders = () => {
                         <div className={classes.card_wrapper__all_images}>
                             <div className={classes.all_images}>
                                 <section
-                                    className={
-                                        classes.card_wrapper__all_images__text
-                                    }
+                                    className={classes.all_images__order_num}
                                 >
                                     <span>Заказ №2032e231w </span>
-                                    <span>Доставлено</span>
+                                    <span className={classes.order_status}>
+                                        Доставлено
+                                    </span>
                                 </section>
                                 <section>
                                     <span className={classes.date}>
@@ -39,6 +48,7 @@ const MyOrders = () => {
                                     </span>
                                 </section>
                             </div>
+
                             <div
                                 className={
                                     classes.card_wrapper__all_images__images
@@ -72,9 +82,46 @@ const MyOrders = () => {
                                 >
                                     <img src={summer} alt="" />
                                 </div>
-                                <button className={classes.btn}>
-                                    <p>+10</p>
-                                </button>
+                                {hideButton ? (
+                                    <button
+                                        onClick={openImages}
+                                        className={classes.btn}
+                                    >
+                                        <p>+10</p>
+                                    </button>
+                                ) : null}
+                                {visible && (
+                                    <>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                    </>
+                                )}
                             </div>
                             <section className={classes.price_section_wrapper}>
                                 <span className={classes.price_section}>
@@ -83,6 +130,106 @@ const MyOrders = () => {
                             </section>
                         </div>
                     </div>
+                    <div className={classes.card_wrapper}>
+                        <div className={classes.card_wrapper__all_images}>
+                            <div className={classes.all_images}>
+                                <section
+                                    className={classes.all_images__order_num}
+                                >
+                                    <span>Заказ №2032e231w </span>
+                                    <span className={classes.order_status}>
+                                        Доставлено
+                                    </span>
+                                </section>
+                                <section>
+                                    <span className={classes.date}>
+                                        24/03/21
+                                    </span>
+                                </section>
+                            </div>
+
+                            <div
+                                className={
+                                    classes.card_wrapper__all_images__images
+                                }
+                            >
+                                <div
+                                    className={
+                                        classes.card_wrapper__all_images__images__one
+                                    }
+                                >
+                                    <img src={summer} alt="" />
+                                </div>
+                                <div
+                                    className={
+                                        classes.card_wrapper__all_images__images__one
+                                    }
+                                >
+                                    <img src={summer} alt="" />
+                                </div>
+                                <div
+                                    className={
+                                        classes.card_wrapper__all_images__images__one
+                                    }
+                                >
+                                    <img src={summer} alt="" />
+                                </div>
+                                <div
+                                    className={
+                                        classes.card_wrapper__all_images__images__one
+                                    }
+                                >
+                                    <img src={summer} alt="" />
+                                </div>
+                                {hideButton ? (
+                                    <button
+                                        onClick={openImages}
+                                        className={classes.btn}
+                                    >
+                                        <p>+10</p>
+                                    </button>
+                                ) : null}
+                                {visible && (
+                                    <>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                        <div
+                                            className={
+                                                classes.card_wrapper__all_images__images__one
+                                            }
+                                        >
+                                            <img src={summer} alt="" />
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                            <section className={classes.price_section_wrapper}>
+                                <span className={classes.price_section}>
+                                    23200c
+                                </span>
+                            </section>
+                        </div>
+                    </div>
+                    <PagesBtn />
                 </div>
             </div>
         </>
