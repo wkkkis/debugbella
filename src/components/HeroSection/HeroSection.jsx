@@ -9,8 +9,8 @@ const HeroSection = () => {
     return (
         <>
             <div
-                id="carouselExampleCaptions"
                 data-interval="5000"
+                id="carouselExampleCaptions"
                 class="carousel slide carousel-fade"
                 data-bs-ride="carousel"
             >
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src={img1} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption  d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -58,7 +58,7 @@ const HeroSection = () => {
                     </div>
                     <div class="carousel-item">
                         <img src={img2} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption  d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -77,7 +77,7 @@ const HeroSection = () => {
                     </div>
                     <div class="carousel-item">
                         <img src={img3} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption  d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это

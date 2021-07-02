@@ -19,7 +19,7 @@ const Header = ({ openDrawer }) => {
                         src={lupa}
                         alt="logo"
                         className={classes.img2}
-                        style={{ width: "25px" }}
+                       
                     />
                 </NavLink>
                 <NavLink to="/basket">
@@ -27,7 +27,7 @@ const Header = ({ openDrawer }) => {
                         src={shop}
                         alt="logo"
                         className={classes.img1}
-                        style={{ width: "25px" }}
+                       
                     />
                 </NavLink>
             </div>

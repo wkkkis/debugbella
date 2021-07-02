@@ -3,24 +3,35 @@ $light_brown: rgba(171, 132, 74, 1);
 * {
     box-sizing: border-box;
 }
+// @font-face {
+//     font-family: "Helvetica Neue Cyr Thin";
+//     src: url("HelveticaNeueCyr-Thin.eot");
+//     src: url("HelveticaNeueCyr-Thin.eot?#iefix") format("embedded-opentype"),
+//         url("HelveticaNeueCyr-Thin.ttf") format("truetype");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// :global(ul) {
+//     padding: 0;
+//     margin: 0;
+//     li {
+//         list-style: none;
+//     }
+// }
+// :global(body) {
+//     padding: 0;
+//     margin: 0;
+// }
 .main_container {
     width: 100%;
     margin: 0 auto;
 }
-// .topSales__wrap {
-//     margin: 0 auto;
-//     width: 80%;
-//     padding-bottom: 20px;
-// }
-// .topSales_wrap {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+
 .secondary_container {
     background-color: #fff3e3;
     padding-bottom: 20px;
     padding-top: 20px;
+    margin-top: -2.4rem;
 }
 .third_container {
     width: 80%;
@@ -130,6 +141,25 @@ i:hover {
     h4 {
         font-size: 32px;
         font-weight: 400;
+    }
+}
+.mainContainer {
+    width: 80%;
+    margin: 0 auto;
+
+    .breadCrumbs {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 1.5rem;
+        padding-bottom: 0.5rem;
+        &__left_col {
+            color: #000;
+            text-decoration: none;
+            list-style: none;
+        }
+        &__right_col {
+            color: #7c7c7c;
+        }
     }
 }
 @media (max-width: 720px) {

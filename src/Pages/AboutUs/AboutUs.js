@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./AboutUs.module.scss";
 import diva from "../../assets/image/diva.png";
 import dress from "../../assets/image/about_us_dress.png";
@@ -7,8 +8,17 @@ const AboutUs = () => {
     return (
         <div className={classes.mainContainer}>
             <div className={classes.breadCrumbs}>
-                <span>Главная /&ensp;</span>
-                <span>Новости</span>
+                <Link
+                    to="/"
+                    style={{
+                        textDecoration: "none",
+                        listStyle: "none",
+                        color: "#000",
+                    }}
+                >
+                    <span>Главная /&ensp;</span>
+                </Link>
+                <span style={{ color: "grey" }}>О нас</span>
             </div>
             <div className={classes.main_header}>
                 <div className={classes.heading}>

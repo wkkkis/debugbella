@@ -1,25 +1,30 @@
 .close {
-    transform: translateX(-300px);
-    transition: transform 0.5s;
+  transform: translateX(-300px);
+  transition: transform 0.5s;
 }
 
 .open {
-    transform: translateX(0px);
-    transition: transform 0.5s;
+  transform: translateX(0px);
+  transition: transform 0.5s;
 }
 
-.Drawer{
+.Drawer {
   height: 100%;
 }
 
 .content {
-  width: 300px;
-  background-color: #fff;
-  position: absolute;
-  height: 100% !important;
+<<<<<<< HEAD
+=======
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
+>>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
+  width: 300px;
+  background-color: #fff;
+  height: 100% !important;
   padding: 15px 0px;
+<<<<<<< HEAD
   z-index: 12;
   ul {
     display: flex;
@@ -44,26 +49,36 @@
             align-items: flex-start;
             margin-top: 80px;
         }
+=======
+  list-style: none;
+  margin-top: 20px;
 
-        .profile {
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+>>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
 
-            img {
-                width: 25px;
-                height: 30px;
-            }
-        }
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+    img {
+      width: 25px;
+      height: 30px;
     }
-    a {
-        color: #7c7c7c;
-        text-decoration: none;
-        font-size: 14px;
-        text-align: left;
-        padding: 8px;
-        box-sizing: border-box;
-    }
+  }
+  a {
+    color: #7c7c7c;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+  }
 }
 
 @media (min-width: 966px) {
@@ -83,5 +98,26 @@
     .drawerLinks {
       height: 300px;
     }
+<<<<<<< HEAD
 }}
 }
+=======
+  }
+}
+
+@media (max-width: 550px) {
+
+  .content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 200px;
+    background-color: #fff;
+    height: 100% !important;
+    padding: 15px 0px;
+    list-style: none;
+    margin-top: 20px;
+  }
+}
+>>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890

@@ -14,3 +14,16 @@
     display: none;
   }
 }
+
+@media (max-width:720px) {
+ .DrawerOpen {
+    cursor: pointer;
+    > div > div {
+      width: 30px;
+      height: 2px;
+      background-color: black;
+      margin: 7px 0px;
+      transition: background-color 0.5s;
+    }
+  }
+}

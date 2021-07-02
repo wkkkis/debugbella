@@ -4,11 +4,7 @@ import styles from "../../components/Subscription/Subscription.module.scss";
 import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
 
-const Subscription = (callback, Validate) => {
-    // const { values, errors, handleChange, handleSubmit } = SubscriptionCheck(
-    //     Subscribe,
-    //     Validate
-    // );
+const Subscription = () => {
     const [showModal, setShowModal] = useState(false);
     const [values, setValues] = useState({});
     const [errors, setErrors] = useState({});
@@ -16,15 +12,27 @@ const Subscription = (callback, Validate) => {
 
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
-            callback();
+            openModal();
         }
     }, [errors]);
 
+    function validate(values) {
+        let errors = {};
+        let valid = values.fullName && values.phone;
+
+        if (!valid) {
+            errors.valid = "Не заполнены обязательные поля";
+        }
+        return errors;
+    }
+
     const handleSubmit = (event) => {
         if (event) event.preventDefault();
-        setErrors(Validate(values));
-        setIsSubmitting(true);
-        openModal();
+        setErrors(validate(values));
+
+        if (setIsSubmitting(true)) {
+            openModal();
+        }
     };
 
     const handleChange = (event) => {
@@ -37,10 +45,6 @@ const Subscription = (callback, Validate) => {
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
-
-    // function Subscribe() {
-    //     console.log("Done");
-    // }
     return (
         <div className={styles.main_subscription}>
             <div className={styles.subscription_wrapper}>
@@ -60,12 +64,16 @@ const Subscription = (callback, Validate) => {
                             ullamcorper porttitor faucibus tellus. Elit
                             ullamcorper lorem in mauris.
                         </p>
+<<<<<<< HEAD
+=======
+                        {/* <form onSubmit={handleSubmit}> */}
+>>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
                         <input
                             placeholder="Ваше Ф.И.О."
                             className={styles.form_inp}
                             name="fullName"
                             onChange={handleChange}
-                            value={values.fullName}
+                            // value="fullName"
                             required
                         />
                         <input
@@ -74,16 +82,16 @@ const Subscription = (callback, Validate) => {
                             type="number"
                             name="phone"
                             onChange={handleChange}
-                            value={values.phone}
+                            // value="phone"
                             required
                         />
                         <select>
-                            <option defaultChecked className={styles.option}>
+                            <option defaultValue className={styles.option}>
                                 Выбрать категорию
                             </option>
                             <option
                                 name="category"
-                                value={values.category}
+                                // value={values.category}
                                 className={styles.option}
                             >
                                 Платья
@@ -125,6 +133,10 @@ const Subscription = (callback, Validate) => {
                         {errors.valid && (
                             <p className={styles.alert}>{errors.valid}</p>
                         )}
+<<<<<<< HEAD
+=======
+                        {/* </form> */}
+>>>>>>> 9f4f25b8e00e2647d1ee20105858d0de6efbd890
                     </div>
                 </div>
             </div>
