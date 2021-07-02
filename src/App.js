@@ -17,6 +17,11 @@ import {
     Order,
     SearchResults,
 } from "./Pages";
+<<<<<<< HEAD
+import ProductCarousel from "./components/ProductCarousel/ProductCarousel";
+import Basket from "./Pages/Basket/Basket";
+=======
+>>>>>>> f37361477b0a90d8c03efe315a03e4afdd2039b0
 
 function App() {
     return (
@@ -43,6 +48,8 @@ function App() {
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
+<<<<<<< HEAD
+=======
                     <Route exact path="/products" component={Products} />
                     <Route exact path="ordering" component={Order} />
                     <Route
@@ -50,6 +57,7 @@ function App() {
                         path="/prodCarousel"
                         component={ProductCarousel}
                     />
+>>>>>>> f37361477b0a90d8c03efe315a03e4afdd2039b0
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
                     <Route exact path="/myOrders" component={MyOrders} />
