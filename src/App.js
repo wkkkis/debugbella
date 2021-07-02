@@ -28,14 +28,28 @@ function App() {
                     <Route exact path="/favourite" component={Favorite} />
                     <Route exact path="/delivery" component={Delivery} />
                     <Route exact path="/news" component={NewsCart} />
-                    <Route exact path="/news_details/" component={NewsDetails}/>
-                    <Route exact path="/collections" component={CollectionPage}/>
+                    <Route exact path="/search" component={SearchResults} />
+                    <Route
+                        exact
+                        path="/news_details/"
+                        component={NewsDetails}
+                    />
+                    <Route
+                        exact
+                        path="/collections"
+                        component={CollectionPage}
+                    />
                     <Route exact path="/details" component={Products} />
                     <Route exact path="/notFound" component={PageNotFound} />
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
                     <Route exact path="/products" component={Products} />
-                    <Route exact path="/prodCarousel" component={ProductCarousel} />
+                    <Route exact path="ordering" component={Order} />
+                    <Route
+                        exact
+                        path="/prodCarousel"
+                        component={ProductCarousel}
+                    />
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
                     <Route exact path="/myOrders" component={MyOrders} />
