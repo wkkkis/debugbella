@@ -22,14 +22,14 @@ const Header = ({ openDrawer }) => {
                        
                     />
                 </NavLink>
-                <NavLink to="/basket">
+                <span onClick>
                     <img
                         src={shop}
                         alt="logo"
                         className={classes.img1}
                        
                     />
-                </NavLink>
+                </span>
             </div>
             <Nav />
         </div>

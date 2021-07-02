@@ -6,8 +6,15 @@
     display: flex;
     justify-content: center;
     &__inner {
-        margin-bottom: 3rem;
+        margin: 1rem 0 0 3rem;
         width: 80%;
+        text-align: center;
+
+        .hit {
+            font-size: 24px;
+            padding: 1rem 0;
+            font-weight: 400;
+        }
     }
     &__header {
         margin: 2rem 0 2rem 0;
@@ -30,7 +37,7 @@
 @media (max-width: 720px) {
     .favorite_wrap {
         &__inner {
-            margin: 3rem 0 3rem 0;
+            margin: 1rem 0 3rem 0;
         }
     }
 }

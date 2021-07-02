@@ -10,16 +10,23 @@ import { useState } from "react";
 import Basket from "../../../../Pages/Basket/Basket";
 
 const Nav = () => {
-  const [visible, setVisible] = useState(false);
+<<<<<<< HEAD
+=======
 
+>>>>>>> f37361477b0a90d8c03efe315a03e4afdd2039b0
+  const [visible, setVisible] = useState(false);
   let toggle = () => {
     setVisible(!visible);
   };
 
   const [vid, setVid] = useState(false);
-
   let toggle1 = () => {
     setVid(!vid);
+  };
+
+  const [basket, setBasket] = useState(false);
+  let handleBasketClick = () => {
+    setBasket(!basket);
   };
 
   return (
@@ -148,14 +155,20 @@ const Nav = () => {
             </div>
           </span>
 
+<<<<<<< HEAD
           <NavItem url="/basket">
+=======
+          <span className={classes.basket} onClick={handleBasketClick}>
+>>>>>>> f37361477b0a90d8c03efe315a03e4afdd2039b0
             <span className={classes.img}>
               <img src={shop} alt="logo" />
               Корзина
             </span>
-          </NavItem>
+          </span>
+
         </div>
       </ul>
+      <Basket setBasket={setBasket} basket={basket}/>
     </div>
   );
 };

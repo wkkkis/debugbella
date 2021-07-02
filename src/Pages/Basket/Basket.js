@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
 import style from './Basket.module.scss'
-import Nav from '../../containers/NavigationMenuBar/Header/Nav/Nav';
-import Backdrop from '../../containers/NavigationMenuBar/Header/Backdrop/Backdrop';
+import basketEmpty from '../../assets/ProductImg/basketEmpty.png'
 
 const Basket = ({setBasket, basket,open,closeDrawer}) => {
 
     return (
         <>
             {basket ? (
-               <div className={style.modal}>
-                    <div className={style.modal__inner}>
-                        <div className={style.modal__inner__container}>
-                            asd 
+               <div className={style.mainModal}>
+                   <div className={style.mainModal__inner}>
+                        <div className={style.mainModal__inner__container}>
+                            
                         </div>
-                    </div>
+                   </div>
                </div>
             ) : (
-                null
+            //     <div className={style.modal}>
+            //         <div className={style.modal__inner}>
+            //             <div className={style.modal__inner__container}>
+            //                 <img src={basketEmpty} alt="" />
+            //                 <h1>Ваша корзина пуста</h1>
+            //                 <button>Продолжить покупки</button>
+            //             </div>
+            //         </div>
+            //    </div>
+            null
             )}
         </>
     );
