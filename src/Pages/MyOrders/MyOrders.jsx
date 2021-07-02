@@ -6,12 +6,16 @@ import summer from "../../assets/image/summer.png";
 import { PagesBtn } from "../../components";
 const MyOrders = () => {
     const [visible, setVisible] = useState(false);
+    const [visible2, setVisible2] = useState(false);
     const [hideButton, setHideButton] = useState(true);
-    const openImages = (e) => {
-        e.stopPropagation();
-        e.preventDefault();
+    const [hideButton2, setHideButton2] = useState(true);
+    const openImages = () => {
         setVisible((prev) => !prev);
         setHideButton(!hideButton);
+    };
+    const openSentImages = () => {
+        setVisible2((prev) => !prev);
+        setHideButton2(!hideButton2);
     };
     return (
         <>
@@ -82,14 +86,14 @@ const MyOrders = () => {
                                 >
                                     <img src={summer} alt="" />
                                 </div>
-                                {hideButton ? (
+                                {hideButton && (
                                     <button
                                         onClick={openImages}
                                         className={classes.btn}
                                     >
                                         <p>+10</p>
                                     </button>
-                                ) : null}
+                                )}
                                 {visible && (
                                     <>
                                         <div
@@ -181,15 +185,15 @@ const MyOrders = () => {
                                 >
                                     <img src={summer} alt="" />
                                 </div>
-                                {hideButton ? (
+                                {hideButton2 ? (
                                     <button
-                                        onClick={openImages}
+                                        onClick={openSentImages}
                                         className={classes.btn}
                                     >
                                         <p>+10</p>
                                     </button>
                                 ) : null}
-                                {visible && (
+                                {visible2 && (
                                     <>
                                         <div
                                             className={
