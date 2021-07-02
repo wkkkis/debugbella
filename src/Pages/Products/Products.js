@@ -2,11 +2,15 @@ import React from "react";
 import style from "./Products.module.scss";
 import lock from "../../assets/lock_nextImg/lock.png";
 import VerticalSlider from "../../components/VerticalSlider/VerticalSlider";
-// import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
-import ProductImg from '../../assets/ProductImg/vertical1.png'
+import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
+// import ProductImg from '../../assets/ProductImg/vertical1.png'
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 
 const Products = () => {
     return (
+        <>
+        <BreadCrumbs/>
+
         <div className={style.w_100}>
             <div className={style.main}>
                 <div className={style.main__carousel}>
@@ -115,9 +119,9 @@ const Products = () => {
                     </button>
                 </div>
             </div>
-            {/* <ProductCarousel/> */}
         </div>
-        
+            <ProductCarousel/>
+        </>
     );
 };
 

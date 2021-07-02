@@ -1,6 +1,7 @@
 import { Footer, Layout } from "./containers";
 import { Route, Switch } from "react-router-dom";
 import { NewsDetails, ProductCarousel, NewsCart } from "./components";
+import './styles/global.module.scss'
 import {
     AboutUs,
     Favorite,
@@ -17,9 +18,12 @@ import {
     Order,
     SearchResults,
 } from "./Pages";
+<<<<<<< HEAD
 
 import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
+=======
+>>>>>>> 16fd75896936a6bce7f34380cf643f71680a2940
 
 function App() {
     return (

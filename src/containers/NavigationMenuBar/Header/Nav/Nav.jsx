@@ -54,13 +54,14 @@ const Nav = () => {
                             }}
                         >
                             <span
-                                style={{ margin: "0", cursor: "pointer" }}
+                                style={{ margin: "0" }}
                                 onClick={toggle1}
                                 className={
                                     vid
                                         ? classes.hoverSearch
                                         : classes.hoverSearchDown
                                 }
+                                style={{ cursor: "pointer" }}
                             >
                                 <img src={lupa} alt="logo" />
                                 Поиск
