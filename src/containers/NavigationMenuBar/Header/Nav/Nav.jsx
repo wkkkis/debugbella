@@ -10,12 +10,6 @@ import { useState } from "react";
 import Basket from "../../../../Pages/Basket/Basket";
 
 const Nav = () => {
-<<<<<<< HEAD
-  const [visible, setVisible] = useState(false);
-  let toggle = () => {
-    setVisible(!visible);
-  };
-=======
     const [visible, setVisible] = useState(false);
     let toggle = () => {
         setVisible(!visible);
@@ -25,7 +19,6 @@ const Nav = () => {
     let toggle1 = () => {
         setVid(!vid);
     };
->>>>>>> 57a1f045a6164d3a7906c0a37358016476330521
 
     const [basket, setBasket] = useState(false);
     let handleBasketClick = () => {
@@ -141,14 +134,6 @@ const Nav = () => {
                                 </span>
                             </div>
 
-<<<<<<< HEAD
-          <span className={classes.basket} onClick={handleBasketClick}>
-            <span className={classes.img}>
-              <img src={shop} alt="logo" />
-              Корзина
-            </span>
-          </span>
-=======
                             {visible && (
                                 <>
                                     <div
@@ -169,7 +154,6 @@ const Nav = () => {
                             )}
                         </div>
                     </span>
->>>>>>> 57a1f045a6164d3a7906c0a37358016476330521
 
                     <span
                         className={classes.basket}
