@@ -23,6 +23,7 @@ $dark: rgba(43, 42, 42, 1);
             font-weight: 400;
             font-size: 13px;
             color: $gray;
+            margin-bottom: 5px;
 
             span{
                 color: $dark;
@@ -39,7 +40,7 @@ $dark: rgba(43, 42, 42, 1);
         }
         // block inner
         .cart__blockTwo__btns{
-            // margin-top: 20px;
+            margin-top: 13px;
             display: flex;
             border: none;
             .cart__blockTwo__btnMinus{
