@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import style from './Basket.module.scss'
 import basketEmpty from '../../assets/ProductImg/basketEmpty.png'
+import BasketCart from '../../components/BasketCart/BasketCart';
 
 const Basket = ({setBasket, basket,open,closeDrawer}) => {
 
@@ -10,7 +11,7 @@ const Basket = ({setBasket, basket,open,closeDrawer}) => {
                <div className={style.mainModal}>
                    <div className={style.mainModal__inner}>
                         <div className={style.mainModal__inner__container}>
-                            
+                            <BasketCart/>
                         </div>
                    </div>
                </div>

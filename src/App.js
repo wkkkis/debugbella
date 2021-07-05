@@ -1,6 +1,7 @@
 import { Footer, Layout } from "./containers";
 import { Route, Switch } from "react-router-dom";
 import { NewsDetails, ProductCarousel, NewsCart } from "./components";
+import "./styles/global.module.scss";
 import {
     AboutUs,
     Favorite,
@@ -17,6 +18,12 @@ import {
     Order,
     SearchResults,
 } from "./Pages";
+<<<<<<< HEAD
+=======
+
+import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
+import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
+>>>>>>> 57a1f045a6164d3a7906c0a37358016476330521
 
 function App() {
     return (
@@ -55,6 +62,8 @@ function App() {
                     <Route exact path="/myOrders" component={MyOrders} />
                 </Switch>
             </Layout>
+            <Register />
+            <Confirmation />
             <Footer />
         </>
     );
