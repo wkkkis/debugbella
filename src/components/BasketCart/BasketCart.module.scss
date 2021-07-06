@@ -6,9 +6,7 @@ $dark: rgba(43, 42, 42, 1);
 
     .cart__blockOne{
 
-        img{
-
-        }
+        
     }
     // block
     .cart__blockTwo{
@@ -72,5 +70,6 @@ $dark: rgba(43, 42, 42, 1);
     .cart__blockThree__close{
         display: flex;
         justify-content: flex-end;
+        margin-left: 20px;
     }
 }
