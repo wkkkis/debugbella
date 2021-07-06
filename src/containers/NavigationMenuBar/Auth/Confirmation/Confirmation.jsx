@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./Confirmation.module.scss";
+import RegisterForm from "../Register/RegisterForm/RegisterForm";
 
-const Confirmation = () => {
+const Confirmation = ({ state, setState, submitOtp }) => {
     return (
         <form className={classes.Confirmation}>
             <h1>BELLA</h1>
@@ -10,9 +11,10 @@ const Confirmation = () => {
                 <input
                     type="phone"
                     placeholder="введите код"
-                    name="phone"
+                    onClick={submitOtp}
+                    name="otp"
                     required
-                    pattern="0[0-9]{9}|+[0-9]{13}"
+                    // pattern="0[0-9]{9}|+[0-9]{13}"
                     minLength="13"
                 />
             </div>

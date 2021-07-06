@@ -21,7 +21,7 @@ import {
 
 import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
-import Auth from "./Auth/Auth";
+// import Auth from "./Auth/Auth";
 function App() {
     return (
         <>
@@ -57,11 +57,10 @@ function App() {
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
                     <Route exact path="/myOrders" component={MyOrders} />
-                    <Route exact path="/auth" component={Auth} />
+                    {/* <Route exact path="/auth" component={Auth} /> */}
                 </Switch>
             </Layout>
-            {/* <Register />
-            <Confirmation /> */}
+            <Register />
             <Footer />
         </>
     );

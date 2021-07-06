@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
 // import firebase from "../../../../../firebase";
 import app from "../../../../../firebase";
+import Confirmation from "../../Confirmation/Confirmation";
 
 const RegisterForm = ({ submitCallback, submitHandler }) => {
     const [state, setState] = useState(false);
@@ -28,7 +29,7 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
     }, []);
     const SignInSubmit = (e) => {
         e.preventDefault();
-        const phoneNumber = "+996" + name.mobile;
+        const phoneNumber = "+996" + name.phone;
         console.log(phoneNumber);
         const appVerifier = window.recaptchaVerifier;
         app.auth()
@@ -83,63 +84,65 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
     //         });
     // };
     return (
-        <form className={classes.Register} onSubmit={submitCallback}>
-            <div id="sign-in-button"></div>
-            <h1>BELLA</h1>
-            <div className={classes.input_cont}>
-                <h5>Ваше имя</h5>
-                <input
-                    type="text"
-                    placeholder="введите имя"
-                    name="name"
-                    // id="name"
-                    onChange={(e) => submitHandler(e)}
-                    required
-                />
-            </div>
-
-            <div className={classes.input_cont}>
-                <h5>Ваше Фамилия</h5>
-                <input
-                    onChange={(e) => submitHandler(e)}
-                    type="text"
-                    placeholder="введите фамилию"
-                    name="lastName"
-                    required
-                    id="lastName "
-                />
-            </div>
-
-            <div className={classes.input_cont}>
-                <h5>Номер телефона</h5>
-                <input
-                    onChange={(e) => submitHandler(e)}
-                    type="text"
-                    name="phone"
-                    placeholder="введите номер телефона"
-                    required
-                    pattern="0[0-9]{9}|+[0-9]{13}"
-                    minLength="9"
-                    maxLength="13"
-                />
-            </div>
-
-            <div className={classes.btn_cont}>
-                <span>
+        <>
+            <form className={classes.Register} onSubmit={SignInSubmit}>
+                <div id="sign-in-button"></div>
+                <h1>BELLA</h1>
+                <div className={classes.input_cont}>
+                    <h5>Ваше имя</h5>
                     <input
-                        onChange={(e) => submitHandler(e)}
-                        type="checkbox"
-                        name="checked"
+                        type="text"
+                        placeholder="введите имя"
+                        name="name"
+                        // id="name"
+                        onChange={handleChange}
                         required
-                        className={classes.check}
                     />
-                    <p>Согласен с условиями публичной оферты</p>
-                </span>
-                <button className={classes.btn}>
-                    <p>Продолжить </p>
-                </button>
-            </div>
-        </form>
+                </div>
+
+                <div className={classes.input_cont}>
+                    <h5>Ваше Фамилия</h5>
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        placeholder="введите фамилию"
+                        name="lastName"
+                        required
+                        id="lastName "
+                    />
+                </div>
+
+                <div className={classes.input_cont}>
+                    <h5>Номер телефона</h5>
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        name="phone"
+                        placeholder="введите номер телефона"
+                        required
+                        // pattern="0[0-9]{9}|+[0-9]{13}"
+                        minLength="9"
+                        maxLength="13"
+                    />
+                </div>
+                <div className={classes.btn_cont}>
+                    <span>
+                        <input
+                            onChange={handleChange}
+                            type="checkbox"
+                            name="checked"
+                            required
+                            className={classes.check}
+                        />
+                        <p>Согласен с условиями публичной оферты</p>
+                    </span>
+                    <button className={classes.btn} onClick={SubmitOTP}>
+                        <p>Продолжить </p>
+                    </button>
+                </div>
+            </form>
+            {/* <Confirmation SubmitOTP={SubmitOTP} /> */}
+        </>
     );
 };
 
