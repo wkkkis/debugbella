@@ -36,7 +36,11 @@ const BasketCart = () => {
                 </div>
                <div className={style.cart__blockThree}> 
                     <div className={style.cart__blockThree__close}> 
+<<<<<<< HEAD
                         <p>&times;</p>
+=======
+                        <h1>&times;</h1>
+>>>>>>> bef8b0ff044006be735eef4ee30f9ed76dc3e423
                     </div>
                     <div className={style.cart__blockThree__price}>
                         <p> 7222 c. {/*  7222 c. */} </p>

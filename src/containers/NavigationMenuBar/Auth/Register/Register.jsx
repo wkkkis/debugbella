@@ -12,26 +12,26 @@ const Register = () => {
         history.replace("/");
     }
 
-    function submitCallback(event) {
-        const data = new FormData(event.target);
-    }
+    // function submitCallback(event) {
+    //     const data = new FormData(event.target);
+    // }
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setForm((oldState) => {
-            const newState = { ...oldState };
-            newState[e.target.name] = e.target.value;
-            return newState;
-        });
-    };
+    // const submitHandler = (e) => {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     setForm((oldState) => {
+    //         const newState = { ...oldState };
+    //         newState[e.target.name] = e.target.value;
+    //         return newState;
+    //     });
+    // };
     console.log(form);
     return (
         <div className={classes.Register}>
             <RegisterForm
-                submitHandler={submitHandler}
-                submitCallback={submitCallback}
-                cancelCallback={cancelCallback}
+            // submitHandler={submitHandler}
+            // submitCallback={submitCallback}
+            // cancelCallback={cancelCallback}
             />
         </div>
     );

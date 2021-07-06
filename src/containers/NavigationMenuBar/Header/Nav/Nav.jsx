@@ -8,6 +8,7 @@ import bella from "../../../../assets/image/bella.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Basket from "../../../../Pages/Basket/Basket";
+import Register from "../../Auth/Register/Register";
 
 const Nav = () => {
     const [visible, setVisible] = useState(false);
@@ -23,6 +24,12 @@ const Nav = () => {
     const [basket, setBasket] = useState(false);
     let handleBasketClick = () => {
         setBasket(!basket);
+    };
+
+    const [profile, setProfile] = useState(false);
+
+    let handleProfile = () => {
+        setProfile(true);
     };
 
     return (
@@ -54,14 +61,13 @@ const Nav = () => {
                             }}
                         >
                             <span
-                                style={{ margin: "0" }}
                                 onClick={toggle1}
                                 className={
                                     vid
                                         ? classes.hoverSearch
                                         : classes.hoverSearchDown
                                 }
-                                style={{ cursor: "pointer" }}
+                                style={{ cursor: "pointer", margin: "0" }}
                             >
                                 <img src={lupa} alt="logo" />
                                 Поиск
@@ -120,18 +126,29 @@ const Nav = () => {
                                     marginRight: "0",
                                 }}
                             >
-                                <img src={user} alt="logo" />
-                                <span
-                                    style={{ margin: "0" }}
-                                    onClick={toggle}
-                                    className={
-                                        visible
-                                            ? classes.hoverDropDown
-                                            : classes.hoverDropDown__color
-                                    }
-                                >
-                                    Профиль
-                                </span>
+                                <img
+                                    src={user}
+                                    alt="logo"
+                                    onClick={handleProfile}
+                                />
+                                {profile ? (
+                                    <>
+                                        <Register />
+                                        <span
+                                            style={{ margin: "0" }}
+                                            onClick={toggle}
+                                            className={
+                                                visible
+                                                    ? classes.hoverDropDown
+                                                    : classes.hoverDropDown__color
+                                            }
+                                        >
+                                            Профиль
+                                        </span>
+                                    </>
+                                ) : (
+                                    <span onClick={handleProfile}>Войти</span>
+                                )}
                             </div>
 
                             {visible && (
@@ -143,9 +160,7 @@ const Nav = () => {
                                         <span className={classes.link}>
                                             <Link to="/orders">мои заказы</Link>
                                         </span>
-                                        <span className={classes.link}>
-                                            <Link to="/profile">профиль</Link>
-                                        </span>
+
                                         <span className={classes.link}>
                                             <Link to="/notFound">выйти</Link>
                                         </span>

@@ -82,6 +82,7 @@ $dark: rgba(43, 42, 42, 1);
     .cart__blockThree{
         display: flex;
         align-content: space-between;
+<<<<<<< HEAD
         position: relative;
 
         .cart__blockThree__close {
@@ -98,6 +99,17 @@ $dark: rgba(43, 42, 42, 1);
                 font-weight: 300;
                 color: rgba(0, 0, 0, 1);
                 margin-top: -20px;
+=======
+
+        .cart__blockThree__close {
+            h1{
+                display: flex;
+                justify-content: flex-end;
+                width: 16px;
+                height: 16px;
+                font-weight: 300;
+                color: rgba(0, 0, 0, 1);
+>>>>>>> bef8b0ff044006be735eef4ee30f9ed76dc3e423
             }
         }
         .cart__blockThree__price{
