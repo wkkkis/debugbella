@@ -90,7 +90,7 @@ function Auth() {
             <form onSubmit={SignInSubmit}>
                 <div id="sign-in-button"></div>
                 <input
-                    type="number"
+                    type="tel"
                     name="mobile"
                     placeholder="Mobile number"
                     required
@@ -109,7 +109,7 @@ function Auth() {
                 />
                 <button type="submit">Submit</button>
             </form>
-            {/* {state ? <button state={state} onClick={SignOut}></button> : null} */}
+            {state ? <button state={state} onClick={SignOut}></button> : null}
         </div>
     );
 }
