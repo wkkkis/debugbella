@@ -21,7 +21,11 @@ import {
 
 import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
+<<<<<<< HEAD
 
+=======
+// import Auth from "./Auth/Auth";
+>>>>>>> 06127e47a11eaa7bf3fb850533e20d48d55899e9
 function App() {
     return (
         <>
@@ -57,10 +61,10 @@ function App() {
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
                     <Route exact path="/myOrders" component={MyOrders} />
+                    {/* <Route exact path="/auth" component={Auth} /> */}
                 </Switch>
             </Layout>
             <Register />
-            <Confirmation />
             <Footer />
         </>
     );
