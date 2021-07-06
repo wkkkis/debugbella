@@ -8,6 +8,7 @@
     z-index: 3;
     display: flex;
     justify-content: flex-end;
+    overflow: scroll;
 
     &__inner{
         width: 433px;
