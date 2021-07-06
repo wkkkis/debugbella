@@ -1,12 +1,21 @@
 $gray: rgba(124, 124, 124, 1);
 $dark: rgba(43, 42, 42, 1);
+
 .cart{
     display: flex;
-    margin: 15px;
+    justify-content: space-between;
+    // border-bottom: 1px  solid black;
+    // border-top: 1px  solid black;
+    margin: 15px ;
 
+    &__mother{
+        display: flex;
+    }
     .cart__blockOne{
 
-        
+        img{
+
+        }
     }
     // block
     .cart__blockTwo{
@@ -18,27 +27,32 @@ $dark: rgba(43, 42, 42, 1);
             color: $dark;
         }
         .cart__blockTwo__size{
+            display: flex;
             font-weight: 400;
             font-size: 13px;
             color: $gray;
-            margin-bottom: 5px;
+            margin: 4px 0;
 
             span{
                 color: $dark;
+                margin: 0 0 0 5px;
             }
         }
         .cart__blockTwo__color{
+            display: flex;
             font-weight: 400;
             font-size: 13px;
             color: $gray;
+            margin: 4px 0;
 
             span{
                 color: $dark;
+                padding-left: 5px;
             }
         }
         // block inner
         .cart__blockTwo__btns{
-            margin-top: 13px;
+            // margin-top: 20px;
             display: flex;
             border: none;
             .cart__blockTwo__btnMinus{
@@ -48,6 +62,8 @@ $dark: rgba(43, 42, 42, 1);
                 color: white;
             }
             .cart__blockTwo__btnText{
+                display: flex;
+                align-items: center;
                 margin: 0 10px;
                 font-size: 16px;
                 font-weight: 550;
@@ -58,18 +74,30 @@ $dark: rgba(43, 42, 42, 1);
                 color: white;
                 background: rgba(171, 132, 74, 1);
             }
-            .cart__blockTwo__price{
-                display: flex;
-                align-items: flex-end;
-                justify-content: flex-end;
-            }
+           
         }
         //---END OF---block inner
     }
     // block
-    .cart__blockThree__close{
+    .cart__blockThree{
         display: flex;
-        justify-content: flex-end;
-        margin-left: 20px;
+        align-content: space-between;
+
+        .cart__blockThree__close {
+            h1{
+                display: flex;
+                justify-content: flex-end;
+                width: 16px;
+                height: 16px;
+                font-weight: 300;
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+        .cart__blockThree__price{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+        }
     }
 }
