@@ -28,7 +28,7 @@ function Auth() {
     }, []);
     const SignInSubmit = (e) => {
         e.preventDefault();
-        const phoneNumber =  "+996" + name.mobile; 
+        const phoneNumber = "+996" + name.mobile;
         console.log(phoneNumber);
         const appVerifier = window.recaptchaVerifier;
         app.auth()
@@ -109,7 +109,7 @@ function Auth() {
                 />
                 <button type="submit">Submit</button>
             </form>
-            {state ? <button state={state} onClick={SignOut}></button> : null}
+            {/* {state ? <button state={state} onClick={SignOut}></button> : null} */}
         </div>
     );
 }

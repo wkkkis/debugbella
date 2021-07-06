@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
-import firebase from "../../../../../firebase";
+// import firebase from "../../../../../firebase";
 import app from "../../../../../firebase";
 
 const RegisterForm = ({ submitCallback, submitHandler }) => {
