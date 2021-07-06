@@ -37,18 +37,20 @@
 .btn_cont {
   display: flex;
   flex-direction: column;
+
+  span {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: white;} 
 }
 
 .btn {
   width: 344px;
   margin-bottom: 15px;
 }
-span {
-  display: flex;
-  font-size: 14px;
-  margin-bottom: 10px;
-  border: none;
-  background-color: white;
+
 
   .check {
     color: #000;
@@ -61,7 +63,7 @@ span {
       color: black;
     }
   }
-}
+
 
 .btn p {
   padding: 15px;
