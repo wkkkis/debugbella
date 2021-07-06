@@ -12,10 +12,6 @@ const Auth = () => {
         const data = new FormData(event.target);
     }
 
-    const dummyFunction = () => {
-        console.log("dummy");
-    };
-
     return (
         <div className={classes.Auth}>
             <AuthForm

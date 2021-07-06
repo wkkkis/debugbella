@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import firebase from "../firebase";
+// import firebase from "../firebase";
 import app from "../firebase";
 
 function Auth() {
@@ -70,18 +70,18 @@ function Auth() {
             });
     };
 
-    const SignOut = () => {
-        firebase
-            .auth()
-            .signOut()
-            .then(() => {
-                window.open("/signin", "_self");
-            })
-            .catch((error) => {
-                // An error happened.
-                console.log(error);
-            });
-    };
+    // const SignOut = () => {
+    //     firebase
+    //         .auth()
+    //         .signOut()
+    //         .then(() => {
+    //             window.open("/signin", "_self");
+    //         })
+    //         .catch((error) => {
+    //             // An error happened.
+    //             console.log(error);
+    //         });
+    // };
 
     return (
         <div>
