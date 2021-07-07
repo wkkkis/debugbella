@@ -1,4 +1,4 @@
-import bella from "../../../../assets/image/bella.svg";
+import bella from "../../../../../assets/image/bella.svg"
 import classes from "./Logo.module.scss"
 const Logo = () => {
   return ( 
