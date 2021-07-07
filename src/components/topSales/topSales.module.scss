@@ -7,6 +7,7 @@ $brown: rgba(43, 42, 42, 1);
 $light_brown: rgba(171, 132, 74, 1);
 .wrapper {
     margin-bottom: 1rem;
+    margin-right: 0.5rem;
     .main_cart_wrap {
         position: relative;
         display: flex;
@@ -94,17 +95,12 @@ $light_brown: rgba(171, 132, 74, 1);
     }
     .color_wrapper {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+
         align-items: center;
         margin-top: 0.6rem;
         margin-bottom: 1rem;
 
-        .main__colorsDiv {
-            color: #7c7c7c;
-            font-size: 14px;
-            font-weight: 400;
-            margin: 5px 0 0 -10px;
-        }
         .main__colors {
             border: none;
             height: 11px;
@@ -117,7 +113,7 @@ $light_brown: rgba(171, 132, 74, 1);
             justify-content: center;
             width: 20px;
             height: 20px;
-            margin: 0 8px;
+            margin: 0 8px 0 0;
         }
         // ---------HOVER---------
         .main__colorsHover:hover {

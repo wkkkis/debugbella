@@ -106,9 +106,9 @@ $light_brown: rgba(171, 132, 74, 1);
 
 .btn:hover {
     background-color: $light_brown;
-}
-i:hover {
-    color: $brown;
+    i {
+        color: $brown;
+    }
 }
 
 .main__btn_wrap {
@@ -188,6 +188,7 @@ i:hover {
     }
     .category_card {
         margin-top: 20px;
+        margin-right: 0.5rem;
     }
 
     .collection_font {
@@ -195,5 +196,11 @@ i:hover {
             font-size: 20px;
             font-weight: 400;
         }
+    }
+    .card_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
     }
 }

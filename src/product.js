@@ -27,6 +27,16 @@ const product = {
                     name: "красный",
                     slug: "red",
                 },
+                {
+                    id: 2,
+                    name: "черный",
+                    slug: "grey",
+                },
+                {
+                    id: 3,
+                    name: "красный",
+                    slug: "green",
+                },
             ],
             new_price: 300,
         },
@@ -39,7 +49,7 @@ const product = {
             discount: 5,
             sizes: [
                 {
-                    name: "11-11",
+                    name: "38-44",
                 },
             ],
             colors: [
