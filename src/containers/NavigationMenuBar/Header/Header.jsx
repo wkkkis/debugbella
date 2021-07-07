@@ -4,7 +4,7 @@ import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen";
 import { NavLink } from "react-router-dom";
 import shop from "../../../assets/image/shop.png";
 import lupa from "../../../assets/image/lupa.png";
-import Logo from "./Logo/Logo";
+import Logo from "./Nav/Logo/Logo";
 
 const Header = ({ openDrawer }) => {
     return (
