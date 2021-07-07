@@ -20,11 +20,7 @@ import {
 } from "./Pages";
 
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
-<<<<<<< HEAD
-
-=======
 // import Auth from "./Auth/Auth";
->>>>>>> 06127e47a11eaa7bf3fb850533e20d48d55899e9
 function App() {
     return (
         <>
