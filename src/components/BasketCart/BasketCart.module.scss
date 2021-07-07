@@ -6,7 +6,7 @@ $dark: rgba(43, 42, 42, 1);
     justify-content: space-between;
     // border-bottom: 1px  solid black;
     // border-top: 1px  solid black;
-    margin: 15px ;
+    margin: 18px ;
 
     &__mother{
         display: flex;
@@ -19,7 +19,7 @@ $dark: rgba(43, 42, 42, 1);
     }
     // block
     .cart__blockTwo{
-        margin: 0 10px;
+        margin: 0 12px;
 
         .cart__blockTwo__title{
             font-weight: 550;
@@ -31,7 +31,7 @@ $dark: rgba(43, 42, 42, 1);
             font-weight: 400;
             font-size: 13px;
             color: $gray;
-            margin: 4px 0;
+            margin: 5px 0;
 
             span{
                 color: $dark;
@@ -43,7 +43,7 @@ $dark: rgba(43, 42, 42, 1);
             font-weight: 400;
             font-size: 13px;
             color: $gray;
-            margin: 4px 0;
+            margin: 5px 0;
 
             span{
                 color: $dark;
@@ -52,7 +52,7 @@ $dark: rgba(43, 42, 42, 1);
         }
         // block inner
         .cart__blockTwo__btns{
-            // margin-top: 20px;
+            margin-top: 12px;
             display: flex;
             border: none;
             .cart__blockTwo__btnMinus{
