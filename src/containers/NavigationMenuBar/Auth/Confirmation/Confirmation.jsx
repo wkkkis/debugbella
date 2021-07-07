@@ -5,23 +5,22 @@ import classes from "./Confirmation.module.scss";
 const Confirmation = (props) => {
     const [seconds, setSeconds] = useState(60);
     const [isActive, setIsActive] = useState(false);
-    useEffect((e) => {
+    useEffect(() => {
         timer();
-    }, []);
-    function timer() {
-        // e.preventDefault();
+    }, [seconds]);
+    const timer = (e) => {
         if (seconds > 0 && seconds <= 60) {
             setTimeout(() => setSeconds(seconds - 1), 1000);
-            setIsActive(true);
         } else if (seconds !== 1) {
             clearInterval();
             setSeconds("");
         }
+    };
+    function toggle(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsActive((prev) => !prev);
     }
-    // function toggle(e) {
-    //     e.preventDefault();
-    //     setIsActive(!isActive);
-    // }
 
     return (
         <form className={classes.Confirmation}>
@@ -41,13 +40,15 @@ const Confirmation = (props) => {
                     <p>Продолжить</p>
                 </button>
 
-                <button className={classes.btn_2} onClick={timer}>
+                <button className={classes.btn_2} onClick={(e) => toggle(e)}>
                     <p>Не пришло SMS?</p>
                 </button>
-                <button className={classes.btn}>
-                    <p>Отправить снова </p>
-                    {isActive && <p>{seconds}</p>}
-                </button>
+                {isActive && (
+                    <button className={classes.btn} onClick={timer}>
+                        <p>Отправить снова </p>
+                        <p>{seconds}</p>
+                    </button>
+                )}
             </div>
         </form>
     );

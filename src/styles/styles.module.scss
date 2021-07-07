@@ -120,6 +120,13 @@ i:hover {
     display: flex;
     padding-bottom: 20px;
 }
+.card_container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .backgroundColor_collection {
     background-color: #f6fdff;
     margin: 2rem 0 2rem 0;

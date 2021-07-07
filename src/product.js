@@ -11,7 +11,23 @@ const product = {
                     name: "42-50",
                 },
             ],
-            colors: [1],
+            colors: [
+                {
+                    id: 23,
+                    name: "белый",
+                    slug: "grey",
+                },
+                {
+                    id: 2,
+                    name: "черный",
+                    slug: "black",
+                },
+                {
+                    id: 3,
+                    name: "красный",
+                    slug: "red",
+                },
+            ],
             new_price: 300,
         },
         {
@@ -23,10 +39,26 @@ const product = {
             discount: 5,
             sizes: [
                 {
-                    name: "50-52",
+                    name: "11-11",
                 },
             ],
-            colors: [1],
+            colors: [
+                {
+                    id: 23,
+                    name: "белый",
+                    slug: "brown",
+                },
+                {
+                    id: 2,
+                    name: "черный",
+                    slug: "black",
+                },
+                {
+                    id: 3,
+                    name: "красный",
+                    slug: "red",
+                },
+            ],
             new_price: 1900,
         },
         {
@@ -41,7 +73,23 @@ const product = {
                     name: "42-50",
                 },
             ],
-            colors: [1],
+            colors: [
+                {
+                    id: 23,
+                    name: "белый",
+                    slug: "yellow",
+                },
+                {
+                    id: 2,
+                    name: "черный",
+                    slug: "black",
+                },
+                {
+                    id: 3,
+                    name: "красный",
+                    slug: "red",
+                },
+            ],
             new_price: 800,
         },
         {
@@ -56,7 +104,23 @@ const product = {
                     name: "40-42",
                 },
             ],
-            colors: [2],
+            colors: [
+                {
+                    id: 1,
+                    name: "1",
+                    slug: "blue",
+                },
+                {
+                    id: 2,
+                    name: "черный",
+                    slug: "pink",
+                },
+                {
+                    id: 3,
+                    name: "красный",
+                    slug: "red",
+                },
+            ],
             new_price: 2940,
         },
         {
@@ -71,7 +135,23 @@ const product = {
                     name: "36-38",
                 },
             ],
-            colors: [2],
+            colors: [
+                {
+                    id: 23,
+                    name: "белый",
+                    slug: "red",
+                },
+                {
+                    id: 2,
+                    name: "черный",
+                    slug: "black",
+                },
+                {
+                    id: 3,
+                    name: "красный",
+                    slug: "red",
+                },
+            ],
             new_price: 2700,
         },
     ],
