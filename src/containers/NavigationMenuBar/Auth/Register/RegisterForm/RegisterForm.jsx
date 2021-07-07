@@ -85,7 +85,7 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
     // };
     return (
         <>
-            <form className={classes.Register} onSubmit={SignInSubmit}>
+            <form className={classes.RegisterForm} onSubmit={SignInSubmit}>
                 <div id="sign-in-button"></div>
                 <h1>BELLA</h1>
                 <div className={classes.input_cont}>

@@ -59,7 +59,11 @@ function App() {
                     {/* <Route exact path="/auth" component={Auth} /> */}
                 </Switch>
             </Layout>
+<<<<<<< HEAD
+            {/* <Register /> */}
+=======
             <Confirmation />
+>>>>>>> 81409da26ba3fdf852f364aa01fc4a8b48f91823
             <Footer />
         </>
     );
