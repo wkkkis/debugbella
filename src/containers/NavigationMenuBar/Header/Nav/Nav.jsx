@@ -134,7 +134,64 @@ const Nav = () => {
                           : classes.hoverDropDown__color
                       }
                     >
+<<<<<<< HEAD
                       Профиль
+=======
+                        <div>
+                            <div
+                                className={classes.cont}
+                                style={{
+                                    position: "realtive",
+                                    marginRight: "0",
+                                }}
+                            >
+                                <img
+                                    src={user}
+                                    alt="logo"
+                                    onClick={handleProfile}
+                                />
+                                {profile ? (
+                                    <>
+                                        <div
+                                            className={classes.register_wrapper}
+                                        >
+                                            <Register />
+                                        </div>
+                                        <span
+                                            style={{ margin: "0" }}
+                                            onClick={toggle}
+                                            className={
+                                                visible
+                                                    ? classes.hoverDropDown
+                                                    : classes.hoverDropDown__color
+                                            }
+                                        >
+                                            Профиль
+                                        </span>
+                                    </>
+                                ) : (
+                                    <span onClick={handleProfile}>Войти</span>
+                                )}
+                            </div>
+
+                            {visible && (
+                                <>
+                                    <div
+                                        className={classes.dropDown}
+                                        style={{ position: "absolute" }}
+                                    >
+                                        <span className={classes.link}>
+                                            <Link to="/orders">мои заказы</Link>
+                                        </span>
+
+                                        <span className={classes.link}>
+                                            <Link to="/notFound">выйти</Link>
+                                        </span>
+                                    </div>
+                                </>
+                            )}
+                        </div>
+>>>>>>> 81409da26ba3fdf852f364aa01fc4a8b48f91823
                     </span>
                   </>
                 ) : (

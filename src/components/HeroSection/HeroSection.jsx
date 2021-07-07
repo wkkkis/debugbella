@@ -11,15 +11,15 @@ const HeroSection = () => {
             <div
                 data-interval="5000"
                 id="carouselExampleCaptions"
-                class="carousel slide carousel-fade"
+                className="carousel slide carousel-fade"
                 data-bs-ride="carousel"
             >
-                <div class="carousel-indicators">
+                <div className="carousel-indicators">
                     <button
                         type="button"
                         data-bs-target="#carouselExampleCaptions"
                         data-bs-slide-to="0"
-                        class="active"
+                        className="active"
                         aria-current="true"
                         aria-label="Slide 1"
                     ></button>
@@ -36,10 +36,10 @@ const HeroSection = () => {
                         aria-label="Slide 3"
                     ></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src={img1} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-md-block">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src={img1} className="d-block w-100" alt="..." />
+                        <div className="carousel-caption d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -56,9 +56,9 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src={img2} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-md-block">
+                    <div className="carousel-item">
+                        <img src={img2} className="d-block w-100" alt="..." />
+                        <div className="carousel-caption d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -75,9 +75,9 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src={img3} class="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-md-block">
+                    <div className="carousel-item">
+                        <img src={img3} className="d-block w-100" alt="..." />
+                        <div className="carousel-caption d-md-block">
                             <div className="block_absolute">
                                 <h5>
                                     Скидки до 70%! Вы точно <br /> захотите это
@@ -96,22 +96,22 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <button
-                    class="carousel-control-prev"
+                    className="carousel-control-prev"
                     type="button"
                     data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="prev"
                 >
                     {/* <span class="carousel-control-prev-icon" aria-hidden="true"></span> */}
-                    <span class="visually-hidden">Previous</span>
+                    <span className="visually-hidden">Previous</span>
                 </button>
                 <button
-                    class="carousel-control-next"
+                    className="carousel-control-next"
                     type="button"
                     data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="next"
                 >
                     {/* <span class="carousel-control-next-icon" aria-hidden="true"></span> */}
-                    <span class="visually-hidden">Next</span>
+                    <span className="visually-hidden">Next</span>
                 </button>
             </div>
         </>

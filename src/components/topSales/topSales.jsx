@@ -1,14 +1,20 @@
-import React from "react";
-// import classes from "../../styles/styles.module.scss";
+import React, { useState, useEffect } from "react";
 import classes from "../topSales/topSales.module.scss";
 import dress_model from "../../assets/image/dress_model.svg";
-// import cart from "../../assets/image/cart.svg";
 import favourite from "../../assets/image/favourite.png";
-// import styles from "../topSales/topSales.module.scss";
 import ColorSelection from "../ColorSelection/ColorSelection";
+import productJSON from "../../product";
 
 const TopSales = () => {
-    return (
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        setTimeout(() => {
+            setProduct(productJSON);
+        }, 1000);
+    }, [product]);
+    console.log(productJSON.products[0].title);
+    return productJSON.products.map((index) => (
         <div className={classes.main_cart__container}>
             <div className={classes.main_cart_wrap}>
                 <img src={dress_model} alt="blue-dress" />
@@ -40,22 +46,24 @@ const TopSales = () => {
                 </div>
 
                 <div className={classes.price_box}>
-                    <span className={classes.prevPrice}>12000 c.</span>
-                    <span className={classes.currentPrice}>12000 c.</span>
-                    <span className={classes.discount}>35%</span>
+                    <span className={classes.prevPrice}>{index.price}</span>
+                    <span className={classes.currentPrice}>
+                        {product.new_price}
+                    </span>
+                    <span className={classes.discount}>{index.discount}%</span>
                 </div>
                 <div className={classes.product_description}>
                     <div className={classes.description_text}>
-                        <span>The Organic Cotton Clothes</span>
+                        <span>{index.title}</span>
                     </div>
 
                     <div className={classes.size_description}>
-                        <span>Размер 46-54</span>
+                        <span>{index.sizes.name}</span>
                     </div>
                 </div>
                 <ColorSelection />
             </div>
-            <div className={classes.main_cart_wrap}>
+            {/* <div className={classes.main_cart_wrap}>
                 <img src={dress_model} alt="blue-dress" />
 
                 <div className={classes.favourite}>
@@ -234,9 +242,9 @@ const TopSales = () => {
                     </div>
                 </div>
                 <ColorSelection />
-            </div>
+            </div> */}
         </div>
-    );
+    ));
 };
 
 export default TopSales;

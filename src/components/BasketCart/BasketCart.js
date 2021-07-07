@@ -1,6 +1,6 @@
-import React from 'react';
-import style from './BasketCart.module.scss'
-import basketCartImg from '../../assets/image/basketCartImg.png'
+import React from "react";
+import style from "./BasketCart.module.scss";
+import basketCartImg from "../../assets/image/basketCartImg.png";
 
 const BasketCart = () => {
     return (
@@ -24,25 +24,29 @@ const BasketCart = () => {
                             <button className={style.cart__blockTwo__btnMinus}>
                                 -
                             </button>
-                                <p className={style.cart__blockTwo__btnText}>
-                                    20 {/* 20 */}
-                                </p>
+                            <p className={style.cart__blockTwo__btnText}>
+                                20 {/* 20 */}
+                            </p>
                             <button className={style.cart__blockTwo__btnMPlus}>
                                 +
                             </button>
-                           
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                <div className={style.cart__blockThree}> 
                     <div className={style.cart__blockThree__close}> 
+=======
+                <div className={style.cart__blockThree}>
+                    <div className={style.cart__blockThree__close}>
+>>>>>>> 81409da26ba3fdf852f364aa01fc4a8b48f91823
                         <h1>&times;</h1>
                     </div>
                     <div className={style.cart__blockThree__price}>
                         <p> 7222 c. {/*  7222 c. */} </p>
                     </div>
-               </div>
-            </div> 
+                </div>
+            </div>
         </>
     );
 };
