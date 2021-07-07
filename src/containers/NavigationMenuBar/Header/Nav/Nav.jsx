@@ -133,7 +133,11 @@ const Nav = () => {
                                 />
                                 {profile ? (
                                     <>
-                                        <Register />
+                                        <div
+                                            className={classes.register_wrapper}
+                                        >
+                                            <Register />
+                                        </div>
                                         <span
                                             style={{ margin: "0" }}
                                             onClick={toggle}

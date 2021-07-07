@@ -19,7 +19,6 @@ import {
     SearchResults,
 } from "./Pages";
 
-import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
 // import Auth from "./Auth/Auth";
 function App() {
@@ -60,7 +59,7 @@ function App() {
                     {/* <Route exact path="/auth" component={Auth} /> */}
                 </Switch>
             </Layout>
-            <Register />
+            <Confirmation />
             <Footer />
         </>
     );

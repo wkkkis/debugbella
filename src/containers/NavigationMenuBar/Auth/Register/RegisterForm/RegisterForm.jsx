@@ -121,8 +121,8 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                         placeholder="введите номер телефона"
                         required
                         // pattern="0[0-9]{9}|+[0-9]{13}"
-                        minLength="9"
-                        maxLength="13"
+                        // minLength="9"
+                        // maxLength="13"
                     />
                 </div>
                 <div className={classes.btn_cont}>
@@ -136,12 +136,16 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                         />
                         <p>Согласен с условиями публичной оферты</p>
                     </span>
-                    <button className={classes.btn} onClick={SubmitOTP}>
+                    <button className={classes.btn}>
                         <p>Продолжить </p>
                     </button>
                 </div>
             </form>
-            {/* <Confirmation SubmitOTP={SubmitOTP} /> */}
+            <Confirmation
+                SubmitOTP={SubmitOTP}
+                state={state}
+                setState={setState}
+            />
         </>
     );
 };

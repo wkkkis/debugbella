@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./ProductCart.module.scss";
 import dress_model from "../../assets/image/rect.svg";
 import { favorite } from "../../assets";
@@ -14,7 +14,16 @@ import { ColorSelection } from "../index";
 //     `#ff6363`,
 // ];
 
+import productJSON from "../../product";
+
 const ProductCart = () => {
+    // const [product, setProduct] = useState({});
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setProduct(productJSON);
+    //     }, 1000);
+    // }, [product]);
+    // console.log(product);
     return (
         <div className={classes.main_cart_wrap}>
             <img src={dress_model} alt="blue-dress" />
@@ -44,7 +53,6 @@ const ProductCart = () => {
                     <span>Добавить в корзину</span>
                 </div>
             </div>
-
             <div className={classes.price_box}>
                 <span className={classes.prevPrice}>12000 c.</span>
                 <span className={classes.currentPrice}>12000 c.</span>
