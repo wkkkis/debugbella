@@ -19,10 +19,13 @@ import {
     SearchResults,
 } from "./Pages";
 
-import Register from "./containers/NavigationMenuBar/Auth/Register/Register";
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
+<<<<<<< HEAD
 import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
 
+=======
+// import Auth from "./Auth/Auth";
+>>>>>>> a15ea62869797b5581e37be489f85824dd7aff32
 function App() {
     return (
         <>
@@ -62,8 +65,7 @@ function App() {
 
                 </Switch>
             </Layout>
-            <Register />
-            <Confirmation />
+            {/* <Register /> */}
             <Footer />
         </>
     );

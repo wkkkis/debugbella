@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
 
@@ -16,6 +16,7 @@ const RegisterForm = () => {
     };
 
     return (
+        <>
         <form className={classes.Register} onSubmit={createUser}>
             <h1>BELLA</h1>
             <div className={classes.input_cont}>
@@ -47,20 +48,41 @@ const RegisterForm = () => {
                 />
             </div>
 
-            <div className={classes.btn_cont}>
-                <span>
+                <div className={classes.input_cont}>
+                    <h5>Номер телефона</h5>
                     <input
-                        type="checkbox"
-                        name="checked"
-                        className={classes.check}
+                        onChange={handleChange}
+                        type="text"
+                        name="phone"
+                        placeholder="введите номер телефона"
+                        required
+                        // pattern="0[0-9]{9}|+[0-9]{13}"
+                        // minLength="9"
+                        // maxLength="13"
                     />
-                    <p>Согласен с условиями публичной аферты</p>
-                </span>
-                <button className={classes.btn}>
-                    <p>Продолжить </p>
-                </button>
-            </div>
-        </form>
+                </div>
+                <div className={classes.btn_cont}>
+                    <span>
+                        <input
+                            onChange={handleChange}
+                            type="checkbox"
+                            name="checked"
+                            required
+                            className={classes.check}
+                        />
+                        <p>Согласен с условиями публичной оферты</p>
+                    </span>
+                    <button className={classes.btn}>
+                        <p>Продолжить </p>
+                    </button>
+                </div>
+            </form>
+            <Confirmation
+                SubmitOTP={SubmitOTP}
+                state={state}
+                setState={setState}
+            />
+        </>
     );
 };
 

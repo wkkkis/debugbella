@@ -1,60 +1,23 @@
-import React from 'react';
-import classes from '../ColorSelection/ColorSelection.module.scss';
-
+import React, { useState, useEffect } from "react";
+import classes from "../ColorSelection/ColorSelection.module.scss";
+import productJSON from "../../product";
 const ColorSelection = () => {
-  return (
-    <div className={classes.main__colorsDiv}>
+    const [product, setProduct] = useState({});
+    useEffect(() => {
+        setTimeout(() => {
+            setProduct(productJSON);
+        }, 1000);
+    }, [product]);
+    return productJSON.products.map((index) => (
+        <div className={classes.main__colorsDiv}>
             <span className={classes.main__colorsHover}>
                 <span
-                  className={classes.main__colors}
-                  style={{ background: '#bdd4d1' }}
-                >
-                </span>
+                    className={classes.main__colors}
+                    style={{ background: index.colors }}
+                ></span>
             </span>
-      <div className={classes.main__colorsHover}>
-                <span
-                  className={classes.main__colors}
-                  style={{ background: '#c5e7ab' }}
-                >
-                </span>
-      </div>
-      <div className={classes.main__colorsHover}>
-                <span
-                  className={classes.main__colors}
-                  style={{ background: '#ab844a' }}
-                >
-                </span>
-      </div>
-      <div className={classes.main__colorsHover}>
-                <span
-                  className={classes.main__colors}
-                  style={{ background: '#b9bff8' }}
-                >
-                </span>
-      </div>
-      <div className={classes.main__colorsHover}>
-                <span
-                  className={classes.main__colors}
-                  style={{ background: '#ECECEC' }}
-                >
-                </span>
-      </div>
-      <div className={classes.main__colorsHover}>
-                <span
-                  className={classes.main__colors}
-                  style={{ background: '#909091' }}
-                >
-                </span>
-      </div>
-      <div className={classes.main__colorsHover}>
-                <span
-                  className={classes.main__colors}
-                  style={{ background: '#ff8787' }}
-                >
-                </span>
-      </div>
-    </div>
-  );
+        </div>
+    ));
 };
 
 export default ColorSelection;

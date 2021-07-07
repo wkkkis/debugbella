@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
+// import { useHistory } from "react-router-dom";
 import classes from "./Register.module.scss";
 import RegisterForm from "./RegisterForm/RegisterForm";
 
 const Register = () => {
-    const [form, setForm] = useState({});
+    // const [form, setForm] = useState({});
 
-    const history = useHistory();
+    // const history = useHistory();
 
-    function cancelCallback() {
-        history.replace("/");
-    }
+    // function cancelCallback() {
+    //     history.replace("/");
+    // }
 
     // function submitCallback(event) {
     //     const data = new FormData(event.target);
@@ -29,8 +29,9 @@ const Register = () => {
     return (
         <div className={classes.Register}>
             <RegisterForm
-                // submitHandler={submitHandler}
-                cancelCallback={cancelCallback}
+            // submitHandler={submitHandler}
+            // submitCallback={submitCallback}
+            // cancelCallback={cancelCallback}
             />
         </div>
     );

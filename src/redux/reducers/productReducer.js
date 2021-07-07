@@ -1,7 +1,7 @@
 // import { ActionTypes } from "../constants/action_types";
 
 // const initialState = {
-//     products: [],
+//
 // loading: false,
 // error: null
 // };

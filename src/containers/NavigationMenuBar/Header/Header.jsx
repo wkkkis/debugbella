@@ -1,34 +1,24 @@
 import classes from "./Header.module.scss";
 import Nav from "./Nav/Nav";
-import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen"
+import DrawerOpen from "./Drawer/DrawerOpen/DrawerOpen";
 import { NavLink } from "react-router-dom";
 import shop from "../../../assets/image/shop.png";
 import lupa from "../../../assets/image/lupa.png";
-import Logo from "./Logo/Logo";
+import Logo from "./Nav/Logo/Logo";
 
 const Header = ({ openDrawer }) => {
     return (
         <div className={classes.header}>
-            <DrawerOpen click={openDrawer} />
+            <DrawerOpen onClick={openDrawer} />
             <div className={classes.logo}>
                 <Logo />
             </div>
             <div className={classes.icon}>
                 <NavLink to="/search">
-                    <img
-                        src={lupa}
-                        alt="logo"
-                        className={classes.img2}
-                       
-                    />
+                    <img src={lupa} alt="logo" className={classes.img2} />
                 </NavLink>
-                <span onClick>
-                    <img
-                        src={shop}
-                        alt="logo"
-                        className={classes.img1}
-                       
-                    />
+                <span>
+                    <img src={shop} alt="logo" className={classes.img1} />
                 </span>
             </div>
             <Nav />

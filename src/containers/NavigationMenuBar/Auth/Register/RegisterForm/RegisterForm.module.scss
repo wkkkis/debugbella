@@ -1,37 +1,39 @@
-.Register {
-  width: 408px;
-  margin: 0 auto;
-  display: flex;
-
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-
-  padding: 20px;
-  padding-bottom: 90px;
-
-  h1 {
+.RegisterForm {
+    width: 408px;
+    height: 532px;
     margin: 0 auto;
-    text-align: center;
-  }
+    display: flex;
+
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    padding: 20px;
+    padding-bottom: 90px;
+
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+  
 }
 
 .input_cont {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
 
-  input {
-    width: 344px;
-    padding: 10px;
-    margin: 15px 0;
-  }
-  h5 {
-    font-size: 20px;
-    color: black;
-    font-weight: 500;
-  }
+    input {
+        width: 344px;
+        padding: 10px;
+        margin: 15px 0;
+    }
+    h5 {
+        font-size: 20px;
+        color: black;
+        font-weight: 500;
+    }
 }
 
 .btn_cont {
@@ -47,29 +49,28 @@
 }
 
 .btn {
-  width: 344px;
-  margin-bottom: 15px;
+    width: 344px;
+    margin-bottom: 15px;
 }
 
-
-  .check {
+.check {
     color: #000;
     line-height: 30px;
     padding: 10px 0;
     background-color: white;
 
     .check::after {
-      background-color: white;
-      color: black;
+        background-color: white;
+        color: black;
     }
   }
 
 
 .btn p {
-  padding: 15px;
+    padding: 15px;
 }
 
 .btn {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
