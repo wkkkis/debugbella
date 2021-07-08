@@ -8,14 +8,13 @@
     align-content: center;
     align-items: center;
 
-    padding: 20px;
-    padding-bottom: 90px;
+    padding: 13px;
+    margin-bottom: 6rem;
 
-    h1 {
+    h3 {
         margin: 0 auto;
         text-align: center;
     }
-  
 }
 
 .input_cont {
@@ -26,7 +25,7 @@
 
     input {
         width: 344px;
-        padding: 10px;
+        padding: 8px;
         margin: 0px 0 15px 0;
     }
     h5 {
@@ -37,11 +36,11 @@
 }
 
 .btn_cont {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.span{
+.span {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -69,8 +68,7 @@
         background-color: white;
         color: black;
     }
-  }
-
+}
 
 .btn p {
     padding: 15px;
