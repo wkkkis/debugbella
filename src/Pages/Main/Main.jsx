@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import classes from "../../styles/styles.module.scss";
 import red_coat from "../../assets/image/redCoat.png";
 import yellowDress from "../../assets/image/yellowDress.png";
@@ -88,7 +88,9 @@ const Main = () => {
                 <span className={classes.collection_font}>
                     <h4>Хит продаж</h4>
                 </span>
-                <TopSales />
+                <div className={classes.card_container}>
+                    <TopSales />
+                </div>
                 <Button />
                 <span className={classes.collection_font}>
                     <h4>Новинки</h4>

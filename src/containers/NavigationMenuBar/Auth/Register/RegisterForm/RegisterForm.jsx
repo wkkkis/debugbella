@@ -1,57 +1,125 @@
 import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
+import app from "../../../../../firebase";
 import Confirmation from "../../Confirmation/Confirmation";
-
 const RegisterForm = () => {
-
-    const createUser = async (event) => {
-        event.preventDefault()
-        let  formData = {
-            name: event.target[0].value,
-            lastName: event.target[1].value,
-            phone: event.target[2].value,
+    const [state, setState] = useState(false);
+    const [name, setName] = useState();
+    const handleChange = (e) => {
+        setName({
+            firstName: e.target.value,
+            lastName: e.target.value,
+            phone: e.target.value,
+            otp: e.target.value,
+        });
+    };
+    const createUser = async (e) => {
+        // event.preventDefault();
+        let formData = {
+            firstName: e.target[0].value,
+            lastName: e.target[1].value,
+            phone: e.target[2].value,
         };
-        const isValid = await userSchema.isValid(formData)
+        const isValid = await userSchema.isValid(formData);
         console.log(isValid);
     };
+    useEffect(() => {
+        window.recaptchaVerifier = new app.auth.RecaptchaVerifier(
+            "sign-in-button",
+            {
+                size: "invisible",
+                callback: (response) => {
+                    // reCAPTCHA solved, allow signInWithPhoneNumber.
+                    SignInSubmit();
+                    console.log("Recaptca varified");
+                },
+                defaultCountry: "KG",
+            }
+        );
+    }, []);
+    const SignInSubmit = (e) => {
+        e.preventDefault();
+        const phoneNumber = name.phone;
+        console.log(name);
+        const appVerifier = window.recaptchaVerifier;
+        app.auth()
+            .signInWithPhoneNumber(phoneNumber, appVerifier)
+            .then((confirmationResult) => {
+                // SMS sent. Prompt user to type the code from the message, then sign the
+                // user in with confirmationResult.confirm(code).
+                window.confirmationResult = confirmationResult;
+                console.log(confirmationResult);
+                console.log("OTP has been sent");
+                createUser();
+                // ...
+                appVerifier.clear();
+            })
+            .catch((error) => {
+                // Error; SMS not sent
+                // ...
+                console.log(error);
+                console.log("SMS not sent");
+                appVerifier.clear();
+            });
+    };
+
+    // const SignOut = () => {
+    //     firebase
+    //         .auth()
+    //         .signOut()
+    //         .then(() => {
+    //             window.open("/signin", "_self");
+    //         })
+    //         .catch((error) => {
+    //             // An error happened.
+    //             console.log(error);
+    //         });
+    // };
 
     return (
         <>
-        <form className={classes.RegisterForm} onSubmit={createUser}>
-            <h1>BELLA</h1>
-            <div className={classes.input_cont}>
-                <h5>Ваше имя</h5>
-                <input
-                    type="text"
-                    placeholder="введите имя"
-                    name="name"
-                    id="name"
-                />
-            </div>
+            <form className={classes.RegisterForm} onSubmit={SignInSubmit}>
+                <div id="sign-in-button"></div>
+                <h1>BELLA</h1>
+                <div className={classes.input_cont}>
+                    <h5>Ваше имя</h5>
+                    <input
+                        type="text"
+                        placeholder="введите имя"
+                        name="firstName"
+                        id="name"
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className={classes.input_cont}>
-                <h5>Ваше Фамилия</h5>
-                <input
-                    type="text"
-                    placeholder="введите фамилию"
-                    name="lastName"
-                    id="lastName "
-                />
-            </div>
+                <div className={classes.input_cont}>
+                    <h5>Ваше Фамилия</h5>
+                    <input
+                        type="text"
+                        placeholder="введите фамилию"
+                        name="lastName"
+                        onChange={handleChange}
+                        id="lastName "
+                    />
+                </div>
 
-            <div className={classes.input_cont}>
-                <h5>Номер телефона</h5>
-                <input
-                    type="text"
-                    name="phone"
-                    placeholder="+996"
-                />
-            </div>
+                <div className={classes.input_cont}>
+                    <h5>Номер телефона</h5>
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        name="phone"
+                        placeholder="введите номер телефона"
+                        required
+                        // pattern="0[0-9]{9}|+[0-9]{13}"
+                        // minLength="9"
+                        // maxLength="13"
+                    />
+                </div>
                 <div className={classes.btn_cont}>
                     <span className={classes.span}>
                         <input
-                            // onChange={handleChange}
                             type="checkbox"
                             name="checked"
                             required
@@ -64,11 +132,13 @@ const RegisterForm = () => {
                     </button>
                 </div>
             </form>
-            {/* <Confirmation */}
-                {/* // SubmitOTP={SubmitOTP}
-                // state={state}
-                // setState={setState}
-            // /> */}
+            <Confirmation
+                state={state}
+                setState={setState}
+                name={name}
+                setName={setName}
+                handleChange={handleChange}
+            />
         </>
     );
 };

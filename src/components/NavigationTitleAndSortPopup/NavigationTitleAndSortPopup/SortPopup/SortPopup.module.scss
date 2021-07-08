@@ -19,14 +19,14 @@ $font: "Open Sans", sans-serif;
             top: 0;
         }
 
-        &__sort_toggle_wrap {
+        .sort__sort_wrap__sort_toggle_wrap {
             cursor: pointer;
             margin-bottom: 12px;
             width: 11rem;
 
             span {
                 margin-right: 0.3rem;
-                font-size: 15px;
+                font-size: 16px;
                 color: #2a2a2a;
                 font-weight: 550;
                 line-height: 17px;
@@ -45,12 +45,13 @@ $font: "Open Sans", sans-serif;
             margin-top: 5px;
             padding: 10px 16px 16px 0;
 
-            &__drop_link {
+            .sort__sort_wrap__open_links__drop_link {
                 padding: 0 0 18px 57px;
                 font-family: $font;
+                margin-top: 0.5rem;
 
                 span {
-                    font-size: 13px;
+                    font-size: 15px;
                     font-weight: 600;
                     color: #7c7c7c;
                     cursor: pointer;

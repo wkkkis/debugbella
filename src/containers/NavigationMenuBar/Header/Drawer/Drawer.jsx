@@ -66,9 +66,9 @@ const Drawer = ({ open, closeDrawer }) => {
                   </div>
                 </>
               ) : (
-                <div>
+                <div className={classes.profile}>
                   <img src={user} alt="logo" onClick={handleProfile} />
-                  <span onClick={handleProfile}>Войти</span>{" "}
+                  <span className={classes.center} onClick={handleProfile}>Войти</span>{" "}
                 </div>
               )}
             </div>

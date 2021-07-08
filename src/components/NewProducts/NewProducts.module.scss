@@ -6,6 +6,15 @@ $light_brown: rgba(171, 132, 74, 1);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    .color_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+        background-color: rgb(235, 206, 206);
+    }
 }
 .main_cart_wrap {
     position: relative;

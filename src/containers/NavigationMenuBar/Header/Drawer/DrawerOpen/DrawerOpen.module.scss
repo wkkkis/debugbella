@@ -1,29 +1,29 @@
 .DrawerOpen {
-  cursor: pointer;
-  > div > div {
-    width: 40px;
-    height: 4px;
-    background-color: rgb(0, 0, 0);
-    margin: 10px 0px;
-    transition: background-color 0.5s;
-  }
+    cursor: pointer;
+    > div > div {
+        width: 40px;
+        height: 4px;
+        background-color: rgb(0, 0, 0);
+        margin: 10px 0px;
+        transition: background-color 0.5s;
+    }
 }
 
 @media (min-width: 966px) {
-  .DrawerOpen {
-    display: none;
-  }
+    .DrawerOpen {
+        display: none;
+    }
 }
 
-@media (max-width:720px) {
- .DrawerOpen {
-    cursor: pointer;
-    > div > div {
-      width: 30px;
-      height: 2px;
-      background-color: black;
-      margin: 7px 0px;
-      transition: background-color 0.5s;
+@media (max-width: 720px) {
+    .DrawerOpen {
+        cursor: pointer;
+        > div > div {
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            margin: 7px 0px;
+            transition: background-color 0.5s;
+        }
     }
-  }
 }
