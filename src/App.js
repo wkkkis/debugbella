@@ -19,14 +19,7 @@ import {
     Order,
     SearchResults,
 } from "./Pages";
-<<<<<<< HEAD
-
-import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
 import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
-
-=======
-import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
->>>>>>> 044083d2432a4994abc23bf89ff4013eab558090
 function App() {
     return (
         <>
