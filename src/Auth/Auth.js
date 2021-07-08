@@ -28,7 +28,7 @@ function Auth() {
     }, []);
     const SignInSubmit = (e) => {
         e.preventDefault();
-        const phoneNumber = "+996" + name.mobile;
+        const phoneNumber = name.mobile;
         console.log(phoneNumber);
         const appVerifier = window.recaptchaVerifier;
         app.auth()

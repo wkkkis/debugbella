@@ -7,6 +7,15 @@ $light_brown: rgba(171, 132, 74, 1);
     justify-content: space-between;
     flex-direction: column;
     margin-bottom: 2em;
+
+    .color_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+        background-color: rgb(235, 206, 206);
+    }
 }
 
 .favourite {

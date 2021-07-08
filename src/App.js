@@ -1,3 +1,4 @@
+import React from "react";
 import { Footer, Layout } from "./containers";
 import { Route, Switch } from "react-router-dom";
 import { NewsDetails, ProductCarousel, NewsCart } from "./components";
@@ -18,9 +19,7 @@ import {
     Order,
     SearchResults,
 } from "./Pages";
-import Register from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
-import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
-// import Auth from "./Auth/Auth";
+import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
 function App() {
     return (
         <>
@@ -56,12 +55,9 @@ function App() {
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
                     <Route exact path="/myOrders" component={MyOrders} />
-                    {/* <Route exact path="/auth" component={Auth} /> */}
+                    <Route exact path="/re" component={RegisterForm} />
                 </Switch>
             </Layout>
-            <Register />
-
-            {/* <Confirmation /> */}
             <Footer />
         </>
     );

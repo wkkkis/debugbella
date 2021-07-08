@@ -67,7 +67,6 @@ const TopSales = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className={classes.color_wrapper}> */}
                 <div className={classes.color_wrapper}>
                     {item.colors.map((color, index) => {
                         return (

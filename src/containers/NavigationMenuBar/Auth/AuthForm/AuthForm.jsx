@@ -1,7 +1,7 @@
 import classes from "./AuthForm.module.scss";
 import { Link } from "react-router-dom";
 
-const AuthForm = (submitCallback) => {
+const AuthForm = () => {
     return (
         <form className={classes.AuthForm}>
             <h1>BELLA</h1>
@@ -11,10 +11,6 @@ const AuthForm = (submitCallback) => {
                     type="phone"
                     placeholder="введите номер телефона"
                     name="phone"
-                    required
-                    // pattern="0[0-9]{9}|+[0-9]{13}"
-                    minLength="9"
-                    maxLength="13"
                 />
             </div>
             <div className={classes.btn_cont}>

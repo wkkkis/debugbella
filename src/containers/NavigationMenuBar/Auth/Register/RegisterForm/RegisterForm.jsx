@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
-// import firebase from "../../../../../firebase";
+import { userSchema } from "../../../../../components/Validations/UserValidation";
 import app from "../../../../../firebase";
 import Confirmation from "../../Confirmation/Confirmation";
-
-const RegisterForm = ({ submitCallback, submitHandler }) => {
+const RegisterForm = () => {
     const [state, setState] = useState(false);
     const [name, setName] = useState();
     const handleChange = (e) => {
-        // const {name, value } = e.target
         setName({
-            [e.target.name]: e.target.value,
+            firstName: e.target.value,
+            lastName: e.target.value,
+            phone: e.target.value,
+            otp: e.target.value,
         });
+    };
+    const createUser = async (e) => {
+        // event.preventDefault();
+        let formData = {
+            firstName: e.target[0].value,
+            lastName: e.target[1].value,
+            phone: e.target[2].value,
+        };
+        const isValid = await userSchema.isValid(formData);
+        console.log(isValid);
     };
     useEffect(() => {
         window.recaptchaVerifier = new app.auth.RecaptchaVerifier(
@@ -29,8 +40,8 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
     }, []);
     const SignInSubmit = (e) => {
         e.preventDefault();
-        const phoneNumber = "+996" + name.phone;
-        console.log(phoneNumber);
+        const phoneNumber = name.phone;
+        console.log(name);
         const appVerifier = window.recaptchaVerifier;
         app.auth()
             .signInWithPhoneNumber(phoneNumber, appVerifier)
@@ -40,6 +51,7 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                 window.confirmationResult = confirmationResult;
                 console.log(confirmationResult);
                 console.log("OTP has been sent");
+                createUser();
                 // ...
                 appVerifier.clear();
             })
@@ -49,25 +61,6 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                 console.log(error);
                 console.log("SMS not sent");
                 appVerifier.clear();
-            });
-    };
-    const SubmitOTP = (e) => {
-        e.preventDefault();
-        const code = name.otp;
-        console.log(code);
-        window.confirmationResult
-            .confirm(code)
-            .then((result) => {
-                // User signed in successfully.
-                const user = result.user;
-                console.log(JSON.stringify(user));
-                alert("User is verified");
-                setState(true);
-                // ...
-            })
-            .catch((error) => {
-                // User couldn't sign in (bad verification code?)
-                // ...
             });
     };
 
@@ -83,9 +76,10 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
     //             console.log(error);
     //         });
     // };
+
     return (
         <>
-            <form className={classes.RegisterForm} onSubmit={SignInSubmit}>
+            <form className={classes.Register} onSubmit={SignInSubmit}>
                 <div id="sign-in-button"></div>
                 <h1>BELLA</h1>
                 <div className={classes.input_cont}>
@@ -93,21 +87,19 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                     <input
                         type="text"
                         placeholder="введите имя"
-                        name="name"
-                        // id="name"
+                        name="firstName"
+                        id="name"
                         onChange={handleChange}
-                        required
                     />
                 </div>
 
                 <div className={classes.input_cont}>
                     <h5>Ваше Фамилия</h5>
                     <input
-                        onChange={handleChange}
                         type="text"
                         placeholder="введите фамилию"
                         name="lastName"
-                        required
+                        onChange={handleChange}
                         id="lastName "
                     />
                 </div>
@@ -128,7 +120,6 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                 <div className={classes.btn_cont}>
                     <span>
                         <input
-                            onChange={handleChange}
                             type="checkbox"
                             name="checked"
                             required
@@ -142,9 +133,11 @@ const RegisterForm = ({ submitCallback, submitHandler }) => {
                 </div>
             </form>
             <Confirmation
-                SubmitOTP={SubmitOTP}
                 state={state}
                 setState={setState}
+                name={name}
+                setName={setName}
+                handleChange={handleChange}
             />
         </>
     );
