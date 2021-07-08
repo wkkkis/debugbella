@@ -20,12 +20,8 @@ import {
 } from "./Pages";
 
 import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
-<<<<<<< HEAD
 import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
 
-=======
-// import Auth from "./Auth/Auth";
->>>>>>> a15ea62869797b5581e37be489f85824dd7aff32
 function App() {
     return (
         <>

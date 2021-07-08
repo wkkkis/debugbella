@@ -1,6 +1,7 @@
 import classes from "./AuthForm.module.scss";
 import { Link } from "react-router-dom";
 
+
 const AuthForm = (submitCallback) => {
     return (
         <form className={classes.AuthForm}>
