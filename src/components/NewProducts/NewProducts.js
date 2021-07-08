@@ -54,9 +54,11 @@ const NewProducts = () => {
                         <span>Размер 46-54</span>
                     </div>
                 </div>
-                <ColorSelection />
+                <div className={classes.color_wrapper}>
+                    <ColorSelection />
+                </div>
             </div>
-            <div className={classes.main_cart_wrap}>
+            {/* <div className={classes.main_cart_wrap}>
                 <img src={dress_model} alt="blue-dress" />
                 <div className={classes.main_cart_wrap__icons}>
                     <div className={classes.new_icon}>
@@ -247,7 +249,7 @@ const NewProducts = () => {
                     </div>
                 </div>
                 <ColorSelection />
-            </div>
+            </div> */}
         </div>
     );
 };

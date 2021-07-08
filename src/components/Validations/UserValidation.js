@@ -1,14 +1,14 @@
 import * as yup from "yup";
 
-const phoneRegExp = /\+996\ddddddddd/
 export const userSchema = yup.object().shape({
-    name: yup.string().required(),
+    firstName: yup.string().required(),
     lastName: yup.string().required(),
-    phone: yup.string()
-    .required("required")
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .min(10, "to short")
-    .max(10, "to long"),
-})
-
-
+    phone: yup
+        .string()
+        .required()
+        .matches(/\+[996]\d{10}[0-9]/g)
+        .max(13, "too long"),
+});
+export const otpSchema = yup.object().shape({
+    otp: yup.number().required(),
+});

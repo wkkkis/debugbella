@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./ProductCart.module.scss";
 import dress_model from "../../assets/image/rect.svg";
 import { favorite } from "../../assets";
@@ -14,7 +14,7 @@ import { ColorSelection } from "../index";
 //     `#ff6363`,
 // ];
 
-import productJSON from "../../product";
+// import productJSON from "../../product";
 
 const ProductCart = () => {
     // const [product, setProduct] = useState({});
@@ -67,13 +67,9 @@ const ProductCart = () => {
                     <span>Размер 46-54</span>
                 </div>
             </div>
-
-            {/* <div className={classes.color_picker}>
-                {color.map((color) => {
-                    return <ColorPickerBtn color={color} />;
-                })}
-            </div> */}
-            <ColorSelection />
+            <div className={classes.color_wrapper}>
+                <ColorSelection />
+            </div>
         </div>
     );
 };
