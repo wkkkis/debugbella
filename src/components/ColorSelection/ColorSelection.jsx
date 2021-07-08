@@ -2,14 +2,14 @@ import React from "react";
 import classes from "../ColorSelection/ColorSelection.module.scss";
 import productJSON from "../../product";
 const ColorSelection = () => {
-    return productJSON.products.map((index) => (
-        <div className={classes.main__colorsDiv} key={index.id} index={index}>
+    return productJSON.products.map((item, index) => (
+        <div className={classes.main__colorsDiv} key={item.id} item={item}>
             <span className={classes.main__colorsHover}>
                 <span
                     className={classes.main__colors}
-                    style={{ background: index.color }}
+                    style={{ background: item.color }}
                 >
-                    {index.colors[index]}
+                    {item.colors[0].slug}
                 </span>
             </span>
         </div>

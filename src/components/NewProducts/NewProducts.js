@@ -55,7 +55,7 @@ const NewProducts = () => {
                     </div>
                 </div>
                 <div className={classes.color_wrapper}>
-                    <ColorSelection />
+                    {/* <ColorSelection /> */}
                 </div>
             </div>
             {/* <div className={classes.main_cart_wrap}>

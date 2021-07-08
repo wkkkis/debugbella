@@ -22,11 +22,7 @@ const Confirmation = (props) => {
     // }
 
     const createOTP = async (e) => {
-        // event.preventDefault();
-        let otp = {
-            otp: e.target[0].value,
-        };
-        const isValid = await otpSchema.isValid(otp);
+        const isValid = await otpSchema.isValid(props.name);
         console.log(isValid);
     };
     const SubmitOTP = (e) => {
@@ -54,9 +50,9 @@ const Confirmation = (props) => {
     return (
         <form className={classes.Confirmation} onSubmit={SubmitOTP}>
             <div id="sign-in-button"></div>
-            <h1>BELLA</h1>
+
             <div className={classes.input_cont}>
-                <h5>ВХОД</h5>
+                <h5>Введите код подтвержения</h5>
                 <input
                     type="tel"
                     placeholder="введите код"
