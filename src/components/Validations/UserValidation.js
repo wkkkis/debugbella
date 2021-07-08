@@ -12,3 +12,10 @@ export const userSchema = yup.object().shape({
 export const otpSchema = yup.object().shape({
     otp: yup.number().required(),
 });
+export const authSchema = yup.object().shape({
+    savedPhone: yup
+        .string()
+        .required()
+        .matches(/\+[996]\d{10}[0-9]/g)
+        .max(13, "too long"),
+});

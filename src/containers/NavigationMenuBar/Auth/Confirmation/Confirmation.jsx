@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Confirmation.module.scss";
 import { otpSchema } from "../../../../components/Validations/UserValidation";
 const Confirmation = (props) => {
@@ -62,7 +62,6 @@ const Confirmation = (props) => {
                     placeholder="введите код"
                     onChange={props.handleChange}
                     name="otp"
-                    // required
                 />
             </div>
             <div className={classes.btn_cont}>
