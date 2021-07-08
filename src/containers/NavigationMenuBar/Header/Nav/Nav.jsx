@@ -12,28 +12,32 @@ import Register from "../../Auth/Register/Register";
 
 const Nav = () => {
   const [visible, setVisible] = useState(false);
+  const [vid, setVid] = useState(false);
+  const [basket, setBasket] = useState(false);
+  const [profile, setProfile] = useState(false);
+
   let toggle = () => {
     setVisible(!visible);
   };
 
-  const [vid, setVid] = useState(false);
+ 
+
   let toggle1 = () => {
     setVid(!vid);
   };
-
-  const [basket, setBasket] = useState(false);
+ 
   let handleBasketClick = () => {
     setBasket(!basket);
   };
-
-  const [profile, setProfile] = useState(false);
 
   let handleProfile = () => {
     setProfile(!profile);
   };
 
+
+
   return (
-    <div className={classes.Nav}>
+    <div className={classes.Nav} >
       <ul className={classes.ul}>
         <div className={classes.left}>
           <NavItem url="/">Товары</NavItem>
@@ -111,6 +115,7 @@ const Nav = () => {
           >
             <div>
               <div
+              
                 className={classes.cont}
                 style={{
                   position: "realtive",
@@ -122,120 +127,41 @@ const Nav = () => {
                   <>
                   <div>
                   <Register />
-
                   </div>
 
                     <span
+                    onClick={toggle}
                       style={{ margin: "0" }}
-                      onClick={toggle}
                       className={
                         visible
                           ? classes.hoverDropDown
                           : classes.hoverDropDown__color
                       }
                     >
-<<<<<<< HEAD
                       Профиль
-=======
-                        <div>
-                            <div
-                                className={classes.cont}
-                                style={{
-                                    position: "realtive",
-                                    marginRight: "0",
-                                }}
-                            >
-                                <img
-                                    src={user}
-                                    alt="logo"
-                                    onClick={handleProfile}
-                                />
-                                {profile ? (
-                                    <>
-                                        <div
-                                            className={classes.register_wrapper}
-                                        >
-                                            <Register />
-                                        </div>
-                                        <span
-                                            style={{ margin: "0" }}
-                                            onClick={toggle}
-                                            className={
-                                                visible
-                                                    ? classes.hoverDropDown
-                                                    : classes.hoverDropDown__color
-                                            }
-                                        >
-                                            Профиль
-                                        </span>
-                                    </>
-                                ) : (
-                                    <span onClick={handleProfile}>Войти</span>
-                                )}
-                            </div>
-
-                            {visible && (
-                                <>
-                                    <div
-                                        className={classes.dropDown}
-                                        style={{ position: "absolute" }}
-                                    >
-                                        <span className={classes.link}>
-                                            <Link to="/orders">мои заказы</Link>
-                                        </span>
-
-                                        <span className={classes.link}>
-                                            <Link to="/notFound">выйти</Link>
-                                        </span>
-                                    </div>
-                                </>
-                            )}
-                        </div>
->>>>>>> 81409da26ba3fdf852f364aa01fc4a8b48f91823
                     </span>
                   </>
                 ) : (
                   <span onClick={handleProfile}>Войти</span>
                 )}
-
-                {/* {profile && (
-                <>
-                  <span
-                      style={{ margin: "0" }}
-                      onClick={toggle}
-                      className={
-                        visible
-                          ? classes.hoverDropDown
-                          : classes.hoverDropDown__color
-                      }
-                    >
-                      Профиль
-                    </span>
-                      <div className={classes.modal1}>
-                      <div className={classes.modal2}>
-                        <Register />
-                      </div>
-                    </div> 
-                </>
-              )} */}
               </div>
-
-              {/* //// */}
               {visible && (
-                <>
-                  <div
-                    className={classes.dropDown}
-                    style={{ position: "absolute" }}
-                  >
-                    <span className={classes.link}>
-                      <Link to="/orders">мои заказы</Link>
-                    </span>
-
-                    <span className={classes.link}>
-                      <Link to="/notFound">выйти</Link>
-                    </span>
-                  </div>
-                </>
+                  <>
+                      <div
+                          className={classes.dropDown}
+                          style={{ position: "absolute" }}
+                      >
+                          <span className={classes.link}>
+                              <Link to="/orders">мои заказы</Link>
+                          </span>
+                          <span className={classes.link}>
+                              <Link to="/profile">профиль</Link>
+                          </span>
+                          <span className={classes.link}>
+                              <Link to="/notFound">выйти</Link>
+                          </span>
+                      </div>
+                  </>
               )}
             </div>
           </span>

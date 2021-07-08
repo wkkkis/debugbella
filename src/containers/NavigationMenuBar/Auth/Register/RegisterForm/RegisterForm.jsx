@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
+import Confirmation from "../../Confirmation/Confirmation";
 
 const RegisterForm = () => {
 
@@ -17,7 +18,7 @@ const RegisterForm = () => {
 
     return (
         <>
-        <form className={classes.Register} onSubmit={createUser}>
+        <form className={classes.RegisterForm} onSubmit={createUser}>
             <h1>BELLA</h1>
             <div className={classes.input_cont}>
                 <h5>Ваше имя</h5>
@@ -47,24 +48,10 @@ const RegisterForm = () => {
                     placeholder="+996"
                 />
             </div>
-
-                <div className={classes.input_cont}>
-                    <h5>Номер телефона</h5>
-                    <input
-                        onChange={handleChange}
-                        type="text"
-                        name="phone"
-                        placeholder="введите номер телефона"
-                        required
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
-                    />
-                </div>
                 <div className={classes.btn_cont}>
-                    <span>
+                    <span className={classes.span}>
                         <input
-                            onChange={handleChange}
+                            // onChange={handleChange}
                             type="checkbox"
                             name="checked"
                             required
@@ -77,11 +64,11 @@ const RegisterForm = () => {
                     </button>
                 </div>
             </form>
-            <Confirmation
-                SubmitOTP={SubmitOTP}
-                state={state}
-                setState={setState}
-            />
+            {/* <Confirmation */}
+                {/* // SubmitOTP={SubmitOTP}
+                // state={state}
+                // setState={setState}
+            // /> */}
         </>
     );
 };
