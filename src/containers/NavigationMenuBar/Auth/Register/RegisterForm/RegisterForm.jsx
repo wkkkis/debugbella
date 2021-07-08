@@ -75,7 +75,7 @@ const RegisterForm = () => {
 
     return (
         <>
-            <form className={classes.Register} onSubmit={SignInSubmit}>
+            <form className={classes.RegisterForm} onSubmit={SignInSubmit}>
                 <div id="sign-in-button"></div>
                 <h3>Регистрация</h3>
                 <div className={classes.input_cont}>
@@ -139,7 +139,7 @@ const RegisterForm = () => {
                     />
                 </div>
                 <div className={classes.btn_cont}>
-                    <span>
+                    <span className={classes.span}>
                         <input
                             type="checkbox"
                             name="checked"

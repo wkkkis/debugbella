@@ -12,6 +12,7 @@ const AuthForm = () => {
     //     const isValid = await authSchema.isValid(formData);
     //     console.log(isValid);
     // };
+
     return (
         <form className={classes.AuthForm}>
             <h1>BELLA</h1>
