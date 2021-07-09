@@ -3,6 +3,7 @@ import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
 import app from "../../../../../firebase";
 import Confirmation from "../../Confirmation/Confirmation";
+
 const RegisterForm = () => {
     const [state, setState] = useState(false);
     const [name, setName] = useState();
@@ -16,9 +17,12 @@ const RegisterForm = () => {
         });
     };
     const createUser = async (e) => {
+        // e.preventDefault();
+       
         const isValid = await userSchema.isValid(name);
-        console.log(isValid);
+        // console.log(e + " nurb");
     };
+    createUser()
     useEffect(() => {
         window.recaptchaVerifier = new app.auth.RecaptchaVerifier(
             "sign-in-button",
@@ -106,35 +110,25 @@ const RegisterForm = () => {
                         type="text"
                         name="phone"
                         placeholder="введите номер телефона"
-                        required
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
+                        required                       
                     />
                 </div>
                 <div className={classes.input_cont}>
                     <p>Введите пароль</p>
                     <input
                         onChange={handleChange}
-                        type="text"
+                        type="password"
                         name="password"
-                        placeholder="введите пароль"
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
+                        placeholder="введите пароль"                   
                     />
                 </div>
                 <div className={classes.input_cont}>
                     <p>Подтвердите пароль</p>
                     <input
                         onChange={handleChange}
-                        type="text"
+                        type="password"
                         name="repeatPassword"
                         placeholder="подтвердите пароль"
-
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
                     />
                 </div>
                 <div className={classes.btn_cont}>

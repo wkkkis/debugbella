@@ -2,7 +2,21 @@ import classes from "./Profile.module.scss";
 import { Link } from "react-router-dom";
 import img1 from "../../assets/image/bellaprofile3.png";
 import img2 from "../../assets/image/bellaprofile2.png";
+import { userSchema } from "../../components/Validations/UserValidation";
+
 const Profile = () => {
+
+  const createUser = async (e) => {
+    e.preventDefault();
+    let formData = {
+      firstName: e.target[0].value,
+      lastName: e.target[1].value,
+      phone: e.target[2].value
+    };
+    const isValid = await userSchema.isValid(formData);
+    console.log(isValid);
+  };
+
   return (
     <div className={classes.profilePage}>
       <div className={classes.product}>
@@ -13,48 +27,50 @@ const Profile = () => {
         </div>
       </div>
       <div className={classes.profile} >
-        <div>
+        <form onSubmit={createUser}>
           <div className={classes.h3}>Профиль</div>
           <div className={classes.input_cont}>
-            <h5>Имя</h5>
+            <p>Имя</p>
             <input type="text" placeholder="введите имя" name="name" required />
           </div>
           <div className={classes.input_cont}>
-            <h5>Фамилия</h5>
+            <p>Фамилия</p>
             <input
               type="text"
               placeholder="введите фамилию"
-              name="name"
+              name="lastName"
               required
             />
           </div>
           <div className={classes.input_cont}>
-            <h5>Номер телефона</h5>
+            <p>Номер телефона</p>
             <input
               type="phone"
               placeholder="+996 (773) 870 100"
-              name="name"
+              name="phone"
               required
             />
           </div>
 
           <button className={classes.btn_reg}>
-            <Link to="/">изменить номер</Link>
+            <Link to="/">Изменить номер</Link>
           </button>
 
           <div className={classes.h3}>Адресс доставки</div>
           <div className={classes.input_cont}>
-            <h5>Страна</h5>
+            <p>Страна</p>
             <input type="text" placeholder="Кыргызстан" name="name" required />
           </div>
           <div className={classes.input_cont}>
-            <h5>Город</h5>
+            <p>Город</p>
             <input type="text" placeholder="Бишкек" name="name" required />
           </div>
           <button className={classes.btn__save}>
-            <Link to="/">Сохранить</Link>
+            {/* <Link to="/profile"> */}
+              Сохранить
+              {/* </Link> */}
           </button>
-        </div>
+        </form>
 
         <div className={classes.second__cont}>
           <div className={classes.bella1}>

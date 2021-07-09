@@ -24,9 +24,11 @@ export const userSchema = yup.object().shape({
         .oneOf([yup.ref("password"), null], "Passwords don't match!")
         .required(),
 });
+
 export const otpSchema = yup.object().shape({
     otp: yup.number().required(),
 });
+
 export const authSchema = yup.object().shape({
     savedPhone: yup
         .string()
