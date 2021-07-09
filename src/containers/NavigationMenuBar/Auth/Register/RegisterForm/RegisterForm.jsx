@@ -118,7 +118,7 @@ const RegisterForm = () => {
                     <p>Введите пароль</p>
                     <input
                         onChange={handleChange}
-                        type="text"
+                        type="password"
                         name="password"
                         placeholder="введите пароль"                   
                     />
@@ -127,7 +127,7 @@ const RegisterForm = () => {
                     <p>Подтвердите пароль</p>
                     <input
                         onChange={handleChange}
-                        type="text"
+                        type="password"
                         name="repeatPassword"
                         placeholder="подтвердите пароль"
                     />

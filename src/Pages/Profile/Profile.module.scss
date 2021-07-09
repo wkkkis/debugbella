@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .profilePage {
   width: 100%;
 }
@@ -15,6 +19,10 @@
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 200px;
+  line-height: 19.9px;
+  letter-spacing: 6%;
+  font-weight: 400;
+  color: #2b2a2a;
 }
 
 .input_cont {
@@ -25,16 +33,24 @@
 
   input {
     width: 344px;
-    padding: 10px;
+    padding: 9px;
     margin-bottom: 10px;
     margin-top: 5px;
     border: 1px solid rgba(228, 228, 228, 1);
     outline: none;
+   
+
+    input.text{
+      font-size: 14px;
+      color: black;
+      height: 44px;
+    }
   }
-  h5 {
-    font-size: 13px;
-    color: black;
-    font-weight: 500;
+  p {
+    font-size: 14px;
+    color:#7C7C7C;
+    font-weight: 400;
+    line-height: 12,94px;
   }
 }
 
@@ -60,7 +76,9 @@
   font-size: 16px;
 
   a {
-    color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 

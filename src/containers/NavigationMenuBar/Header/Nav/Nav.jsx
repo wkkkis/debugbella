@@ -166,7 +166,7 @@ const Nav = () => {
                     </span>
 
                     <span className={classes.link}>
-                      <Link to="/orders">Профиль</Link>
+                      <Link to="/profile">Профиль</Link>
                     </span>
 
                     <span className={classes.link}>
