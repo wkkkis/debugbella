@@ -20,7 +20,6 @@ import {
     SearchResults,
     Contacts,
 } from "./Pages";
-
 import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
 
 function App() {

@@ -18,9 +18,11 @@ export const userSchema = yup.object().shape({
         .required()
         .matches(/^[A-Za-z]\w{7,15}$/),
 });
+
 export const otpSchema = yup.object().shape({
     otp: yup.number().required(),
 });
+
 export const authSchema = yup.object().shape({
     savedPhone: yup
         .string()
