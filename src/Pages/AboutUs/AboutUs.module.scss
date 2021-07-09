@@ -151,38 +151,37 @@ $grey: #7c7c7c;
             display: flex;
             flex-direction: column;
             width: 100%;
-
             .first_image {
-                position: relative !important;
-            }
-            .main__pg {
-                position: relative !important;
-                left: 0 !important;
-                width: 27rem !important;
-                height: 27rem !important;
-            }
-        }
-        .second_box {
-            display: flex;
-            flex-direction: column !important;
-
-            width: 100%;
-            &__image {
-                margin-top: -2rem;
-                position: relative;
-            }
-            &__image2 {
-                position: relative !important;
-                left: 0 !important;
-                margin-top: 1rem !important;
-                img {
-                    width: 100%;
+                            position: relative !important;
+                        }
+                        .main__pg {
+                            position: relative !important;
+                            left: 0 !important;
+                            width: 27rem !important;
+                            height: 27rem !important;
+                        }
+                    }
+                    .second_box {
+                        display: flex;
+                        flex-direction: column !important;
+            
+                        width: 100%;
+                        &__image {
+                            margin-top: -2rem;
+                            position: relative;
+                        }
+                        &__image2 {
+                            position: relative !important;
+                            left: 0 !important;
+                            margin-top: 1rem !important;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        &__pg {
+                            position: relative !important;
+                            margin-top: 20px;
+                        }
+                    }
                 }
             }
-            &__pg {
-                position: relative !important;
-                margin-top: 20px;
-            }
-        }
-    }
-}
