@@ -16,11 +16,11 @@ const Profile = () => {
         <div>
           <div className={classes.h3}>Профиль</div>
           <div className={classes.input_cont}>
-            <h5>Имя</h5>
+            <p>Имя</p>
             <input type="text" placeholder="введите имя" name="name" required />
           </div>
           <div className={classes.input_cont}>
-            <h5>Фамилия</h5>
+            <p>Фамилия</p>
             <input
               type="text"
               placeholder="введите фамилию"
@@ -29,7 +29,7 @@ const Profile = () => {
             />
           </div>
           <div className={classes.input_cont}>
-            <h5>Номер телефона</h5>
+            <p>Номер телефона</p>
             <input
               type="phone"
               placeholder="+996 (773) 870 100"
@@ -39,16 +39,16 @@ const Profile = () => {
           </div>
 
           <button className={classes.btn_reg}>
-            <Link to="/">изменить номер</Link>
+            <Link to="/">Изменить номер</Link>
           </button>
 
           <div className={classes.h3}>Адресс доставки</div>
           <div className={classes.input_cont}>
-            <h5>Страна</h5>
+            <p>Страна</p>
             <input type="text" placeholder="Кыргызстан" name="name" required />
           </div>
           <div className={classes.input_cont}>
-            <h5>Город</h5>
+            <p>Город</p>
             <input type="text" placeholder="Бишкек" name="name" required />
           </div>
           <button className={classes.btn__save}>

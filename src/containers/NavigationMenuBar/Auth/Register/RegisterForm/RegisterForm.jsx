@@ -117,7 +117,7 @@ const RegisterForm = () => {
                     <p>Введите пароль</p>
                     <input
                         onChange={handleChange}
-                        type="text"
+                        type="password"
                         name="password"
                         placeholder="введите пароль"
                         // pattern="0[0-9]{9}|+[0-9]{13}"
@@ -129,7 +129,7 @@ const RegisterForm = () => {
                     <p>Подтвердите пароль</p>
                     <input
                         onChange={handleChange}
-                        type="text"
+                        type="password"
                         name="repeatPassword"
                         placeholder="подтвердите пароль"
 

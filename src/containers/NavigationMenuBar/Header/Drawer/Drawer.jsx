@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import Backdrop from "../Backdrop/Backdrop";
 import classes from "./Drawer.module.scss";
 import user from "../../../../assets/image/user.png";
-// import Register from "../../Auth/Register/Register";
 import Confirmation from "../../Auth/Confirmation/Confirmation";
 import { useState } from "react";
 const Drawer = ({ open, closeDrawer }) => {

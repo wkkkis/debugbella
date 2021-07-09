@@ -1,9 +1,13 @@
+*{
+  box-sizing: border-box;
+}
+
 .profilePage {
   width: 100%;
 }
 
 .profile {
-  width: 1366px;
+  width: 1349px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -15,6 +19,10 @@
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 200px;
+  line-height: 19.9px;
+  letter-spacing: 6%;
+  font-weight: 400;
+  color: #2b2a2a;
 }
 
 .input_cont {
@@ -25,16 +33,24 @@
 
   input {
     width: 344px;
-    padding: 10px;
+    padding: 9px;
     margin-bottom: 10px;
     margin-top: 5px;
-    border-color: #e4e4e4;
+    border: solid 1px #e4e4e4;
     outline: none;
+   
+
+    input.text{
+      font-size: 14px;
+      color: black;
+      height: 44px;
+    }
   }
-  h5 {
-    font-size: 13px;
-    color: black;
-    font-weight: 500;
+  p {
+    font-size: 14px;
+    color:#7C7C7C;
+    font-weight: 400;
+    line-height: 12,94px;
   }
 }
 
@@ -43,8 +59,11 @@
   margin-bottom: 15px;
   background-color: black;
   color: white;
-  padding: 15px;
-  font-size: 18px;
+  padding: 15.5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 13.93px;
+  letter-spacing: 4%;
 
   a {
     color: white;
@@ -56,11 +75,12 @@
   margin-bottom: 15px;
   background-color: #bdbdbd;
   border: none;
-  padding: 15px;
-  font-size: 18px;
-
+  padding: 10px;
+ 
   a {
-    color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 
