@@ -18,19 +18,10 @@ const RegisterForm = () => {
         });
     };
     const createUser = async (e) => {
-<<<<<<< HEAD
         // e.preventDefault();
-        // let formData = {
-        //     firstName: e.target[0].value,
-        //     lastName: e.target[1].value, 
-        //     phone: e.target[2].value,
-        // };
+       
         const isValid = await userSchema.isValid(name);
         // console.log(e + " nurb");
-=======
-        const isValid = await userSchema.isValid(name);
-        console.log(isValid);
->>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
     };
     createUser()
     useEffect(() => {
@@ -120,10 +111,7 @@ const RegisterForm = () => {
                         type="text"
                         name="phone"
                         placeholder="введите номер телефона"
-                        required
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
+                        required                       
                     />
                 </div>
                 <div className={classes.input_cont}>
@@ -132,10 +120,7 @@ const RegisterForm = () => {
                         onChange={handleChange}
                         type="text"
                         name="password"
-                        placeholder="введите пароль"
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
+                        placeholder="введите пароль"                   
                     />
                 </div>
                 <div className={classes.input_cont}>
@@ -145,10 +130,6 @@ const RegisterForm = () => {
                         type="text"
                         name="repeatPassword"
                         placeholder="подтвердите пароль"
-
-                        // pattern="0[0-9]{9}|+[0-9]{13}"
-                        // minLength="9"
-                        // maxLength="13"
                     />
                 </div>
                 <div className={classes.btn_cont}>

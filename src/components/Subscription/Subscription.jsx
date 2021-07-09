@@ -3,11 +3,7 @@ import subscription_img from "../../assets/image/subscription_img.png";
 import styles from "../../components/Subscription/Subscription.module.scss";
 import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
-<<<<<<< HEAD
-import { userSchema } from "../Validations/UserValidation";
-=======
 import { validPhone } from "../Validations/UserValidation";
->>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
 const Subscription = () => {
     const [showModal, setShowModal] = useState(false);
     const [values, setValues] = useState({});
