@@ -12,6 +12,9 @@
 //   position: relative;
 //   background: #333;
 // }
+.container.mt-5{
+  // width: 100% !important;
+}
 
 .slider_title {
   font-size: 5vw;
@@ -28,7 +31,9 @@
 }
 .card-wrapper {
   position: relative;
-  width: 100%;
+  width: 50% !important;
+  max-width: 280px;
+  min-width: 200px;
   padding: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -261,4 +266,10 @@
 .container.mt-5.carousel{
   margin-top: 10px !important;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1046px) {
+  // .card-wrapper {
+  //   width: 50% !important;
+  // }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './VerticalSlider.css';
+import './VerticalSlider.css';
 import DetailsThumb from './DetailsThumb';
 import vertical1 from '../../assets/VerticalSlider/vertical2.png'
 import vertical2 from '../../assets/VerticalSlider/vertical3.png'
@@ -43,7 +43,7 @@ class VerticalSlider extends React.Component{
   render(){
     const {products, index} = this.state;
     return(
-      <div className={style.app}>
+      <div>
         {
           products.map(item =>(
             <div className="details" key={item._id}>
