@@ -77,6 +77,9 @@
                 font-weight: 700;
                 font-size: 20px;
                 margin-top: -1rem;
+                @media screen and (max-width: 760px) {
+                    margin-top: 1rem;
+                }
             }
         }
     }
@@ -86,15 +89,37 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            .all_images {
+
+            &__all_images {
                 display: flex;
-                justify-content: space-between;
                 width: 100%;
-            }
-            &__images {
-                width: 100%;
-                display: flex;
                 flex-wrap: wrap;
+                align-items: center;
+
+                .all_images {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+                &__images {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    &__one {
+                        margin: 0.5rem 0;
+                        padding-right: 0.1rem;
+                        img {
+                            width: 5.3rem;
+                            height: 8rem;
+                        }
+                    }
+
+                    .btn {
+                        width: 5.3rem;
+                        height: 8rem;
+                    }
+                }
             }
         }
     }

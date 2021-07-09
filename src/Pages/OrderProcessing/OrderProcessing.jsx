@@ -4,12 +4,76 @@ import classes from "../OrderProcessing/OrderProcessing.module.scss";
 import styles from "../../styles/styles.module.scss";
 import ModalOrder from "../../components/ModalOrder/ModalOrder";
 import cardImage from "../../assets/image/summer.png";
+import { orderSchema } from "../../components/Validations/UserValidation";
 const OrderProcessing = () => {
     const [showModal, setShowModal] = useState(false);
+    const [values, setValues] = useState({});
+    const [errors, setErrors] = useState({});
+    const onChange = (e) => {
+        setValues((oldState) => {
+            const newObj = { ...oldState };
+            newObj[e.target.name] = e.target.value;
+            return newObj;
+        });
+    };
 
+    // const createOrderValid = async (e) => {
+    //     e.preventDefault();
+    //     const validate = orderSchema.isValid({ values }).then((valid) => {
+    //         console.log(validate);
+    //         return values;
+    //     });
+    // };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const isValid = await orderSchema.isValid(values);
+        console.log(isValid);
+        if (e) {
+            setErrors(validate(values));
+            validate();
+        }
+
+        if (isValid === true) {
+            return values;
+        }
+    };
+    async function validate(e) {
+        e.preventDefault();
+        const isValid = await orderSchema.isValid(values);
+        console.log(isValid);
+        let errors = {};
+        let valid =
+            values.name &&
+            values.phone &&
+            values.surname &&
+            values.country &&
+            values.city;
+        const validPhone = values.phone;
+        if (!valid) {
+            setErrors(errors);
+            errors.valid = "Не заполнены обязательные поля";
+        }
+        if (!validPhone) {
+            errors.validPhone = "Номер должен начаться с кода страны";
+        }
+    }
+    // const validRes = async () => {
+    //     const order = await orderSchema
+    //         .validate(values, { abortEarly: false })
+    //         .catch((err) => {
+    //             console.log(err);
+    //             setValues((oldState) => {
+    //                 const newObj = { ...oldState };
+    //                 newObj[err] = "error";
+    //                 return newObj;
+    //             });
+    //         });
+    // };
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
+
     return (
         <>
             <div className={styles.mainContainer}>
@@ -19,17 +83,17 @@ const OrderProcessing = () => {
                             Главная /&ensp;
                         </span>
                     </Link>
-                    <Link>
+                    <Link to="#">
                         <span className={styles.breadCrumbs__right_col}>
                             Товары /&ensp;
                         </span>
                     </Link>
-                    <Link>
+                    <Link to="#">
                         <span className={styles.breadCrumbs__right_col}>
                             {""}/&ensp;
                         </span>
                     </Link>
-                    <Link>
+                    <Link to="#">
                         <span className={styles.breadCrumbs__right_col}>
                             {""}/&ensp;
                         </span>
@@ -53,35 +117,67 @@ const OrderProcessing = () => {
                             Редактировать
                         </button> */}
                         <div className={classes.ordering}>
-                            <div className={classes.ordering__rows}>
-                                <section>
-                                    <p>Ваше имя</p>
-                                    <input type="text" />
-                                </section>
-                                <section>
-                                    <p>Ваша Фамилия</p>
-                                    <input type="text" />
-                                </section>
-                            </div>
-                            <div className={classes.ordering__rows}>
-                                <section>
-                                    <p>Номер телефона</p>
-                                    <input type="text" />
-                                </section>
-                                <section>
-                                    <p>Страна</p>
-                                    <input type="text" />
-                                </section>
-                            </div>
-                            <div className={classes.ordering__rows}>
-                                <section>
-                                    <p>Город</p>
-                                    <input type="text" />
-                                </section>
-                                <button className={classes.save_btn}>
-                                    Сохранить адрес
-                                </button>
-                            </div>
+                            <form onSubmit={validate}>
+                                <div className={classes.ordering__rows}>
+                                    <section>
+                                        <p>Ваше имя</p>
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            onChange={onChange}
+                                        />
+                                    </section>
+                                    <section>
+                                        <p>Ваша Фамилия</p>
+                                        <input
+                                            type="text"
+                                            name="surname"
+                                            onChange={onChange}
+                                        />
+                                    </section>
+                                </div>
+                                <div className={classes.ordering__rows}>
+                                    <section>
+                                        <p>Номер телефона</p>
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            onChange={onChange}
+                                        />
+                                        {errors.validPhone && (
+                                            <p className={styles.alert}>
+                                                {errors.validPhone}
+                                            </p>
+                                        )}
+                                    </section>
+                                    <section>
+                                        <p>Страна</p>
+                                        <input
+                                            type="text"
+                                            name="country"
+                                            onChange={onChange}
+                                        />
+                                    </section>
+                                </div>
+                                <div className={classes.ordering__rows}>
+                                    <section>
+                                        <p>Город</p>
+                                        <input
+                                            type="text"
+                                            name="city"
+                                            onChange={onChange}
+                                        />
+                                    </section>
+                                    <button className={classes.save_btn}>
+                                        Сохранить адрес
+                                    </button>
+                                </div>
+                                {errors.valid && (
+                                    <p className={styles.alert}>
+                                        {errors.valid}
+                                    </p>
+                                )}
+                            </form>
                         </div>
                         <section>
                             <div className={classes.order_title}>

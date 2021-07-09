@@ -77,7 +77,7 @@ const AboutUs = () => {
                             iaculis nunc sed augue lacus, viverra vitae congue
                             eu, consequat ac felis donec et odio pellentesque
                             diam volutpat commodo sed egestas egestas fringilla
-                            phasellus faucibus
+                            phasellus faucibus.
                         </p>
                     </div>
                 </div>

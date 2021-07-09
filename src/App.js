@@ -48,7 +48,7 @@ function App() {
                     <Route exact path="/favourites" component={Favourites} />
                     <Route exact path="/category" component={Category} />
                     <Route exact path="/products" component={Products} />
-                    <Route exact path="ordering" component={Order} />
+                    <Route exact path="/ordering" component={Order} />
                     <Route
                         exact
                         path="/prodCarousel"
