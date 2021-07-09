@@ -22,11 +22,7 @@ const Confirmation = (props) => {
     // }
 
     const createOTP = async (e) => {
-        // event.preventDefault();
-        let otp = {
-            otp: e.target[0].value,
-        };
-        const isValid = await otpSchema.isValid(otp);
+        const isValid = await otpSchema.isValid(props.name);
         console.log(isValid);
     };
     const SubmitOTP = (e) => {

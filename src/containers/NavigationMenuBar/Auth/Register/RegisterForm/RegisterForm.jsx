@@ -3,6 +3,7 @@ import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
 import app from "../../../../../firebase";
 import Confirmation from "../../Confirmation/Confirmation";
+
 const RegisterForm = () => {
     const [state, setState] = useState(false);
     const [name, setName] = useState();
@@ -15,15 +16,16 @@ const RegisterForm = () => {
         });
     };
     const createUser = async (e) => {
-        // event.preventDefault();
-        let formData = {
-            firstName: e.target[0].value,
-            lastName: e.target[1].value,
-            phone: e.target[2].value,
-        };
-        const isValid = await userSchema.isValid(formData);
-        console.log(isValid);
+        // e.preventDefault();
+        // let formData = {
+        //     firstName: e.target[0].value,
+        //     lastName: e.target[1].value, 
+        //     phone: e.target[2].value,
+        // };
+        const isValid = await userSchema.isValid(name);
+        // console.log(e + " nurb");
     };
+    createUser()
     useEffect(() => {
         window.recaptchaVerifier = new app.auth.RecaptchaVerifier(
             "sign-in-button",

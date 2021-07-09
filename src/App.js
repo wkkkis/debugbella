@@ -19,6 +19,8 @@ import {
     Order,
     SearchResults,
 } from "./Pages";
+import Confirmation from "./containers/NavigationMenuBar/Auth/Confirmation/Confirmation";
+import ChangeNum from "./Pages/Profile/ChangeNum/ChangeNum";
 import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
 function App() {
     return (
@@ -55,7 +57,8 @@ function App() {
                     <Route exact path="/order" component={OrderProcessing} />
                     <Route exact path="/profile" component={Profile} />
                     <Route exact path="/myOrders" component={MyOrders} />
-                    <Route exact path="/re" component={RegisterForm} />
+                    <Route exact path="/rr" component={RegisterForm} />
+
                 </Switch>
             </Layout>
             <Footer />

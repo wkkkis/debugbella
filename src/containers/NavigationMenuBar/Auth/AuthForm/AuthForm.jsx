@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import authSchema from "../../../../components/Validations/UserValidation";
 
 const AuthForm = () => {
-<<<<<<< HEAD
-=======
     const [state, setState] = useState(false);
     const [name, setName] = useState();
     const handleChange = (e) => {
@@ -21,7 +19,6 @@ const AuthForm = () => {
         const isValid = await authSchema.isValid(formData);
         console.log(isValid);
     };
->>>>>>> 28087da40f8bbc12713d720381374a2a07e93cb1
     return (
         <form className={classes.AuthForm} onSubmit={createSavedPhone}>
             <h1>BELLA</h1>

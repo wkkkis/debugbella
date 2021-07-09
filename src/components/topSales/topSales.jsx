@@ -13,8 +13,8 @@ const TopSales = () => {
     }, [product]);
     // console.log(productJSON.products[0].colors[0]);
     return productJSON.products.map((item, index) => {
-        console.log(item);
-        console.log(index);
+        // console.log(item);
+        // console.log(index);
         return (
             <div className={classes.wrapper} key={index}>
                 <div className={classes.main_cart_wrap}>
