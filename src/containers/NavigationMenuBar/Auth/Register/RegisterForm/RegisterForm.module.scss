@@ -8,14 +8,18 @@
     align-content: center;
     align-items: center;
 
+<<<<<<< HEAD
     padding: 10px;
     // padding-bottom: 90px;
+=======
+    padding: 13px;
+    margin-bottom: 6rem;
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
 
-    h1 {
+    h3 {
         margin: 0 auto;
         text-align: center;
     }
-  
 }
 
 .input_cont {
@@ -37,11 +41,11 @@
 }
 
 .btn_cont {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.span{
+.span {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -69,8 +73,7 @@
         background-color: white;
         color: black;
     }
-  }
-
+}
 
 .btn p {
     padding: 15px;
