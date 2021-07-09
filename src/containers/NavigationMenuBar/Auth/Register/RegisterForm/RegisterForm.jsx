@@ -11,7 +11,6 @@ const RegisterForm = () => {
             firstName: e.target.value,
             lastName: e.target.value,
             phone: e.target.value,
-            otp: e.target.value,
             password: e.target.value,
             repeatPassword: e.target.value,
         });
@@ -154,11 +153,11 @@ const RegisterForm = () => {
                 </div>
             </form>
             <Confirmation
-                state={state}
-                setState={setState}
-                name={name}
-                setName={setName}
-                handleChange={handleChange}
+            // state={state}
+            // setState={setState}
+            // name={name}
+            // setName={setName}
+            // handleChange={handleChange}
             />
         </>
     );

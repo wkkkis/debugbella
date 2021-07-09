@@ -3,7 +3,7 @@ import subscription_img from "../../assets/image/subscription_img.png";
 import styles from "../../components/Subscription/Subscription.module.scss";
 import bell from "../../assets/image/bell.png";
 import { Modal } from "../Modal/Modal";
-import { validPhone } from "../Validations/UserValidation";
+import { subSchema } from "../Validations/UserValidation";
 const Subscription = () => {
     const [showModal, setShowModal] = useState(false);
     const [values, setValues] = useState({});
@@ -14,7 +14,9 @@ const Subscription = () => {
             ...values,
             [e.target.name]: e.target.value,
         }));
+        console.log(e.target.value);
     };
+
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
             openModal();
@@ -31,13 +33,15 @@ const Subscription = () => {
         return errors;
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        const isValid = await subSchema.isValid(values);
+        console.log(isValid);
         if (e) {
             setErrors(validate(values));
         }
 
-        if (setIsSubmitting(true)) {
+        if (setIsSubmitting(true) && isValid === true) {
             openModal();
         }
     };

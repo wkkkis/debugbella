@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Confirmation.module.scss";
 import { otpSchema } from "../../../../components/Validations/UserValidation";
 const Confirmation = (props) => {
@@ -20,14 +20,19 @@ const Confirmation = (props) => {
     //     e.stopPropagation();
     //     setIsActive((prev) => !prev);
     // }
-
+    const [name, setName] = useState();
+    const handleChange = (e) => {
+        setName({
+            otp: e.target.value,
+        });
+    };
     const createOTP = async (e) => {
-        const isValid = await otpSchema.isValid(props.name);
+        const isValid = await otpSchema.isValid(name);
         console.log(isValid);
     };
     const SubmitOTP = (e) => {
         e.preventDefault();
-        const code = props.name.otp;
+        const code = name.otp;
         console.log(code);
         window.confirmationResult
             .confirm(code)
@@ -56,7 +61,7 @@ const Confirmation = (props) => {
                 <input
                     type="tel"
                     placeholder="введите код"
-                    onChange={props.handleChange}
+                    onChange={handleChange}
                     name="otp"
                 />
             </div>
