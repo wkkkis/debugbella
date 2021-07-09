@@ -1,4 +1,5 @@
 .Confirmation {
+<<<<<<< HEAD
   width: 408px;
   margin: 0 auto;
   display: flex;
@@ -10,36 +11,56 @@
   padding: 20px 0 90px 0;
 
   h1 {
+=======
+    width: 408px;
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
     margin: 0 auto;
-    text-align: center;
-  }
-
-  .input_cont {
     display: flex;
+
     flex-direction: column;
     align-content: center;
-    align-items: flex-start;
+    align-items: center;
 
-    input {
-      width: 344px;
-      padding: 10px;
-      margin: 15px 0;
-    }
+    padding: 13px;
+
     h5 {
+<<<<<<< HEAD
       margin-top: 25px;
       font-size: 20px;
       color: black;
       font-weight: 500;
+=======
+        margin: 0 auto;
+        text-align: center;
     }
-  }
+
+    .input_cont {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+
+        input {
+            width: 344px;
+            padding: 8px;
+            margin: 12px 0;
+        }
+        p {
+            font-size: 20px;
+            color: black;
+            font-weight: 500;
+        }
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
+    }
 }
 
 .btn_cont {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn {
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   width: 344px;
@@ -56,13 +77,31 @@
   background-color: rgba(43, 42, 42, 1);
   border: rgba(43, 42, 42, 1);
   color: white;
+=======
+    display: flex;
+    justify-content: space-between;
+    width: 344px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #bdbdbd;
+    border: #bdbdbd;
+}
+.btn_3 {
+    width: 344px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: black;
+    border: black;
+    color: white;
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
 
-  p{
-    text-align: center;
-  }
+    p {
+        text-align: center;
+    }
 }
 
 .btn_2 {
+<<<<<<< HEAD
   width: 136px;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -70,6 +109,14 @@
   background-color: #dfdfdf;
   color: gray;
 
+=======
+    width: 136px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: none;
+    background-color: white;
+    color: gray;
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
 }
 .alert{
   color: red;

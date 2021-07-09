@@ -1,6 +1,6 @@
 .RegisterForm {
     width: 408px;
-    height: 532px;
+    height: 480px;
     margin: 0 auto;
     display: flex;
 
@@ -8,14 +8,13 @@
     align-content: center;
     align-items: center;
 
-    padding: 20px;
-    padding-bottom: 90px;
+    padding: 13px;
+    margin-bottom: 6rem;
 
-    h1 {
+    h3 {
         margin: 0 auto;
         text-align: center;
     }
-  
 }
 
 .input_cont {
@@ -26,8 +25,8 @@
 
     input {
         width: 344px;
-        padding: 10px;
-        margin: 15px 0;
+        padding: 8px;
+        margin: 0px 0 15px 0;
     }
     h5 {
         font-size: 20px;
@@ -37,15 +36,18 @@
 }
 
 .btn_cont {
-  display: flex;
-  flex-direction: column;
-  span {
     display: flex;
+    flex-direction: column;
+}
+
+.span {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: none;
     background-color: white;
-  }
 }
 
 .btn {
@@ -58,13 +60,15 @@
     line-height: 30px;
     padding: 10px 0;
     background-color: white;
+    padding: 15px;
+    width: 20px;
+    height: 20px;
 
     .check::after {
         background-color: white;
         color: black;
     }
-  }
-
+}
 
 .btn p {
     padding: 15px;

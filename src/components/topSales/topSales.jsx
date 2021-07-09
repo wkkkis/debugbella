@@ -13,10 +13,13 @@ const TopSales = () => {
     }, [product]);
     // console.log(productJSON.products[0].colors[0]);
     return productJSON.products.map((item, index) => {
+<<<<<<< HEAD
         // console.log(item);
         // console.log(index);
+=======
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
         return (
-            <div className={classes.wrapper} key={index}>
+            <div className={classes.wrapper} key={item.id} index={index}>
                 <div className={classes.main_cart_wrap}>
                     <img src={dress_model} alt="blue-dress" />
 
@@ -70,7 +73,10 @@ const TopSales = () => {
                 <div className={classes.color_wrapper}>
                     {item.colors.map((color, index) => {
                         return (
-                            <div className={classes.main__colorsHover}>
+                            <div
+                                className={classes.main__colorsHover}
+                                key={index + 2}
+                            >
                                 <span
                                     key={index + 1}
                                     className={classes.main__colors}

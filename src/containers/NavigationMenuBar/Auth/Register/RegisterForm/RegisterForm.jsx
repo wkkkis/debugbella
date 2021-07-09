@@ -13,9 +13,12 @@ const RegisterForm = () => {
             lastName: e.target.value,
             phone: e.target.value,
             otp: e.target.value,
+            password: e.target.value,
+            repeatPassword: e.target.value,
         });
     };
     const createUser = async (e) => {
+<<<<<<< HEAD
         // e.preventDefault();
         // let formData = {
         //     firstName: e.target[0].value,
@@ -24,6 +27,10 @@ const RegisterForm = () => {
         // };
         const isValid = await userSchema.isValid(name);
         // console.log(e + " nurb");
+=======
+        const isValid = await userSchema.isValid(name);
+        console.log(isValid);
+>>>>>>> e0a590037791378aa159b5806854bbb2d5b5c676
     };
     createUser()
     useEffect(() => {
@@ -81,11 +88,11 @@ const RegisterForm = () => {
 
     return (
         <>
-            <form className={classes.Register} onSubmit={SignInSubmit}>
+            <form className={classes.RegisterForm} onSubmit={SignInSubmit}>
                 <div id="sign-in-button"></div>
-                <h1>BELLA</h1>
+                <h3>Регистрация</h3>
                 <div className={classes.input_cont}>
-                    <h5>Ваше имя</h5>
+                    <p>Ваше имя</p>
                     <input
                         type="text"
                         placeholder="введите имя"
@@ -96,7 +103,7 @@ const RegisterForm = () => {
                 </div>
 
                 <div className={classes.input_cont}>
-                    <h5>Ваше Фамилия</h5>
+                    <p>Ваше Фамилия</p>
                     <input
                         type="text"
                         placeholder="введите фамилию"
@@ -107,7 +114,7 @@ const RegisterForm = () => {
                 </div>
 
                 <div className={classes.input_cont}>
-                    <h5>Номер телефона</h5>
+                    <p>Номер телефона</p>
                     <input
                         onChange={handleChange}
                         type="text"
@@ -119,8 +126,33 @@ const RegisterForm = () => {
                         // maxLength="13"
                     />
                 </div>
+                <div className={classes.input_cont}>
+                    <p>Введите пароль</p>
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        name="password"
+                        placeholder="введите пароль"
+                        // pattern="0[0-9]{9}|+[0-9]{13}"
+                        // minLength="9"
+                        // maxLength="13"
+                    />
+                </div>
+                <div className={classes.input_cont}>
+                    <p>Подтвердите пароль</p>
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        name="repeatPassword"
+                        placeholder="подтвердите пароль"
+
+                        // pattern="0[0-9]{9}|+[0-9]{13}"
+                        // minLength="9"
+                        // maxLength="13"
+                    />
+                </div>
                 <div className={classes.btn_cont}>
-                    <span>
+                    <span className={classes.span}>
                         <input
                             type="checkbox"
                             name="checked"
