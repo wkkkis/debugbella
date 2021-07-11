@@ -5,10 +5,11 @@ import styles from "../../styles/styles.module.scss";
 import ModalOrder from "../../components/ModalOrder/ModalOrder";
 import cardImage from "../../assets/image/summer.png";
 import { orderSchema } from "../../components/Validations/UserValidation";
+import { useFormik } from "formik";
 const OrderProcessing = () => {
     const [showModal, setShowModal] = useState(false);
-    const [values, setValues] = useState({});
-    const [errors, setErrors] = useState({});
+    const [showInfo, setShowInfo] = useState(false);
+    const [values, setValues] = useState();
     const onChange = (e) => {
         setValues((oldState) => {
             const newObj = { ...oldState };
@@ -16,60 +17,24 @@ const OrderProcessing = () => {
             return newObj;
         });
     };
-
-    // const createOrderValid = async (e) => {
-    //     e.preventDefault();
-    //     const validate = orderSchema.isValid({ values }).then((valid) => {
-    //         console.log(validate);
-    //         return values;
-    //     });
-    // };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const isValid = await orderSchema.isValid(values);
-        console.log(isValid);
-        if (e) {
-            setErrors(validate(values));
-            validate();
-        }
-
-        if (isValid === true) {
-            return values;
-        }
-    };
-    async function validate(e) {
-        e.preventDefault();
-        const isValid = await orderSchema.isValid(values);
-        console.log(isValid);
-        let errors = {};
-        let valid =
-            values.name &&
-            values.phone &&
-            values.surname &&
-            values.country &&
-            values.city;
-        const validPhone = values.phone;
-        if (!valid) {
-            setErrors(errors);
-            errors.valid = "Не заполнены обязательные поля";
-        }
-        if (!validPhone) {
-            errors.validPhone = "Номер должен начаться с кода страны";
-        }
-    }
-    // const validRes = async () => {
-    //     const order = await orderSchema
-    //         .validate(values, { abortEarly: false })
-    //         .catch((err) => {
-    //             console.log(err);
-    //             setValues((oldState) => {
-    //                 const newObj = { ...oldState };
-    //                 newObj[err] = "error";
-    //                 return newObj;
-    //             });
-    //         });
-    // };
+    // JSON.parse(JSON.stringify({}));
+    const formik = useFormik({
+        initialValues: {
+            firstName: "",
+            surname: "",
+            phone: "",
+            country: "",
+            city: "",
+        },
+        validationSchema: orderSchema,
+        onSubmit: (values) => {
+            setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
+            }, 1000);
+            setShowInfo((prev) => !prev);
+        },
+    });
+    console.log(formik.values);
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
@@ -108,77 +73,134 @@ const OrderProcessing = () => {
                         >
                             <h4>Оформление заказа</h4>
                         </section>
-                        {/* <div className={classes.address_title}>
-                            Адрес доставки
-                        </div>
-                        <p>Александр Пистолетов &#44; +996 (708) 567 890</p>
-                        <p>Кыргызстан &#44; &nbsp;Бишкек</p>
-                        <button className={classes.edit_btn}>
-                            Редактировать
-                        </button> */}
-                        <div className={classes.ordering}>
-                            <form onSubmit={validate}>
-                                <div className={classes.ordering__rows}>
-                                    <section>
-                                        <p>Ваше имя</p>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            onChange={onChange}
-                                        />
-                                    </section>
-                                    <section>
-                                        <p>Ваша Фамилия</p>
-                                        <input
-                                            type="text"
-                                            name="surname"
-                                            onChange={onChange}
-                                        />
-                                    </section>
+
+                        {showInfo ? (
+                            <>
+                                <div className={classes.address_title}>
+                                    Адрес доставки
                                 </div>
-                                <div className={classes.ordering__rows}>
-                                    <section>
-                                        <p>Номер телефона</p>
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            onChange={onChange}
-                                        />
-                                        {errors.validPhone && (
-                                            <p className={styles.alert}>
-                                                {errors.validPhone}
-                                            </p>
-                                        )}
-                                    </section>
-                                    <section>
-                                        <p>Страна</p>
-                                        <input
-                                            type="text"
-                                            name="country"
-                                            onChange={onChange}
-                                        />
-                                    </section>
-                                </div>
-                                <div className={classes.ordering__rows}>
-                                    <section>
-                                        <p>Город</p>
-                                        <input
-                                            type="text"
-                                            name="city"
-                                            onChange={onChange}
-                                        />
-                                    </section>
-                                    <button className={classes.save_btn}>
-                                        Сохранить адрес
-                                    </button>
-                                </div>
-                                {errors.valid && (
-                                    <p className={styles.alert}>
-                                        {errors.valid}
-                                    </p>
-                                )}
-                            </form>
-                        </div>
+                                <p>
+                                    Александр Пистолетов &#44; +996 (708) 567
+                                    890
+                                </p>
+                                <p>Кыргызстан &#44; &nbsp;Бишкек</p>
+                                <button className={classes.edit_btn}>
+                                    Редактировать
+                                </button>
+                            </>
+                        ) : (
+                            <div className={classes.ordering}>
+                                <form onSubmit={formik.handleSubmit}>
+                                    <div className={classes.ordering__rows}>
+                                        <section>
+                                            <p>Ваше имя</p>
+                                            <input
+                                                id="firstName"
+                                                type="text"
+                                                name="firstName"
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={
+                                                    formik.values.firstName ||
+                                                    ""
+                                                }
+                                            />
+                                            {formik.touched.firstName &&
+                                            formik.errors.firstName ? (
+                                                <p className={classes.alert}>
+                                                    {formik.errors.firstName}
+                                                </p>
+                                            ) : null}
+                                        </section>
+                                        <section>
+                                            <p>Ваша Фамилия</p>
+                                            <input
+                                                id="surname"
+                                                type="text"
+                                                name="surname"
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={
+                                                    formik.values.surname || ""
+                                                }
+                                            />
+                                            {formik.touched.surname &&
+                                            formik.errors.surname ? (
+                                                <p className={classes.alert}>
+                                                    {formik.errors.surname}
+                                                </p>
+                                            ) : null}
+                                        </section>
+                                    </div>
+                                    <div className={classes.ordering__rows}>
+                                        <section>
+                                            <p>Номер телефона</p>
+                                            <input
+                                                id="phone"
+                                                type="text"
+                                                name="phone"
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={
+                                                    formik.values.phone || ""
+                                                }
+                                            />
+                                            {formik.touched.phone &&
+                                            formik.errors.phone ? (
+                                                <p className={classes.alert}>
+                                                    {formik.errors.phone}
+                                                </p>
+                                            ) : null}
+                                        </section>
+                                        <section>
+                                            <p>Страна</p>
+                                            <input
+                                                id="country"
+                                                type="text"
+                                                name="country"
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={
+                                                    formik.values.country || ""
+                                                }
+                                            />
+                                            {formik.touched.country &&
+                                            formik.errors.country ? (
+                                                <p className={classes.alert}>
+                                                    {formik.errors.country}
+                                                </p>
+                                            ) : null}
+                                        </section>
+                                    </div>
+                                    <div className={classes.ordering__rows}>
+                                        <section>
+                                            <p>Город</p>
+                                            <input
+                                                id="city"
+                                                type="text"
+                                                name="city"
+                                                onChange={formik.handleChange}
+                                                onBlur={formik.handleBlur}
+                                                value={formik.values.city || ""}
+                                            />
+                                            {formik.touched.city &&
+                                            formik.errors.city ? (
+                                                <p className={classes.alert}>
+                                                    {formik.errors.city}
+                                                </p>
+                                            ) : null}
+                                        </section>
+                                        <button
+                                            className={classes.save_btn}
+                                            type="submit"
+                                        >
+                                            Сохранить адрес
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        )}
+
                         <section>
                             <div className={classes.order_title}>
                                 <p>Состав заказа</p>

@@ -3,26 +3,33 @@ import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
 import app from "../../../../../firebase";
 import Confirmation from "../../Confirmation/Confirmation";
-
+import { useFormik, FormikProvider } from "formik";
 const RegisterForm = () => {
     const [state, setState] = useState(false);
-    const [name, setName] = useState();
+    const [values, setValues] = useState();
     const handleChange = (e) => {
-        setName({
-            firstName: e.target.value,
-            lastName: e.target.value,
-            phone: e.target.value,
-            password: e.target.value,
-            repeatPassword: e.target.value,
+        setValues((oldState) => {
+            const registerObj = { ...oldState };
+            registerObj[e.target.name] = e.target.value;
+            return registerObj;
         });
     };
-    const createUser = async (e) => {
-        // e.preventDefault();
-       
-        const isValid = await userSchema.isValid(name);
-        // console.log(e + " nurb");
-    };
-    createUser()
+    const registerFormik = useFormik({
+        initialValues: {
+            firstName: "",
+            lastName: "",
+            phone: "",
+            password: "",
+            repeatPassword: "",
+        },
+        validationSchema: userSchema,
+        onSubmit: (values) => {
+            setTimeout(() => {
+                alert(JSON.stringify(values, null, 2));
+                SignInSubmit();
+            }, 1000);
+        },
+    });
     useEffect(() => {
         window.recaptchaVerifier = new app.auth.RecaptchaVerifier(
             "sign-in-button",
@@ -38,9 +45,9 @@ const RegisterForm = () => {
         );
     }, []);
     const SignInSubmit = (e) => {
-        e.preventDefault();
-        const phoneNumber = name.phone;
-        console.log(name);
+        // e.preventDefault();
+        const phoneNumber = registerFormik.values.phone;
+        console.log(registerFormik.values.phone);
         const appVerifier = window.recaptchaVerifier;
         app.auth()
             .signInWithPhoneNumber(phoneNumber, appVerifier)
@@ -50,7 +57,7 @@ const RegisterForm = () => {
                 window.confirmationResult = confirmationResult;
                 console.log(confirmationResult);
                 console.log("OTP has been sent");
-                createUser();
+
                 // ...
                 appVerifier.clear();
             })
@@ -78,74 +85,122 @@ const RegisterForm = () => {
 
     return (
         <>
-            <form className={classes.RegisterForm} onSubmit={SignInSubmit}>
-                <div id="sign-in-button"></div>
-                <h3>Регистрация</h3>
-                <div className={classes.input_cont}>
-                    <p>Ваше имя</p>
-                    <input
-                        type="text"
-                        placeholder="введите имя"
-                        name="firstName"
-                        id="name"
-                        onChange={handleChange}
-                    />
-                </div>
-
-                <div className={classes.input_cont}>
-                    <p>Ваше Фамилия</p>
-                    <input
-                        type="text"
-                        placeholder="введите фамилию"
-                        name="lastName"
-                        onChange={handleChange}
-                        id="lastName "
-                    />
-                </div>
-
-                <div className={classes.input_cont}>
-                    <p>Номер телефона</p>
-                    <input
-                        onChange={handleChange}
-                        type="text"
-                        name="phone"
-                        placeholder="введите номер телефона"
-                        required                       
-                    />
-                </div>
-                <div className={classes.input_cont}>
-                    <p>Введите пароль</p>
-                    <input
-                        onChange={handleChange}
-                        type="password"
-                        name="password"
-                        placeholder="введите пароль"                   
-                    />
-                </div>
-                <div className={classes.input_cont}>
-                    <p>Подтвердите пароль</p>
-                    <input
-                        onChange={handleChange}
-                        type="password"
-                        name="repeatPassword"
-                        placeholder="подтвердите пароль"
-                    />
-                </div>
-                <div className={classes.btn_cont}>
-                    <span className={classes.span}>
+            <FormikProvider value={registerFormik}>
+                <form
+                    className={classes.RegisterForm}
+                    onSubmit={registerFormik.handleSubmit}
+                >
+                    <div id="sign-in-button"></div>
+                    <h3>Регистрация</h3>
+                    <div className={classes.input_cont}>
+                        <p>Ваше имя</p>
                         <input
-                            type="checkbox"
-                            name="checked"
-                            required
-                            className={classes.check}
+                            type="text"
+                            placeholder="введите имя"
+                            name="firstName"
+                            id="firstName"
+                            onChange={registerFormik.handleChange}
+                            onBlur={registerFormik.handleBlur}
+                            value={registerFormik.values.firstName || ""}
                         />
-                        <p>Согласен с условиями публичной оферты</p>
-                    </span>
-                    <button className={classes.btn}>
-                        <p>Продолжить </p>
-                    </button>
-                </div>
-            </form>
+
+                        {registerFormik.touched.firstName &&
+                        registerFormik.errors.firstName ? (
+                            <p className={classes.alert}>
+                                {registerFormik.errors.firstName}
+                            </p>
+                        ) : null}
+                    </div>
+
+                    <div className={classes.input_cont}>
+                        <p>Ваше Фамилия</p>
+                        <input
+                            type="text"
+                            placeholder="введите фамилию"
+                            name="lastName"
+                            onChange={registerFormik.handleChange}
+                            onBlur={registerFormik.handleBlur}
+                            value={registerFormik.values.lastName || ""}
+                            id="lastName "
+                        />
+                        {registerFormik.touched.lastName &&
+                        registerFormik.errors.lastName ? (
+                            <p className={classes.alert}>
+                                {registerFormik.errors.lastName}
+                            </p>
+                        ) : null}
+                    </div>
+
+                    <div className={classes.input_cont}>
+                        <p>Номер телефона</p>
+                        <input
+                            id="phone"
+                            type="text"
+                            name="phone"
+                            placeholder="введите номер телефона"
+                            onChange={registerFormik.handleChange}
+                            onBlur={registerFormik.handleBlur}
+                            value={registerFormik.values.phone || ""}
+                        />
+                        {registerFormik.touched.phone &&
+                        registerFormik.errors.phone ? (
+                            <p className={classes.alert}>
+                                {registerFormik.errors.phone}
+                            </p>
+                        ) : null}
+                    </div>
+                    <div className={classes.input_cont}>
+                        <p>Введите пароль</p>
+                        <input
+                            id="password"
+                            type="text"
+                            name="password"
+                            placeholder="введите пароль"
+                            onChange={registerFormik.handleChange}
+                            onBlur={registerFormik.handleBlur}
+                            value={registerFormik.values.password || ""}
+                        />
+                        {registerFormik.touched.password &&
+                        registerFormik.errors.password ? (
+                            <p className={classes.alert}>
+                                {registerFormik.errors.password}
+                            </p>
+                        ) : null}
+                    </div>
+                    <div className={classes.input_cont}>
+                        <p>Подтвердите пароль</p>
+                        <input
+                            id="repeatPassword"
+                            type="text"
+                            name="repeatPassword"
+                            placeholder="подтвердите пароль"
+                            onChange={registerFormik.handleChange}
+                            onBlur={registerFormik.handleBlur}
+                            value={registerFormik.values.repeatPassword || ""}
+                        />
+                        {registerFormik.touched.repeatPassword &&
+                        registerFormik.errors.repeatPassword ? (
+                            <p className={classes.alert}>
+                                {registerFormik.errors.repeatPassword}
+                            </p>
+                        ) : null}
+                    </div>
+                    <div className={classes.btn_cont}>
+                        <span className={classes.span}>
+                            <input
+                                type="checkbox"
+                                name="checked"
+                                required
+                                className={classes.check}
+                            />
+                            <p>Согласен с условиями публичной оферты</p>
+                        </span>
+                        <button className={classes.btn} type="submit">
+                            <p>Продолжить </p>
+                        </button>
+                    </div>
+                </form>
+            </FormikProvider>
             <Confirmation
             // state={state}
             // setState={setState}

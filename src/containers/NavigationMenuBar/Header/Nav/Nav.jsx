@@ -95,12 +95,7 @@ const Nav = () => {
             </>
           )}
 
-          <NavItem url="/favourites">
-            <span className={classes.img}>
-              <img src={heart} alt="logo" />
-              Избранные
-            </span>
-          </NavItem>
+           
 
           <span
             style={{
@@ -179,7 +174,7 @@ const Nav = () => {
           </span>
 
           <span className={classes.basket} onClick={handleBasketClick}>
-            <span className={classes.img}>
+            <span className={classes.img} >
               <img src={shop} alt="logo" />
               Корзина
             </span>

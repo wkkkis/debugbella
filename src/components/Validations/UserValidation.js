@@ -1,13 +1,16 @@
 import * as yup from "yup";
 
 export const userSchema = yup.object().shape({
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
+    firstName: yup.string().required("Введите ваше имя"),
+    lastName: yup.string().required("Введите ваше фамилию"),
     phone: yup
         .string()
-        .matches(/\+[996]\d{10}[0-9]/g)
-        .max(13, "too long")
-        .required("type your phone number"),
+        .matches(
+            /^(\+996)?[\s]?\(?[0-9]{3}\)?[\s]?[0-9]{2}[\s]?[0-9]{2}[\s]?[0-9]{2}$/gm,
+            "Номер не соответствует +XXX XXX XXXXXX"
+        )
+        .max(17, "Номер не должен превышать 13 символов")
+        .required("введите номер телефона"),
     password: yup
         .string()
         // .matches(/^[A-Za-z]\w{7,15}$/)
@@ -17,41 +20,53 @@ export const userSchema = yup.object().shape({
             /[a-zA-Z]+[^a-zA-Z\s]+/,
             "at least 1 number or special character (@,!,#, etc)."
         )
-        .max(15, "too long")
-        .required("password is needed"),
+        .max(15)
+        .required("Введите пароль"),
     repeatPassword: yup
         .string()
-        .oneOf([yup.ref("password"), null], "Passwords don't match!")
+        .oneOf([yup.ref("password"), null], "Пароли не совпадают!")
         .required(),
 });
 
 export const otpSchema = yup.object().shape({
-    otp: yup.number().required(),
+    otp: yup.number().positive().max(6).required("Введите код подтверждения"),
 });
 
 export const authSchema = yup.object().shape({
-    savedPhone: yup
+    password: yup
         .string()
-        .matches(/\+[996]\d{10}[0-9]/g)
-        .max(13, "too long")
-        .required(),
+        // .matches(/^[A-Za-z]\w{7,15}$/)
+        .matches(/[a-z]/, "at least one lowercase char")
+        .matches(/[A-Z]/, "at least one uppercase char")
+        .matches(
+            /[a-zA-Z]+[^a-zA-Z\s]+/,
+            "at least 1 number or special character (@,!,#, etc)."
+        )
+        .max(15)
+        .required("Введите пароль"),
 });
 export const subSchema = yup.object().shape({
-    fullName: yup.string().required(),
-    phone_num: yup
-        .string()
-        .matches(/\+[996]\d{10}[0-9]/g)
-        .max(13, "too long")
-        .required("type your phone number"),
-});
-export const orderSchema = yup.object().shape({
-    name: yup.string().required(),
-    surname: yup.string().required(),
+    fullName: yup.string().required("Введите ваше Ф.И.О"),
     phone: yup
         .string()
-        .matches(/\+[996]\d{10}[0-9]/g)
-        .max(13, "too long")
-        .required(),
-    country: yup.string().required(),
-    city: yup.string().required(),
+        .matches(
+            /^(\+996)?[\s]?\(?[0-9]{3}\)?[\s]?[0-9]{2}[\s]?[0-9]{2}[\s]?[0-9]{2}$/gm,
+            "Номер не соответствует +XXX XXX XXXXXX"
+        )
+        .max(17, "Номер не должен превышать 13 символов")
+        .required("Введите номер телефона"),
+});
+export const orderSchema = yup.object().shape({
+    firstName: yup.string().required("Обязателен к заполнению"),
+    surname: yup.string().required("Обязателен к заполнению"),
+    phone: yup
+        .string()
+        .matches(
+            /^(\+996)?[\s]?\(?[0-9]{3}\)?[\s]?[0-9]{2}[\s]?[0-9]{2}[\s]?[0-9]{2}$/gm,
+            "Номер не соответствует +XXX XXX XXXXXX"
+        )
+        .max(17, "Номер не должен превышать 13 символов")
+        .required("Введите номер телефона"),
+    country: yup.string().required("Обязателен к заполнению"),
+    city: yup.string().required("Обязателен к заполнению"),
 });
