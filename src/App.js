@@ -21,7 +21,7 @@ import {
     Contacts,
 } from "./Pages";
 import RegisterForm from "./containers/NavigationMenuBar/Auth/Register/RegisterForm/RegisterForm";
-
+import AuthForm from "./containers/NavigationMenuBar/Auth/AuthForm/AuthForm";
 function App() {
     return (
         <>
@@ -59,6 +59,7 @@ function App() {
                     <Route exact path="/myOrders" component={MyOrders} />
                     <Route exact path="/re" component={RegisterForm} />
                     <Route exact path="/contacts" component={Contacts} />
+                    <Route exact path="/auth" component={AuthForm} />
                 </Switch>
             </Layout>
             <Footer />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./AuthForm.module.scss";
 
 const AuthForm = () => {
@@ -9,15 +10,20 @@ const AuthForm = () => {
                 <h5>ВХОД</h5>
                 <input
                     type="phone"
+                    id="password"
+                    name="password"
                     placeholder="Введите пароль"
-                    name="savedPhone"
                 />
             </div>
             <div className={classes.btn_cont}>
-                <button className={classes.btn_reg}>
+                <button className={classes.btn_reg} type="submit">
                     <p>войти </p>
                 </button>
-                <button className={classes.btn_2}>Зарегистрироваться</button>
+                <Link to="register">
+                    <button className={classes.btn_2}>
+                        Зарегистрироваться
+                    </button>
+                </Link>
             </div>
         </form>
     );
