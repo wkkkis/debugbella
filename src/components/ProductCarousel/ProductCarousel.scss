@@ -34,7 +34,7 @@
   position: relative;
   width: 100% !important;
   max-width: 280px;
-  min-width: 200px;
+  min-width: 100px;
   padding: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -269,6 +269,28 @@
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 596px) {
+    .card-wrapper{
+      width: 200px !important;
+    }
     
+}
+@media screen and (max-width: 596px) {
+  .carousel .slick-prev {
+    left: -30px;
+  }
+  .carousel .slick-next {
+    right: -30px;
+  }
+  .container.mt-5.carousel{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 455px) {
+  .card-wrapper{
+    width: 140px !important;
+  }
+  .slick-slide{
+    width: 120px !important;
+  }
 }

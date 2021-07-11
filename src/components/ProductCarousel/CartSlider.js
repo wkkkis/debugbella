@@ -32,12 +32,12 @@ function CartSlider() {
                 breakpoint: 767,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 3,
+                  slidesToScroll: 2,
                   infinite: true,
                   dots: true,
   
                 },
-              }
+            },
         ],
         
     }

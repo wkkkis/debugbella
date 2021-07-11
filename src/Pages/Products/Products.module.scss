@@ -144,6 +144,26 @@
                 display: block;
             }
         }
-       
+        @media screen and (max-width: 495px) {
+            .main__desTitle {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            .main__price{
+                font-size: 18px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width: 495px) {
+            width: 250px !important;
+        }
+        @media screen and (max-width: 350px) {
+            .main__addToBasketBtn{
+                width: 250px;
+            }
+        }
     }
 }
+
