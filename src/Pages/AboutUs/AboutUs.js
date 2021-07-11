@@ -75,9 +75,14 @@ const AboutUs = () => {
                             massa vitae tortor condimentum lacinia quis vel eros
                             donec ac odio tempor orci dapibus ultrices in
                             iaculis nunc sed augue lacus, viverra vitae congue
+<<<<<<< HEAD
+                            eu, consequat ac felis donec et odio pellentesquediam volutpat commodo sed egestas egestas fringilla
+                            phasellus faucibus
+=======
                             eu, consequat ac felis donec et odio pellentesque
                             diam volutpat commodo sed egestas egestas fringilla
                             phasellus faucibus.
+>>>>>>> f421b808a1557d7883cc5c96301c6e4c07c52438
                         </p>
                     </div>
                 </div>
