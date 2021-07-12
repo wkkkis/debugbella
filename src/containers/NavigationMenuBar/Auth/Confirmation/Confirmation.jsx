@@ -41,7 +41,7 @@ const Confirmation = (props) => {
                 const user = result.user;
                 console.log(JSON.stringify(user));
                 createOTP();
-                alert("Пользователь зарегистрирован");
+                alert("Вы успешно зарегистрированы!Добро пожаловать!");
                 props.setState(true);
 
                 // ...
@@ -59,7 +59,7 @@ const Confirmation = (props) => {
             <div className={classes.input_cont}>
                 <h5>Введите код подтвержения</h5>
                 <input
-                    type="tel"
+                    type="text"
                     placeholder="введите код"
                     onChange={handleChange}
                     name="otp"

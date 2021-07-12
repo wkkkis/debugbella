@@ -15,7 +15,31 @@ function CartSlider() {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        cssEase: "linear"
+        cssEase: "linear",
+
+        responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+
+              },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: true,
+                  dots: true,
+  
+                },
+            },
+        ],
+        
     }
 
 

@@ -10,11 +10,12 @@ const Subscription = () => {
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const handleChange = (e) => {
-        setValues((values) => ({
-            ...values,
-            [e.target.name]: e.target.value,
-        }));
-        console.log(e.target.value);
+        setValues((values) => {
+            const subscriptionObj = { ...values };
+            subscriptionObj[e.target.name] = e.target.value;
+            console.log(subscriptionObj);
+            return subscriptionObj;
+        });
     };
 
     useEffect(() => {
@@ -25,8 +26,7 @@ const Subscription = () => {
 
     function validate(values) {
         let errors = {};
-        let valid = values.fullName && values.phone_num;
-
+        let valid = values.fullName && values.phone;
         if (!valid) {
             errors.valid = "Не заполнены обязательные поля";
         }
@@ -40,12 +40,10 @@ const Subscription = () => {
         if (e) {
             setErrors(validate(values));
         }
-
-        if (setIsSubmitting(true) && isValid === true) {
+        if (isValid === true) {
             openModal();
         }
     };
-
     const openModal = () => {
         setShowModal((prev) => !prev);
     };
@@ -74,17 +72,24 @@ const Subscription = () => {
                                 className={styles.form_inp}
                                 name="fullName"
                                 onChange={handleChange}
-                                // value="fullName"
+                                // onBlur={formikSubscription.handleBlur}
+                                value={values.fullName || ""}
                             />
+
                             <input
                                 placeholder="WhatsApp номер"
                                 className={styles.form_inp}
-                                name="phone_num"
+                                name="phone"
                                 onChange={handleChange}
-                                type="phone"
+                                value={values.phone || ""}
+                                type="text"
                                 // value="phone"
                             />
-                            <select onChange={handleChange}>
+                            <select
+                                id="category"
+                                name="category"
+                                onChange={handleChange}
+                            >
                                 <option defaultValue className={styles.option}>
                                     Выбрать категорию
                                 </option>
@@ -120,7 +125,7 @@ const Subscription = () => {
 
                             <button
                                 className={styles.form_wrapper__btn}
-                                // onClick={handleSubmit}
+                                type="submit"
                             >
                                 <img
                                     src={bell}

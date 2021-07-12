@@ -7,7 +7,6 @@ $light_brown: rgba(171, 132, 74, 1);
     justify-content: space-between;
     flex-direction: column;
     margin-bottom: 2em;
-
     &__img{
         width: 250px;
     }
@@ -34,7 +33,7 @@ $light_brown: rgba(171, 132, 74, 1);
     &:hover {
         opacity: 1;
     }
-
+  
 
     .cart_wrapper {
         margin: 16.5em auto;
@@ -45,7 +44,6 @@ $light_brown: rgba(171, 132, 74, 1);
         color: white;
         cursor: pointer;
         transition: background 0.5s ease;
-    
         svg {
             margin-top: 0.2em;
             margin-right: 0.5em;
@@ -56,8 +54,9 @@ $light_brown: rgba(171, 132, 74, 1);
         }
 
         &:hover {
-            background: rgb(164, 120, 47);
+            background: $light_brown;
         }
+        
     }
 }
 
@@ -129,5 +128,74 @@ $light_brown: rgba(171, 132, 74, 1);
         .cart_wrapper_main {
             display: none;
         }
+    }
+}
+@media screen and (max-width: 1199px) {
+    .main_cart_wrap{
+        width: 100%;
+
+    }
+    .cart_wrapper {
+        margin-top: -120px;
+    }
+    .main_cart_wrap img{
+        width: 210px;
+
+    }
+    .favourite {
+        img{
+            margin: 0 10px;
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 1199px) {
+    .cart_wrapper {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .favourite {
+        img{
+            margin: 0 28px 0 0;
+            width: 45%;
+        }
+    }
+}
+@media screen and (max-width: 596px) {
+    .main_cart_wrap__img{
+        width: 180px !important;
+    }
+    .favourite {
+        img{
+            margin: 0 0px 0 0px;
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 510px) {
+    .main_cart_wrap {
+        width: 140px !important;
+    }
+    .main_cart_wrap__img{
+        width: 140px !important;
+    }
+}
+@media screen and (max-width: 455px) {
+    .main_cart_wrap {
+        width: 100px !important;
+    }
+    .main_cart_wrap__img{
+        width: 100px !important;
+    }
+    .favourite {
+        img{
+            margin: 0 0px 0 0px;
+            width: 50%;
+        }
+    }
+    .card-wrapper{
+        width: 140px !important;
     }
 }

@@ -36,8 +36,8 @@ $grey: #7c7c7c;
                 border: 1px solid rgb(240, 233, 233);
                 display: block;
                 span {
-                    font-size: 100px;
-                    letter-spacing: 20px;
+                    font-size: 110px;
+                    letter-spacing: 22px;
                     font-weight: 700;
                 }
             }
@@ -86,9 +86,9 @@ $grey: #7c7c7c;
         }
     }
 }
-@media (max-width: 890px) {
+@media (max-width: 1336px) {
     .main_font {
-        width: 20rem !important;
+        width: 16rem !important;
         height: 5rem !important;
         top: 40%;
         right: 10% !important;
@@ -140,7 +140,7 @@ $grey: #7c7c7c;
         }
     }
 }
-@media (max-width: 720px) {
+@media (max-width: 800px) {
     .main_font {
         display: none !important;
     }

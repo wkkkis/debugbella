@@ -12,9 +12,7 @@
 //   position: relative;
 //   background: #333;
 // }
-.container.mt-5{
-  // width: 100% !important;
-}
+
 
 .slider_title {
   font-size: 5vw;
@@ -22,6 +20,9 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2vw;
+}
+.ProductSlider__container{
+  width: 100%;
 }
 .ProductSlider__container h1{
   padding: 0px 5px 25px ;
@@ -31,9 +32,9 @@
 }
 .card-wrapper {
   position: relative;
-  width: 50% !important;
+  width: 100% !important;
   max-width: 280px;
-  min-width: 200px;
+  min-width: 100px;
   padding: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -252,11 +253,11 @@
 }
 
 .carousel .slick-next {
-  right: -55px;
+  right: -40px;
 }
 
 .carousel .slick-prev {
-  left: -55px;
+  left: -40px;
 }
 
 .slick-dots{
@@ -268,8 +269,28 @@
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 1046px) {
-  // .card-wrapper {
-  //   width: 50% !important;
-  // }
+@media screen and (max-width: 596px) {
+    .card-wrapper{
+      width: 200px !important;
+    }
+    
+}
+@media screen and (max-width: 596px) {
+  .carousel .slick-prev {
+    left: -30px;
+  }
+  .carousel .slick-next {
+    right: -30px;
+  }
+  .container.mt-5.carousel{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 455px) {
+  .card-wrapper{
+    width: 140px !important;
+  }
+  .slick-slide{
+    width: 120px !important;
+  }
 }
