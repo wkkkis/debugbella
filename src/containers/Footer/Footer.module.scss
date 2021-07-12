@@ -7,6 +7,7 @@ $brown: rgba(43, 42, 42, 1);
     margin: 0 auto;
     background-color: $brown;
     padding-bottom: 1.5rem;
+
     &__inner {
         width: 80%;
     }
@@ -29,19 +30,23 @@ $brown: rgba(43, 42, 42, 1);
     ul {
         list-style: none;
         color: rgba(124, 124, 124, 1);
-
-        li {
-            // padding: -5px 0 -5px 0;
-            font-weight: 400;
-            font-size: 14px;
+        .link {
+            text-decoration: none;
+            list-style-type: none;
+            color: rgba(124, 124, 124, 1);
+            li {
+                // padding: -5px 0 -5px 0;
+                font-weight: 400;
+                font-size: 14px;
+            }
         }
     }
-
     .secondContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-left: 2.1rem;
+        padding-top: 0.5rem;
 
         .copyright {
             font-size: 14px;

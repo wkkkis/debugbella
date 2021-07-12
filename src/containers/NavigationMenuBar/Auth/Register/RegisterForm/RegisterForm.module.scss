@@ -1,11 +1,10 @@
-.RegisterForm {
-    width: 408px;
+.registerForm {
+    width: 410px;
     height: 480px;
     margin: 0 auto;
     display: flex;
 
     flex-direction: column;
-    align-content: center;
     align-items: center;
 
     padding: 13px;
@@ -56,7 +55,7 @@
 
 .btn {
     width: 344px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .check {

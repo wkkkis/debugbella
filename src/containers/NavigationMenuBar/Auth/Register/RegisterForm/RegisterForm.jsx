@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import classes from "./RegisterForm.module.scss";
 import { userSchema } from "../../../../../components/Validations/UserValidation";
 import app from "../../../../../firebase";
-import Confirmation from "../../Confirmation/Confirmation";
 import { useFormik, FormikProvider } from "formik";
 const RegisterForm = () => {
-    const [state, setState] = useState(false);
     const [values, setValues] = useState();
     const handleChange = (e) => {
         setValues((oldState) => {
@@ -87,7 +85,7 @@ const RegisterForm = () => {
         <>
             <FormikProvider value={registerFormik}>
                 <form
-                    className={classes.RegisterForm}
+                    className={classes.registerForm}
                     onSubmit={registerFormik.handleSubmit}
                 >
                     <div id="sign-in-button"></div>
@@ -201,13 +199,6 @@ const RegisterForm = () => {
                     </div>
                 </form>
             </FormikProvider>
-            <Confirmation
-            // state={state}
-            // setState={setState}
-            // name={name}
-            // setName={setName}
-            // handleChange={handleChange}
-            />
         </>
     );
 };
