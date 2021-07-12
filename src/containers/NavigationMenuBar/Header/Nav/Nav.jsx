@@ -95,12 +95,10 @@ const Nav = () => {
             </>
           )}
 
-           
-
           <span
             style={{
               cursor: "pointer",
-              display: "felx",
+              display: "flex",
               alignItems: "center",
             }}
           >
@@ -114,29 +112,34 @@ const Nav = () => {
               >
                 {profile ? (
                   <>
-                    {/* <img src={user} alt="logo" onClick={handleProfile} /> */}
                     <div>
                       <Register />
                     </div>
 
                     <span
                       style={{ margin: "0" }}
-                      onClick={toggle}
+                      // onClick={toggle}
                       className={
                         visible
                           ? classes.hoverDropDown
                           : classes.hoverDropDown__color
                       }
                     >
-                      <div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src={user}
+                          alt="download"
+                          style={{ marginRight: "-15px" , marginLeft:"16px" }}
+                          onClick={toggle}
+                        />
                         <div
+                          onClick={toggle}
                           className={classes.cont}
                           style={{
                             position: "realtive",
-                            marginRight: "0",
+                            margin: "0 16px",
                           }}
                         >
-                          <img src={user} alt="logo" onClick={handleProfile} />
                           Профиль
                         </div>
                       </div>
@@ -145,8 +148,8 @@ const Nav = () => {
                 ) : (
                   <div>
                     {" "}
-                    <img src={user} alt="logo" onClick={handleProfile} />
-                    <span onClick={handleProfile}>Войти</span>
+                    <img src={user} alt="logo" style={{ marginRight: "-15px" , marginLeft:"16px" }}/>
+                    <span onClick={handleProfile} style={{margin:"0 16px"}}>Войти</span>
                   </div>
                 )}
               </div>
@@ -164,8 +167,8 @@ const Nav = () => {
                       <Link to="/profile">Профиль</Link>
                     </span>
 
-                    <span className={classes.link}>
-                      <Link to="/notFound">выйти</Link>
+                    <span className={classes.link} onClick={handleProfile}>
+                      <span onClick={toggle}>выйти</span>
                     </span>
                   </div>
                 </>
@@ -174,7 +177,7 @@ const Nav = () => {
           </span>
 
           <span className={classes.basket} onClick={handleBasketClick}>
-            <span className={classes.img} >
+            <span className={classes.img}>
               <img src={shop} alt="logo" />
               Корзина
             </span>
