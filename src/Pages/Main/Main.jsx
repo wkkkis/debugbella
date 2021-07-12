@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "../../styles/styles.module.scss";
 import red_coat from "../../assets/image/redCoat.png";
 import yellowDress from "../../assets/image/yellowDress.png";
@@ -16,13 +16,9 @@ import {
 } from "../../components";
 // import productJSON from "../../product";
 const Main = () => {
-    // const [product, setProduct] = useState({});
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setProduct(productJSON);
-    //     }, 1000);
-    // }, [product]);
-    // console.log(product);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <div className={classes.main_container}>

@@ -47,6 +47,9 @@ const Nav = () => {
         </NavItem>
 
         <div className={classes.right}>
+        <NavItem url="/favourites"> 
+        <img src={heart} alt="logo" style={{marginRight:"5px"}}/>
+        Избранное</NavItem>
           <div
             style={{
               display: "flex",

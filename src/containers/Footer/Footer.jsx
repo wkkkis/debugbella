@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../Footer/Footer.module.scss";
 import odnoklassniki from "../../assets/image/odnokl.png";
 import vk from "../../assets/image/vk.png";
@@ -11,24 +12,51 @@ const Footer = () => {
                 <div className={classes.container}>
                     <ul className={classes.first__col}>
                         <span className={classes.col_header}>Покупателям</span>
-                        <li>Как сделать заказ</li>
-                        <li>Способы оплаты</li>
-                        <li>Доставка</li>
+                        <Link to="/news" className={classes.link}>
+                            <li>Как сделать заказ</li>
+                        </Link>
+                        <Link className={classes.link} to="#">
+                            <li>Способы оплаты</li>
+                        </Link>
+
+                        <Link to="/delivery" className={classes.link}>
+                            <li>Доставка</li>
+                        </Link>
                     </ul>
                     <ul className={classes.first__col}>
                         <span className={classes.col_header}>Покупателям</span>
-                        <li>Возврат товара</li>
-                        <li>Вопросы и ответы</li>
-                        <li>Публичная оферта</li>
+                        <Link to="#" className={classes.link}>
+                            <li>Возврат товара</li>
+                        </Link>
+
+                        <Link to="/" className={classes.link}>
+                            <li>Вопросы и ответы</li>
+                        </Link>
+
+                        <Link to="#" className={classes.link}>
+                            <li>Публичная оферта</li>
+                        </Link>
                     </ul>
                     <ul className={classes.first__col}>
                         <span className={classes.col_header}>Компания</span>
-                        <li>О нас</li>
-                        <li>Реквизиты</li>
-                        <li>Контакты</li>
+
+                        <Link to="/about" className={classes.link}>
+                            <li>О нас</li>
+                        </Link>
+
+                        <Link to="#" className={classes.link}>
+                            <li>Реквизиты</li>
+                        </Link>
+                        <li>
+                            <Link to="/contacts" className={classes.link}>
+                                Контакты
+                            </Link>
+                        </li>
                     </ul>
                     <ul className={classes.first__col}>
-                        <span className={classes.col_header}>Контакты</span>
+                        <Link to="/contacts" className={classes.link}>
+                            <span className={classes.col_header}>Контакты</span>
+                        </Link>
                         <li>+996 778 898 776</li>
                         <li>mail@zulya.kg</li>
                         <li>г.Бишкек, Чуй 23</li>

@@ -25,7 +25,7 @@ export const userSchema = yup.object().shape({
     repeatPassword: yup
         .string()
         .oneOf([yup.ref("password"), null], "Пароли не совпадают!")
-        .required(),
+        .required("Введите повторно пароль"),
 });
 
 export const otpSchema = yup.object().shape({
