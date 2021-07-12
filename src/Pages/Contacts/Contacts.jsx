@@ -51,7 +51,7 @@ const Contacts = () => {
                                     }}
                                     allowFullScreen=""
                                     aria-hidden="false"
-                                ></iFrame>
+                                />
                             </div>
                         </div>
                     </div>

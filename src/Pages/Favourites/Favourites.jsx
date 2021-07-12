@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import classes from "./Favourites.module.scss";
 import styles from "../../styles/styles.module.scss";
@@ -12,6 +12,9 @@ const favoriteSortItems = [
 ];
 
 const Favourites = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     let arr = [];
     for (let i = 0; i < 12; i++) {
         arr.push(i);

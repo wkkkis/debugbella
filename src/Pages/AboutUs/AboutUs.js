@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import classes from "./AboutUs.module.scss";
 import diva from "../../assets/image/diva.png";
 import dress from "../../assets/image/about_us_dress.png";
 import beach from "../../assets/image/beach.png";
 const AboutUs = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className={classes.mainContainer}>
             <div className={classes.breadCrumbs}>
